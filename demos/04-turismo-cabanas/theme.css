@@ -1,0 +1,65 @@
+/* ==========================================================================
+   TENGO WEB — THEME: CABAÑAS & ALOJAMIENTO TURÍSTICO
+   Arquetipo: Cabañas, Hostería y Turismo en Sierras de Córdoba
+   Diseñar – Río Tercero
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Tipografía Editorial & Calma */
+  --tw-font-heading: 'Playfair Display', Georgia, serif;
+  --tw-font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Paleta Verde Bosque & Terracota Cálido */
+  --tw-primary: #2D5A27;
+  --tw-primary-hover: #1E3F1A;
+  --tw-primary-rgb: 45, 90, 39;
+
+  --tw-secondary: #C97A3E;
+  --tw-secondary-hover: #B2652B;
+  --tw-secondary-rgb: 201, 122, 62;
+
+  --tw-accent: #E5A84B;
+  --tw-accent-hover: #D49433;
+
+  /* Fondos Orgánicos y Cálidos */
+  --tw-bg-body: #FBF9F5;
+  --tw-bg-surface: #FFFFFF;
+  --tw-bg-alt: #F4EFE6;
+  --tw-bg-dark: #192719;
+  --tw-bg-dark-surface: #223522;
+  --tw-bg-muted: #EFE9DC;
+
+  /* Capa de Hero */
+  --tw-hero-overlay: rgba(20, 32, 20, 0.62);
+
+  /* Textos */
+  --tw-text-title: #1C2B1C;
+  --tw-text-body: #4A554A;
+  --tw-text-muted: #727E72;
+  --tw-border-color: #E6DFD3;
+
+  /* Botones Redondeados Cálidos */
+  --tw-btn-radius: 999px;
+  --tw-btn-padding-y: 13px;
+  --tw-btn-padding-x: 28px;
+  --tw-btn-font-family: var(--tw-font-body);
+  --tw-btn-font-weight: 600;
+  --tw-btn-letter-spacing: 0.3px;
+
+  /* Cards Suaves */
+  --tw-card-radius: 20px;
+  --tw-card-bg: #FFFFFF;
+  --tw-card-border-color: #E8E1D5;
+  --tw-card-padding: 34px 28px;
+  --tw-card-shadow: 0 4px 20px rgba(45, 90, 39, 0.06);
+  --tw-card-hover-shadow: 0 12px 30px rgba(45, 90, 39, 0.12);
+  --tw-img-radius: 18px;
+
+  /* Badges */
+  --tw-badge-radius: 999px;
+
+  /* Espaciado */
+  --tw-section-py: 95px;
+}

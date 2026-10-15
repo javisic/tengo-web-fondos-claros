@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don Tomás — Almacén & Fiambrería de Barrio (Río Tercero)</title>
+  <meta name="description" content="Almacén de cercanía en Río Tercero. Fiambres de primera calidad, quesos criollos, picadas por encargo, panificados y bebidas al mejor precio.">
+
+  <!-- Bootstrap 5.3 & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Tengo Web Core -->
+  <link href="../../core/css/tengo-core.css" rel="stylesheet">
+  <link href="../../core/css/tengo-modules.css" rel="stylesheet">
+
+  <!-- Identidad Visual Don Tomás -->
+  <link href="theme.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOPBAR COMERCIAL: Aviso de Envíos y Horarios
+       ======================================================================== -->
+  <div class="tw-topbar d-none d-md-block" style="background-color: var(--tw-primary);">
+    <div class="container d-flex justify-content-between align-items-center text-white">
+      <div class="d-flex align-items-center gap-3 small">
+        <span><i class="bi bi-truck text-warning"></i> Envíos a domicilio en Río Tercero</span>
+        <span>·</span>
+        <span><i class="bi bi-clock"></i> Lunes a Sábados 8:30 a 13:00 / 17:00 a 21:30 hs</span>
+      </div>
+      <div class="d-flex align-items-center gap-3 small">
+        <a href="https://wa.me/5493571112233?text=Hola%20Don%20Tomás!%20Quisiera%20hacer%20un%20pedido." target="_blank" rel="noopener" class="text-white fw-bold">
+          <i class="bi bi-whatsapp"></i> Pedidos: 3571-112233
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       HEADER STICKY
+       ======================================================================== -->
+  <header class="tw-header sticky-top">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
+      <a href="#inicio" class="tw-brand">
+        <span class="d-flex align-items-center gap-2">
+          <i class="bi bi-shop text-success fs-3"></i>
+          <span>Don Tomás<span class="tw-brand-dot">.</span></span>
+        </span>
+      </a>
+
+      <button class="tw-mobile-toggle" aria-label="Abrir menú">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="tw-nav-collapse d-lg-flex align-items-center gap-4">
+        <ul class="tw-nav">
+          <li><a href="#inicio" class="tw-nav-link active">Inicio</a></li>
+          <li><a href="#ofertas" class="tw-nav-link">Ofertas</a></li>
+          <li><a href="#catalogo" class="tw-nav-link">Catálogo</a></li>
+          <li><a href="#horarios" class="tw-nav-link">Horarios & Envíos</a></li>
+          <li><a href="#ubicacion" class="tw-nav-link">Ubicación</a></li>
+        </ul>
+        <div class="tw-nav-cta">
+          <a href="https://wa.me/5493571112233?text=Hola%20Don%20Tomas!%20Quiero%20hacer%20un%20pedido%20para%20retirar/envio." 
+             target="_blank" 
+             rel="noopener" 
+             class="tw-btn tw-btn-wa tw-btn-sm">
+            <i class="bi bi-whatsapp"></i> Pedir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ======================================================================
+         HERO: Local Store con Pills en Vivo (Inspirado en Savora)
+         ====================================================================== -->
+    <section class="tw-hero tw-hero--local-store">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6" data-tw-animate="fade-right">
+            <span class="tw-hero-kicker"><i class="bi bi-basket-fill"></i> Almacén & Fiambrería Tradicional</span>
+            <h1 class="tw-hero-title">El sabor de barrio y la mejor atención de Río Tercero</h1>
+            <p class="tw-hero-subtitle">Fiambres de primera marca, quesos artesanales, pan recién horneado y todo lo que necesitás para tu casa sin pagar de más.</p>
+            
+            <div class="tw-hero-actions">
+              <a href="https://wa.me/5493571112233?text=Hola!%20Quisiera%20hacer%20un%20pedido%20en%20Don%20Tomas." target="_blank" rel="noopener" class="tw-btn tw-btn-wa">
+                <i class="bi bi-whatsapp"></i> Pedir por WhatsApp
+              </a>
+              <a href="#catalogo" class="tw-btn tw-btn-outline">Ver Productos</a>
+            </div>
+
+            <!-- Pills de Estado en Vivo y Ubicación estilo Savora -->
+            <div class="tw-store-pills">
+              <div class="tw-store-pill">
+                <span class="pill-dot"></span>
+                <span><strong>Abierto hoy:</strong> 08:30 a 13:00 / 17:00 a 21:30 hs</span>
+              </div>
+              <div class="tw-store-pill">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span>Av. Savio 480, Río Tercero</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-tw-animate="fade-left" data-tw-delay="200">
+            <div class="tw-hero-mosaic">
+              <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?w=800&auto=format&fit=crop&q=80" alt="Tabla de fiambres y quesos" class="tw-mosaic-main">
+              <div class="tw-mosaic-badge">
+                <span class="badge-val">15% OFF</span>
+                <small>Pagando en efectivo</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         OFERTA DESTACADA DE LA SEMANA (Banner Promo)
+         ====================================================================== -->
+    <section id="ofertas" class="tw-section py-4">
+      <div class="container">
+        <div class="tw-promo-banner" data-tw-animate="fade-up" style="background: linear-gradient(135deg, #15803D 0%, #0F172A 100%);">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+              <span class="promo-tag"><i class="bi bi-fire"></i> OFERTA DE LA SEMANA</span>
+              <h3>Picada Artesanal Don Tomás (Comen 4 / Pican 6)</h3>
+              <p>Jamón crudo estacionado, bondiola, lomito ahumado, queso pategrás, gouda saborizado, aceitunas verdes rellenas y pan de campo casero.</p>
+              <div class="d-flex align-items-baseline gap-3 mb-4">
+                <span class="fs-2 fw-bold text-white">$24.900</span>
+                <span class="text-white-50 text-decoration-line-through fs-5">$29.500</span>
+                <span class="badge bg-warning text-dark fw-bold">Ahorrás $4.600</span>
+              </div>
+              <a href="https://wa.me/5493571112233?text=Hola%20Don%20Tomas!%20Quiero%20encargar%20la%20Picada%20Especial%20en%20oferta." target="_blank" rel="noopener" class="tw-btn tw-btn-wa">
+                <i class="bi bi-whatsapp"></i> Encargar esta Picada Ahora
+              </a>
+            </div>
+            <div class="col-lg-4 text-center d-none d-lg-block">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&auto=format&fit=crop&q=80" alt="Picada" class="img-fluid rounded-3 shadow">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CATÁLOGO CON PESTAÑAS (Inspiración Savora)
+         ====================================================================== -->
+    <section id="catalogo" class="tw-section">
+      <div class="container">
+        <div class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Lo Más Pedido</span>
+          <h2 class="tw-section-title">Nuestros Productos Destacados</h2>
+          <p class="tw-section-subtitle">Elegí lo que te gusta y pedilo por WhatsApp para retirar sin fila o recibirlo en tu puerta.</p>
+        </div>
+
+        <!-- Pestañas de Filtrado Interactivo (Savora) -->
+        <div class="tw-cat-tabs" data-tw-tabs data-tw-target="#grid-productos" data-tw-animate="fade-up">
+          <li><button class="tw-cat-tab-btn active" data-filter="all">Todos los productos</button></li>
+          <li><button class="tw-cat-tab-btn" data-filter="fiambres">Fiambrería</button></li>
+          <li><button class="tw-cat-tab-btn" data-filter="quesos">Quesos</button></li>
+          <li><button class="tw-cat-tab-btn" data-filter="panaderia">Panadería</button></li>
+          <li><button class="tw-cat-tab-btn" data-filter="bebidas">Bebidas & Vinos</button></li>
+        </div>
+
+        <div id="grid-productos" class="row gy-4">
+          <!-- Producto 1 -->
+          <div class="col-lg-4 col-md-6" data-category="fiambres" data-tw-animate="fade-up">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?w=600&auto=format&fit=crop&q=80" alt="Jamón Crudo">
+                <span class="tw-product-badge">ESTACIONADO</span>
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Fiambrería</span>
+                <h4 class="tw-product-title">Jamón Crudo Tipo Parma</h4>
+                <p class="tw-product-desc">Corte fino a máquina o a cuchillo, 12 meses de maduración. Textura inigualable.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$12.800 <small>/ kg</small></div>
+                  <a href="https://wa.me/5493571112233?text=Hola,%20quiero%20pedir%20Jamon%20Crudo" target="_blank" rel="noopener" class="tw-btn tw-btn-wa tw-btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="col-lg-4 col-md-6" data-category="quesos" data-tw-animate="fade-up" data-tw-delay="100">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?w=600&auto=format&fit=crop&q=80" alt="Queso Gouda">
+                <span class="tw-product-badge" style="background:#15803D;">ARTESANAL</span>
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Quesos</span>
+                <h4 class="tw-product-title">Queso Gouda Saborizado con Orégano</h4>
+                <p class="tw-product-desc">Elaboración con leche de tambo regional, suave y con aroma a hierbas serranas.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$9.200 <small>/ kg</small></div>
+                  <a href="https://wa.me/5493571112233?text=Hola,%20quiero%20pedir%20Queso%20Gouda" target="_blank" rel="noopener" class="tw-btn tw-btn-wa tw-btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="col-lg-4 col-md-6" data-category="panaderia" data-tw-animate="fade-up" data-tw-delay="200">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <img src="https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600&auto=format&fit=crop&q=80" alt="Pan de Campo">
+                <span class="tw-product-badge">DEL DÍA</span>
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Panadería</span>
+                <h4 class="tw-product-title">Pan de Campo de Masa Madre</h4>
+                <p class="tw-product-desc">Corteza crocante, miga aireada y esponjosa. Horneado todos los días a las 8 y a las 17 hs.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$3.500 <small>/ unidad</small></div>
+                  <a href="https://wa.me/5493571112233?text=Hola,%20quiero%20pedir%20Pan%20de%20Campo" target="_blank" rel="noopener" class="tw-btn tw-btn-wa tw-btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 4 -->
+          <div class="col-lg-4 col-md-6" data-category="bebidas" data-tw-animate="fade-up" data-tw-delay="100">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&auto=format&fit=crop&q=80" alt="Vino Malbec">
+                <span class="tw-product-badge" style="background:#2563EB;">RECOMENDADO</span>
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Bebidas & Vinos</span>
+                <h4 class="tw-product-title">Vino Malbec Selección Bodega</h4>
+                <p class="tw-product-desc">Notas a ciruela madura, vainilla y pimienta. El maridaje perfecto para tus picadas.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$7.400 <small>/ botella</small></div>
+                  <a href="https://wa.me/5493571112233?text=Hola,%20quiero%20pedir%20Vino%20Malbec" target="_blank" rel="noopener" class="tw-btn tw-btn-wa tw-btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 5 -->
+          <div class="col-lg-4 col-md-6" data-category="fiambres" data-tw-animate="fade-up" data-tw-delay="200">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=600&auto=format&fit=crop&q=80" alt="Salame Colonia">
+                <span class="tw-product-badge">COLONIA CAROYA</span>
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Fiambrería</span>
+                <h4 class="tw-product-title">Salame Picado Grueso Típico</h4>
+                <p class="tw-product-desc">Auténtica receta italiana de Colonia Caroya. Condimentado con vino blanco y ajo.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$10.500 <small>/ kg</small></div>
+                  <a href="https://wa.me/5493571112233?text=Hola,%20quiero%20pedir%20Salame%20Colonia" target="_blank" rel="noopener" class="tw-btn tw-btn-wa tw-btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 6 -->
+          <div class="col-lg-4 col-md-6" data-category="quesos" data-tw-animate="fade-up" data-tw-delay="300">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=600&auto=format&fit=crop&q=80" alt="Queso Sardo">
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Quesos</span>
+                <h4 class="tw-product-title">Queso Sardo Estacionado para Rallar</h4>
+                <p class="tw-product-desc">Pasta dura, picor justo y aroma pronunciado. Te lo rallamos en el momento si querés.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$11.200 <small>/ kg</small></div>
+                  <a href="https://wa.me/5493571112233?text=Hola,%20quiero%20pedir%20Queso%20Sardo" target="_blank" rel="noopener" class="tw-btn tw-btn-wa tw-btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         HORARIOS, MEDIOS DE PAGO & ENVÍOS
+         ====================================================================== -->
+    <section id="horarios" class="tw-section tw-section--alt">
+      <div class="container">
+        <div class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Atención & Pagos</span>
+          <h2 class="tw-section-title">Horarios y Formas de Compra</h2>
+          <p class="tw-section-subtitle">Aceptamos todos los medios de pago para que compres cómodo y sin vueltas.</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6" data-tw-animate="fade-right">
+            <div class="tw-location-card">
+              <div class="tw-status-badge">
+                <i class="bi bi-clock-fill"></i> Abierto en este momento
+              </div>
+              <h4>Horarios del Local</h4>
+              <p class="text-muted small">Te esperamos con la mejor atención y corte de fiambres al momento.</p>
+
+              <table class="tw-schedule-table">
+                <tr><td>Lunes a Viernes</td><td>08:30 a 13:00 / 17:00 a 21:30 hs</td></tr>
+                <tr><td>Sábados</td><td>09:00 a 13:30 / 17:30 a 22:00 hs</td></tr>
+                <tr><td>Domingos</td><td>09:30 a 13:00 hs (Mediodía)</td></tr>
+              </table>
+
+              <h6 class="mt-4 mb-2 small text-uppercase fw-bold text-muted">Medios de Pago:</h6>
+              <div class="tw-payment-methods">
+                <span class="tw-payment-pill"><i class="bi bi-cash"></i> Efectivo (15% OFF)</span>
+                <span class="tw-payment-pill"><i class="bi bi-credit-card"></i> Débito y Crédito</span>
+                <span class="tw-payment-pill"><i class="bi bi-qr-code"></i> Mercado Pago / MODO</span>
+                <span class="tw-payment-pill"><i class="bi bi-bank"></i> Transferencia Bancaria</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-tw-animate="fade-left" data-tw-delay="150">
+            <div class="tw-location-card" style="border-left: 4px solid var(--tw-primary);">
+              <span class="badge bg-success mb-3 px-3 py-2"><i class="bi bi-truck"></i> SERVICIO DE ENVÍOS</span>
+              <h4>Delivery en Río Tercero</h4>
+              <p class="text-muted">Hacé tu pedido por WhatsApp antes de las 12:00 o de las 20:00 y te lo llevamos en el día directamente a tu casa.</p>
+              
+              <ul class="list-unstyled my-4 small">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Envío sin cargo</strong> en compras superiores a $15.000.</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Cobro en puerta</strong>: podés pagar con posnet o efectivo al recibir.</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Cadetería express</strong> para pedidos urgentes o del día.</li>
+              </ul>
+
+              <a href="https://wa.me/5493571112233?text=Hola%20Don%20Tomas!%20Quiero%20hacer%20un%20pedido%20con%20envio%20a%20domicilio." target="_blank" rel="noopener" class="tw-btn tw-btn-wa w-100">
+                <i class="bi bi-whatsapp"></i> Coordinar Pedido con Delivery
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         UBICACIÓN Y MAPA DE RÍO TERCERO
+         ====================================================================== -->
+    <section id="ubicacion" class="tw-section">
+      <div class="container">
+        <div class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Cerca Tuyo</span>
+          <h2 class="tw-section-title">¿Dónde Estamos?</h2>
+          <p class="tw-section-subtitle">Vení a visitarnos sobre Av. Savio, con fácil estacionamiento y parada de compras rápida.</p>
+        </div>
+
+        <div class="tw-map-container" data-tw-animate="fade-up">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27038.567156976865!2d-64.12502661836108!3d-32.17431713437194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd67c514df607d%3A0xe54359d9c222ffba!2zUsOtbyBUZXJjZXJvLCBDw7NyZG9iYQ!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER LOCAL
+       ======================================================================== -->
+  <footer class="tw-footer">
+    <div class="container text-center">
+      <h5>Don Tomás — Almacén & Fiambrería<span class="tw-brand-dot">.</span></h5>
+      <p class="text-secondary small mb-3">Av. Savio 480, Río Tercero, Córdoba · Teléfono / WhatsApp: (03571) 11-2233</p>
+      <div class="tw-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>© 2026 Don Tomás Almacén. Todos los derechos reservados.</div>
+        <div class="tw-credit-badge">
+          Desarrollado con <strong>Tengo Web</strong> de <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón WhatsApp Flotante para el Almacén -->
+  <a href="https://wa.me/5493571112233?text=Hola%20Don%20Tomás!%20Quisiera%20hacer%20un%20pedido%20desde%20la%20web." 
+     class="tw-wa-floating" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Pedir por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="tw-wa-tooltip">Hacé tu pedido por WhatsApp</span>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../core/js/tengo-core.js"></script>
+</body>
+</html>

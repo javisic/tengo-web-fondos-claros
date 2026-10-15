@@ -1,0 +1,475 @@
+/* ==========================================================================
+   TENGO WEB — TEMA OFICIAL (theme-oficial.css)
+   Identidad institucional y comercial de Tengo Web por Diseñar
+   Río Tercero, Córdoba, Argentina
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Tipografías Google Fonts: Space Grotesk (Titulares) & DM Sans (Cuerpo)
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* --------------------------------------------------------------------------
+   2. Tokens de Marca y Sobrescritura de Variables de Tengo Web
+   -------------------------------------------------------------------------- */
+:root {
+  /* Tipografía */
+  --tw-font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --tw-font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --tw-heading-letter-spacing: -0.025em;
+  --tw-heading-font-weight: 700;
+  --tw-body-font-size: 1.05rem;
+  --tw-body-line-height: 1.68;
+
+  /* Paleta cromática oficial */
+  --tw-primary: #FF6B4A;            /* Coral: Acento de marca activo */
+  --tw-primary-hover: #E85535;
+  --tw-primary-rgb: 255, 107, 74;
+
+  --tw-secondary: #18343D;          /* Petrol profundo */
+  --tw-secondary-hover: #10252C;
+  --tw-secondary-rgb: 24, 52, 61;
+
+  --tw-accent: #FF6B4A;
+  --tw-accent-hover: #E85535;
+
+  /* Fondos y Superficies */
+  --tw-bg-body: #F7F5EF;            /* Warm White / Marfil suave */
+  --tw-bg-surface: #FFFFFF;
+  --tw-bg-alt: #EFECE3;             /* Fondo cálido secundario */
+  --tw-bg-cream: #F3EBDD;           /* Cream distintivo */
+  --tw-bg-dark: #101820;            /* Navy oscuro institucional */
+  --tw-bg-dark-surface: #182530;    /* Superficie navy contenida */
+  --tw-bg-petrol: #18343D;          /* Bloque petrol */
+  --tw-bg-muted: #EAE6DC;
+
+  /* Textos */
+  --tw-text-title: #101820;         /* Navy oscuro para lectura de alto contraste */
+  --tw-text-body: #2F3E46;          /* Gris grafito cálido legible */
+  --tw-text-muted: #60727D;         /* Gris medio para bajadas y leyendas */
+  --tw-text-light: #F7F5EF;         /* Texto claro sobre fondos oscuros */
+  --tw-text-slate: #AAB6B9;         /* Azul grisáceo para metadatos oscuros */
+
+  /* Bordes */
+  --tw-border-color: #E2DDD5;
+  --tw-border-color-dark: rgba(255, 255, 255, 0.12);
+  --tw-border-subtle: rgba(16, 24, 32, 0.08);
+
+  /* Botones (.tw-btn) */
+  --tw-btn-radius: 8px;
+  --tw-btn-padding-y: 13px;
+  --tw-btn-padding-x: 28px;
+  --tw-btn-font-weight: 600;
+  --tw-btn-letter-spacing: -0.01em;
+
+  --tw-btn-primary-bg: var(--tw-primary);
+  --tw-btn-primary-border: var(--tw-primary);
+  --tw-btn-primary-color: #FFFFFF;
+  --tw-btn-primary-hover-bg: var(--tw-primary-hover);
+  --tw-btn-primary-hover-border: var(--tw-primary-hover);
+  --tw-btn-primary-hover-color: #FFFFFF;
+
+  --tw-btn-secondary-bg: var(--tw-secondary);
+  --tw-btn-secondary-border: var(--tw-secondary);
+  --tw-btn-secondary-color: #F7F5EF;
+  --tw-btn-secondary-hover-bg: var(--tw-secondary-hover);
+  --tw-btn-secondary-hover-border: var(--tw-secondary-hover);
+  --tw-btn-secondary-hover-color: #FFFFFF;
+
+  --tw-btn-outline-border: #18343D;
+  --tw-btn-outline-color: #18343D;
+  --tw-btn-outline-hover-bg: #18343D;
+  --tw-btn-outline-hover-border: #18343D;
+  --tw-btn-outline-hover-color: #F7F5EF;
+
+  /* Tarjetas y Contenedores */
+  --tw-card-radius: 14px;
+  --tw-card-bg: #FFFFFF;
+  --tw-card-border-width: 1px;
+  --tw-card-border-color: var(--tw-border-color);
+  --tw-card-padding: 32px 30px;
+  --tw-card-shadow: 0 4px 16px rgba(16, 24, 32, 0.04);
+  --tw-card-hover-shadow: 0 16px 36px -8px rgba(16, 24, 32, 0.1);
+  --tw-card-hover-border: var(--tw-primary);
+  --tw-img-radius: 12px;
+
+  /* Header & Footer */
+  --tw-header-bg: rgba(247, 245, 239, 0.95);
+  --tw-header-height: 80px;
+  --tw-footer-bg: #101820;
+  --tw-footer-color: #AAB6B9;
+
+  /* Badges y Kickers */
+  --tw-badge-radius: 999px;
+  --tw-badge-padding-y: 6px;
+  --tw-badge-padding-x: 14px;
+  --tw-badge-font-size: 0.82rem;
+  --tw-badge-font-weight: 700;
+  --tw-badge-letter-spacing: 0.8px;
+
+  /* Sombras sutiles */
+  --tw-shadow-sm: 0 2px 8px rgba(16, 24, 32, 0.04);
+  --tw-shadow: 0 10px 24px -6px rgba(16, 24, 32, 0.06);
+  --tw-shadow-lg: 0 22px 42px -12px rgba(16, 24, 32, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   3. Ajustes Específicos para Tengo Web Institucional
+   -------------------------------------------------------------------------- */
+
+/* Header con subtítulo de marca Diseñar */
+.tw-brand-wrapper {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.tw-brand-main {
+  font-family: var(--tw-font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--tw-text-title);
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.tw-brand-main .dot {
+  color: var(--tw-primary);
+}
+
+.tw-brand-sub {
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--tw-text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Estilos de Botón Outline Cálido sobre fondo claro */
+.tw-btn--outline-subtle {
+  background: transparent;
+  border: 1px solid var(--tw-border-color);
+  color: var(--tw-text-title);
+}
+
+.tw-btn--outline-subtle:hover {
+  background: #FFFFFF;
+  border-color: var(--tw-primary);
+  color: var(--tw-primary);
+  box-shadow: var(--tw-shadow-sm);
+}
+
+/* Botón Outline en Fondos Oscuros */
+.tw-btn--outline-light {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.tw-btn--outline-light:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: var(--tw-bg-dark);
+}
+
+/* Kicker de Sección con color Coral institucional */
+.tw-section-kicker--coral {
+  color: var(--tw-primary);
+  background-color: rgba(var(--tw-primary-rgb), 0.1);
+  border: 1px solid rgba(var(--tw-primary-rgb), 0.2);
+}
+
+/* Tarjeta Editorial destacada de Tengo Web */
+.tw-editorial-card {
+  background: var(--tw-card-bg);
+  border: 1px solid var(--tw-card-border-color);
+  border-radius: var(--tw-card-radius);
+  padding: var(--tw-card-padding);
+  box-shadow: var(--tw-card-shadow);
+  transition: var(--tw-transition);
+}
+
+.tw-editorial-card:hover {
+  border-color: var(--tw-card-hover-border);
+  box-shadow: var(--tw-card-hover-shadow);
+  transform: translateY(-4px);
+}
+
+/* Tarjeta en fondo oscuro */
+.tw-editorial-card--dark {
+  background: var(--tw-bg-dark-surface);
+  border-color: var(--tw-border-color-dark);
+  color: var(--tw-text-light);
+}
+
+.tw-editorial-card--dark:hover {
+  border-color: var(--tw-primary);
+}
+
+.tw-editorial-card--dark h3,
+.tw-editorial-card--dark h4 {
+  color: #FFFFFF;
+}
+
+.tw-editorial-card--dark p {
+  color: #CBD5E1;
+}
+
+/* Número de paso con acento Coral */
+.tw-step-num {
+  font-family: var(--tw-font-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--tw-primary);
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+}
+
+/* Barra o tag de categoría */
+.tw-cat-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--tw-bg-cream);
+  border: 1px solid var(--tw-border-color);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--tw-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 12px;
+}
+
+/* Demos Showcase Grid */
+.tw-demo-card {
+  background: #FFFFFF;
+  border: 1px solid var(--tw-border-color);
+  border-radius: var(--tw-card-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: var(--tw-transition);
+  box-shadow: var(--tw-shadow-sm);
+}
+
+.tw-demo-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--tw-primary);
+  box-shadow: var(--tw-shadow-lg);
+}
+
+.tw-demo-thumb-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #EAE6DC;
+  aspect-ratio: 16 / 10;
+}
+
+.tw-demo-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tw-demo-card:hover .tw-demo-thumb {
+  transform: scale(1.03);
+}
+
+.tw-demo-badge-rubro {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(16, 24, 32, 0.88);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-family: var(--tw-font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tw-demo-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tw-demo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--tw-text-title);
+}
+
+.tw-demo-desc {
+  font-size: 0.94rem;
+  color: var(--tw-text-muted);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.tw-demo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--tw-border-color);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+/* Modulo Scope / Alcance Callout */
+.tw-scope-callout {
+  background: #FFFFFF;
+  border: 1px solid var(--tw-border-color);
+  border-left: 5px solid var(--tw-primary);
+  border-radius: var(--tw-card-radius);
+  padding: 30px;
+}
+
+/* Acordeón FAQ accesible y estilizado con la paleta */
+.tw-faq-item {
+  border: 1px solid var(--tw-border-color);
+  background: #FFFFFF;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: var(--tw-transition);
+}
+
+.tw-faq-item:hover {
+  border-color: rgba(var(--tw-primary-rgb), 0.4);
+}
+
+.tw-faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  font-family: var(--tw-font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--tw-text-title);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.tw-faq-question:hover {
+  color: var(--tw-primary);
+}
+
+.tw-faq-question .icon-chevron {
+  font-size: 1.1rem;
+  color: var(--tw-primary);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.tw-faq-question[aria-expanded="true"] .icon-chevron {
+  transform: rotate(180deg);
+}
+
+.tw-faq-answer {
+  padding: 0 24px 20px 24px;
+  color: var(--tw-text-body);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* Botón WhatsApp Flotante Oficial */
+.tw-wa-float-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 999px;
+  padding: 12px 20px 12px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--tw-font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 25px -4px rgba(37, 211, 102, 0.45);
+  z-index: 1040;
+  text-decoration: none;
+  transition: var(--tw-transition);
+}
+
+.tw-wa-float-btn:hover {
+  background-color: #1EBE5D;
+  color: #FFFFFF;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 14px 30px -4px rgba(37, 211, 102, 0.55);
+}
+
+.tw-wa-float-btn i {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+@media (max-width: 576px) {
+  .tw-wa-float-btn span {
+    display: none;
+  }
+  .tw-wa-float-btn {
+    padding: 14px;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Formulario de Consulta WhatsApp en CTA Final
+   -------------------------------------------------------------------------- */
+.tw-form-box {
+  border: 1px solid var(--tw-border-color);
+  border-top: 4px solid var(--tw-primary);
+  border-radius: var(--tw-card-radius);
+  transition: var(--tw-transition);
+}
+
+.tw-form-box:hover {
+  box-shadow: var(--tw-shadow-lg) !important;
+}
+
+.tw-form-label {
+  font-family: var(--tw-font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--tw-text-title);
+  margin-bottom: 6px;
+}
+
+.tw-form-control {
+  border: 1px solid var(--tw-border-color);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: var(--tw-text-body);
+  transition: var(--tw-transition);
+}
+
+.tw-form-control:focus {
+  border-color: var(--tw-primary);
+  box-shadow: 0 0 0 3px rgba(var(--tw-primary-rgb), 0.18);
+  outline: none;
+}
+

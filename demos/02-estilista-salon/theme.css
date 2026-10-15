@@ -1,0 +1,49 @@
+/* ==========================================================================
+   TENGO WEB — DEMO 02: STUDIO CLARA MORENA (ESTÉTICA & ESTILISMO)
+   Identidad visual cálida, sofisticada, orgánica y luminosa.
+   Inspiración: Clarity (Espacios/Composición) + Strada (Elegancia Boutique)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Tipografías: Moderna, estilizada y femenina */
+  --tw-font-heading: 'Outfit', sans-serif;
+  --tw-font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Paleta Cálida & Boutique */
+  --tw-primary: #C47355;              /* Terracota suave / rosa arcilla */
+  --tw-primary-hover: #A85A3F;        /* Terracota tostado */
+  --tw-primary-rgb: 196, 115, 85;
+  --tw-secondary: #2C2623;            /* Carbón cálido */
+  --tw-secondary-hover: #433B36;
+  --tw-accent: #D97706;               /* Tono dorado miel */
+  --tw-accent-hover: #B45309;
+
+  /* Fondos y Superficies Nude / Arena */
+  --tw-bg-body: #FAF7F5;              /* Fondo arena muy suave */
+  --tw-bg-surface: #FFFFFF;           /* Blanco puro para tarjetas */
+  --tw-bg-alt: #F3ECE7;               /* Nude alternado */
+  --tw-bg-dark: #2C2623;              /* Fondo oscuro elegante */
+
+  /* Textos y Contrastes */
+  --tw-text-title: #2C2623;
+  --tw-text-body: #574F4A;
+  --tw-text-muted: #8C827A;
+  --tw-border-color: #EAE2DC;
+
+  /* UI Tokens: Bordes redondeados suaves (Pill / 20px) */
+  --tw-btn-radius: 999px;             /* Botones estilo píldora */
+  --tw-card-radius: 22px;             /* Tarjetas suaves */
+  --tw-img-radius: 20px;
+  --tw-badge-radius: 999px;
+
+  /* Sombras etéreas y cálidas */
+  --tw-shadow: 0 10px 30px -5px rgba(44, 38, 35, 0.06);
+  --tw-shadow-lg: 0 20px 40px -10px rgba(44, 38, 35, 0.12);
+
+  --tw-section-py: 95px;
+
+  /* WhatsApp personalizado en tono armónico */
+  --tw-wa-color: #25D366;
+}

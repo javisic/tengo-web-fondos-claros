@@ -1,0 +1,45 @@
+/* ==========================================================================
+   TENGO WEB — DEMO 01: ESTUDIO JURÍDICO ROSSI & ASOC. (RÍO TERCERO)
+   Identidad visual sobria, distinguida, de máxima credibilidad y confianza.
+   Inspiración: Passion (Topbar/Credenciales) + Strada (Editorial/Numerado)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Tipografías: Serif editorial de autoridad para títulos + Sans geométrica limpia */
+  --tw-font-heading: 'Playfair Display', Georgia, serif;
+  --tw-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Paleta Corporativa / Legal */
+  --tw-primary: #1E3A8A;              /* Azul marino de autoridad */
+  --tw-primary-hover: #172554;        /* Azul medianoche profundo */
+  --tw-primary-rgb: 30, 58, 138;
+  --tw-secondary: #0F172A;            /* Slate oscuro */
+  --tw-secondary-hover: #1E293B;
+  --tw-accent: #B45309;               /* Tono bronce / dorado sobrio */
+  --tw-accent-hover: #92400E;
+
+  /* Fondos y Superficies */
+  --tw-bg-body: #FAF9F6;              /* Blanco hueso / marfil editorial */
+  --tw-bg-surface: #FFFFFF;           /* Blanco puro en tarjetas */
+  --tw-bg-alt: #F1F5F9;               /* Slate sutil en alternadas */
+  --tw-bg-dark: #0B1329;              /* Azul noche profundo en topbar y footer */
+
+  /* Textos y Contrastes */
+  --tw-text-title: #0F172A;
+  --tw-text-body: #334155;
+  --tw-text-muted: #64748B;
+  --tw-border-color: #E2E8F0;
+
+  /* UI Tokens: Bordes más sobrios y rectos, sombras elegantes y sutiles */
+  --tw-btn-radius: 6px;
+  --tw-card-radius: 10px;
+  --tw-img-radius: 8px;
+  --tw-badge-radius: 4px;
+
+  --tw-shadow: 0 10px 30px -5px rgba(11, 19, 41, 0.08);
+  --tw-shadow-lg: 0 20px 40px -10px rgba(11, 19, 41, 0.14);
+
+  --tw-section-py: 95px;
+}

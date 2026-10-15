@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tengo Web — Sistema Modular de Sitios Web One-Page | Diseñar</title>
+  <meta name="description" content="Sistema modular de producción ágil de sitios web one-page en HTML5, CSS3, JavaScript y Bootstrap 5 para Diseñar (Río Tercero, Córdoba).">
+
+  <!-- Bootstrap 5.3 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="core/css/tengo-core.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --tw-font-heading: 'Outfit', sans-serif;
+      --tw-font-body: 'Plus Jakarta Sans', sans-serif;
+      --tw-primary: #0D6EFD;
+      --tw-bg-dark: #0B132B;
+    }
+    .portal-hero {
+      background: linear-gradient(135deg, #0B132B 0%, #1C2541 100%);
+      color: #FFFFFF;
+      padding: 85px 0 65px;
+      border-bottom: 4px solid var(--tw-primary);
+    }
+    .demo-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    }
+    .demo-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 35px -8px rgba(0,0,0,0.12);
+      border-color: var(--tw-primary);
+    }
+    .demo-thumb {
+      height: 210px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .demo-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <!-- ========================================================================
+       PORTAL HEADER
+       ======================================================================== -->
+  <header class="portal-hero">
+    <div class="container text-center">
+      <span class="badge bg-primary px-3 py-2 text-uppercase mb-3">Diseñar · Río Tercero, Córdoba</span>
+      <h1 class="display-4 fw-bold mb-3">Tengo Web</h1>
+      <p class="lead text-white-50 mx-auto" style="max-width: 740px;">
+        Sistema modular de producción ágil de sitios web one-page profesionales. Código limpio, HTML5 semántico optimizado para SEO, variables CSS expandidas para control total y 6 arquetipos reales de negocio.
+      </p>
+
+      <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap">
+        <span class="badge bg-secondary">HTML Semántico SEO (article/section)</span>
+        <span class="badge bg-secondary">Variables CSS Expandidas (theme.css)</span>
+        <span class="badge bg-secondary">Catálogo con Tabs & Filtros</span>
+        <span class="badge bg-secondary">Horarios & Mapa Local</span>
+        <span class="badge bg-secondary">Esquinas Rectas (Sharp 90°)</span>
+        <span class="badge bg-secondary">Heroes Fullwidth con Overlay</span>
+        <span class="badge bg-secondary">Formularios a WhatsApp</span>
+      </div>
+
+      <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+        <a href="showroom/index.html" class="btn btn-primary btn-lg px-4"><i class="bi bi-grid-fill me-2"></i> Showroom de Módulos (12 Secciones)</a>
+        <a href="starter-boilerplate/index.html" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-file-earmark-code me-2"></i> Boilerplate Limpio</a>
+        <a href="docs/MANUAL-EDICION-DUMMIES.md" class="btn btn-warning btn-lg px-4 text-dark fw-bold"><i class="bi bi-mortarboard-fill me-2"></i> Manual para "Dummies"</a>
+        <a href="docs/GUIA-USO.md" class="btn btn-secondary btn-lg px-4"><i class="bi bi-book me-2"></i> Guía Técnica</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       GRILLA DE 6 DEMOS INTERACTIVAS
+       ======================================================================== -->
+  <main class="container my-5 py-3">
+    <div class="text-center mb-5">
+      <span class="text-primary fw-bold text-uppercase small">Catálogo de Casos Reales</span>
+      <h2 class="fw-bold">Misma base técnica, seis personalidades únicas</h2>
+      <p class="text-muted" style="max-width:640px; margin:0 auto;">
+        Comprobá cómo la combinación modular de secciones, variables cromáticas y tipografías produce sitios auténticos para cada rubro comercial.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Demo 01: Profesional / Abogado -->
+      <div class="col-lg-4 col-md-6">
+        <article class="demo-card">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&auto=format&fit=crop&q=80" alt="Estudio Dr. Mariano Rossi" class="demo-thumb">
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="demo-badge bg-primary-subtle text-primary">Profesional / Legal</span>
+              <small class="text-muted">Passion + Strada</small>
+            </div>
+            <h3 class="h5 mb-2">Estudio Rossi & Asoc.</h3>
+            <p class="text-muted small flex-grow-1">
+              Diseño sobrio y formal con topbar de contacto, hero con credenciales, áreas de práctica numeradas 01-04, acordeón FAQ y reserva de turnos por WhatsApp.
+            </p>
+            <div class="pt-3 border-top mt-3">
+              <a href="demos/01-profesional-abogado/index.html" class="btn btn-outline-primary w-100 fw-bold">
+                Ver Demo Estudio Rossi <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Demo 02: Estética / Salón -->
+      <div class="col-lg-4 col-md-6">
+        <article class="demo-card">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&auto=format&fit=crop&q=80" alt="Studio Clara Morena" class="demo-thumb">
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="demo-badge" style="background:#FCE7F3; color:#BE185D;">Estética & Estilismo</span>
+              <small class="text-muted">Clarity + Strada</small>
+            </div>
+            <h3 class="h5 mb-2">Studio Clara Morena</h3>
+            <p class="text-muted small flex-grow-1">
+              Hero centrado editorial, carta de tratamientos con precios y duración, galería de transformaciones, testimonios y turnos rápidos por WhatsApp.
+            </p>
+            <div class="pt-3 border-top mt-3">
+              <a href="demos/02-estilista-salon/index.html" class="btn btn-outline-danger w-100 fw-bold" style="border-color:#C47355; color:#C47355;">
+                Ver Demo Clara Morena <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Demo 03: Comercio / Almacén -->
+      <div class="col-lg-4 col-md-6">
+        <article class="demo-card">
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80" alt="Don Tomás Almacén" class="demo-thumb">
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="demo-badge bg-success-subtle text-success">Comercio / Almacén</span>
+              <small class="text-muted">Savora</small>
+            </div>
+            <h3 class="h5 mb-2">Don Tomás — Almacén & Fiambres</h3>
+            <p class="text-muted small flex-grow-1">
+              Hero con pills de estado en vivo, banner de ofertas semanales, catálogo con pestañas interactivas, tabla de horarios, formas de pago y Google Maps.
+            </p>
+            <div class="pt-3 border-top mt-3">
+              <a href="demos/03-comercio-almacen/index.html" class="btn btn-outline-success w-100 fw-bold">
+                Ver Demo Don Tomás <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Demo 04: Turismo & Cabañas -->
+      <div class="col-lg-4 col-md-6">
+        <article class="demo-card">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&auto=format&fit=crop&q=80" alt="Cabañas Los Aromos" class="demo-thumb">
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="demo-badge text-white" style="background:#2D5A27;">Alojamiento / Turismo</span>
+              <small class="text-muted">Calamuchita</small>
+            </div>
+            <h3 class="h5 mb-2">Cabañas Los Aromos</h3>
+            <p class="text-muted small flex-grow-1">
+              Hero fullwidth con overlay de montaña, amenities con pileta climatizada, catálogo de unidades con tarifas por noche, galería de 8 fotos y reserva por WhatsApp.
+            </p>
+            <div class="pt-3 border-top mt-3">
+              <a href="demos/04-turismo-cabanas/index.html" class="btn w-100 fw-bold text-white" style="background:#2D5A27; border-color:#2D5A27;">
+                Ver Demo Cabañas <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Demo 05: Oficio / Electricista -->
+      <div class="col-lg-4 col-md-6">
+        <article class="demo-card">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80" alt="Voltio Electricidad" class="demo-thumb">
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="demo-badge text-dark fw-bold" style="background:#F59E0B;">Oficio / Electricista</span>
+              <small class="text-muted">ERSeP 24hs</small>
+            </div>
+            <h3 class="h5 mb-2">Voltio Electricidad & Servicios</h3>
+            <p class="text-muted small flex-grow-1">
+              Topbar de urgencias 24hs, hero split con llamada inmediata, matrícula oficial ERSeP Ley 10.281, zonas de cobertura con tiempos de respuesta y WhatsApp técnico.
+            </p>
+            <div class="pt-3 border-top mt-3">
+              <a href="demos/05-oficio-electricista/index.html" class="btn btn-warning w-100 fw-bold text-dark">
+                Ver Demo Electricista <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Demo 06: Arquitectura & Metalúrgica -->
+      <div class="col-lg-4 col-md-6">
+        <article class="demo-card" style="border-radius:0 !important;">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=80" alt="Vértice Arquitectura" class="demo-thumb" style="border-radius:0 !important;">
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="demo-badge text-white" style="background:#121212; border-radius:0 !important;">Arquitectura & Metalúrgica</span>
+              <small class="text-muted">Sharp 90°</small>
+            </div>
+            <h3 class="h5 mb-2">Vértice Arquitectura & Estructuras</h3>
+            <p class="text-muted small flex-grow-1">
+              Estética 100% esquinas rectas (Archiste/Strada), hero tipográfico de alto impacto, bio asimétrica con stats, portfolio de obras por tipología y footer Big CTA.
+            </p>
+            <div class="pt-3 border-top mt-3">
+              <a href="demos/06-arquitectura-construccion/index.html" class="btn btn-dark w-100 fw-bold text-uppercase" style="border-radius:0 !important;">
+                Ver Demo Vértice <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER PORTAL
+       ======================================================================== -->
+  <footer class="text-center py-4 text-muted border-top small bg-white">
+    <div class="container">
+      Tengo Web — Sistema Modular de Producción Web · Desarrollado para <strong>Diseñar – Diseño gráfico y web</strong> (Río Tercero, Córdoba).
+    </div>
+  </footer>
+
+</body>
+</html>

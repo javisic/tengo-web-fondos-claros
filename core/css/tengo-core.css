@@ -1,0 +1,847 @@
+/* ==========================================================================
+   TENGO WEB — CORE CSS (tengo-core.css)
+   Base técnica común para todos los sitios del sistema.
+   Diseñar – Diseño gráfico y web (Río Tercero, Cba)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Variables por defecto (Sobrescribibles por cada theme.css)
+   -------------------------------------------------------------------------- */
+:root {
+  /* --------------------------------------------------------------------------
+     A. Tipografía y Textos
+     -------------------------------------------------------------------------- */
+  --tw-font-heading: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --tw-font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --tw-text-title: #0F172A;
+  --tw-text-body: #475569;
+  --tw-text-muted: #64748B;
+  --tw-text-light: #F8FAFC;
+  --tw-heading-letter-spacing: -0.02em;
+  --tw-heading-transform: none;
+  --tw-heading-font-weight: 700;
+  --tw-body-font-size: 1rem;
+  --tw-body-line-height: 1.65;
+
+  /* --------------------------------------------------------------------------
+     B. Colores y Fondos (Backgrounds)
+     -------------------------------------------------------------------------- */
+  --tw-primary: #0D6EFD;
+  --tw-primary-hover: #0b5ed7;
+  --tw-primary-rgb: 13, 110, 253;
+  --tw-secondary: #0F172A;
+  --tw-secondary-hover: #1e293b;
+  --tw-secondary-rgb: 15, 23, 42;
+  --tw-accent: #10B981;
+  --tw-accent-hover: #059669;
+
+  --tw-bg-body: #FFFFFF;
+  --tw-bg-surface: #FFFFFF;
+  --tw-bg-alt: #F8FAFC;
+  --tw-bg-dark: #0F172A;
+  --tw-bg-dark-surface: #1E293B;
+  --tw-bg-muted: #F1F5F9;
+
+  --tw-hero-overlay: rgba(15, 23, 42, 0.65);
+  --tw-header-bg: rgba(255, 255, 255, 0.94);
+  --tw-topbar-bg: var(--tw-bg-dark);
+  --tw-topbar-color: #CBD5E1;
+  --tw-footer-bg: var(--tw-bg-dark);
+  --tw-footer-color: #94A3B8;
+  --tw-border-color: #E2E8F0;
+  --tw-border-color-dark: rgba(255, 255, 255, 0.1);
+
+  /* --------------------------------------------------------------------------
+     C. Botones (.tw-btn)
+     -------------------------------------------------------------------------- */
+  --tw-btn-radius: 10px;
+  --tw-btn-padding-y: 12px;
+  --tw-btn-padding-x: 26px;
+  --tw-btn-font-family: var(--tw-font-heading);
+  --tw-btn-font-size: 0.96rem;
+  --tw-btn-font-weight: 600;
+  --tw-btn-letter-spacing: 0;
+  --tw-btn-transform: none;
+  --tw-btn-border-width: 1px;
+  --tw-btn-shadow: 0 4px 14px rgba(var(--tw-primary-rgb), 0.25);
+  --tw-btn-shadow-hover: 0 6px 20px rgba(var(--tw-primary-rgb), 0.35);
+
+  --tw-btn-primary-bg: var(--tw-primary);
+  --tw-btn-primary-border: var(--tw-primary);
+  --tw-btn-primary-color: #FFFFFF;
+  --tw-btn-primary-hover-bg: var(--tw-primary-hover);
+  --tw-btn-primary-hover-border: var(--tw-primary-hover);
+  --tw-btn-primary-hover-color: #FFFFFF;
+
+  --tw-btn-secondary-bg: var(--tw-secondary);
+  --tw-btn-secondary-border: var(--tw-secondary);
+  --tw-btn-secondary-color: #FFFFFF;
+  --tw-btn-secondary-hover-bg: var(--tw-secondary-hover);
+  --tw-btn-secondary-hover-border: var(--tw-secondary-hover);
+  --tw-btn-secondary-hover-color: #FFFFFF;
+
+  --tw-btn-outline-border: var(--tw-border-color);
+  --tw-btn-outline-color: var(--tw-text-title);
+  --tw-btn-outline-hover-bg: rgba(var(--tw-primary-rgb), 0.06);
+  --tw-btn-outline-hover-border: var(--tw-primary);
+  --tw-btn-outline-hover-color: var(--tw-primary);
+
+  --tw-btn-wa-bg: #25D366;
+  --tw-btn-wa-color: #FFFFFF;
+  --tw-btn-wa-hover-bg: #1EBE5D;
+
+  /* --------------------------------------------------------------------------
+     D. Cards y Contenedores (.tw-card, .tw-service-card, etc.)
+     -------------------------------------------------------------------------- */
+  --tw-card-radius: 16px;
+  --tw-card-bg: var(--tw-bg-surface);
+  --tw-card-border-width: 1px;
+  --tw-card-border-color: var(--tw-border-color);
+  --tw-card-padding: 32px 28px;
+  --tw-card-shadow: var(--tw-shadow-sm);
+  --tw-card-hover-shadow: var(--tw-shadow-lg);
+  --tw-card-hover-transform: translateY(-6px);
+  --tw-card-hover-border: var(--tw-primary);
+
+  /* --------------------------------------------------------------------------
+     E. Badges y Etiquetas (.tw-badge, .tw-section-kicker)
+     -------------------------------------------------------------------------- */
+  --tw-badge-radius: 999px;
+  --tw-badge-padding-y: 5px;
+  --tw-badge-padding-x: 14px;
+  --tw-badge-font-size: 0.85rem;
+  --tw-badge-font-weight: 700;
+  --tw-badge-transform: uppercase;
+  --tw-badge-letter-spacing: 1.2px;
+
+  /* --------------------------------------------------------------------------
+     F. Formularios e Inputs
+     -------------------------------------------------------------------------- */
+  --tw-input-radius: 10px;
+  --tw-input-bg: #FFFFFF;
+  --tw-input-border-color: var(--tw-border-color);
+  --tw-input-focus-border: var(--tw-primary);
+  --tw-input-focus-shadow: 0 0 0 3px rgba(var(--tw-primary-rgb), 0.15);
+  --tw-input-padding-y: 12px;
+  --tw-input-padding-x: 16px;
+  --tw-input-font-size: 0.95rem;
+
+  /* --------------------------------------------------------------------------
+     G. Espaciados, Layout y Sombras
+     -------------------------------------------------------------------------- */
+  --tw-section-py: 85px;
+  --tw-section-header-mb: 50px;
+  --tw-header-height: 76px;
+  --tw-topbar-height: 40px;
+  --tw-img-radius: 14px;
+
+  --tw-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --tw-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --tw-shadow-lg: 0 20px 35px -8px rgba(15, 23, 42, 0.12), 0 10px 15px -5px rgba(15, 23, 42, 0.06);
+
+  /* WhatsApp Flotante */
+  --tw-wa-color: #25D366;
+  --tw-wa-hover: #1EBE5D;
+  --tw-wa-text: #FFFFFF;
+
+  /* Transición estándar */
+  --tw-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset y Tipografía Global
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--tw-header-height) + 15px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--tw-font-body);
+  color: var(--tw-text-body);
+  background-color: var(--tw-bg-body);
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--tw-font-heading);
+  color: var(--tw-text-title);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+a {
+  color: var(--tw-primary);
+  text-decoration: none;
+  transition: var(--tw-transition);
+}
+
+a:hover {
+  color: var(--tw-primary-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. Estructura de Secciones y Encabezados (Inspiración Clarity)
+   -------------------------------------------------------------------------- */
+.tw-section {
+  padding: var(--tw-section-py) 0;
+  position: relative;
+  scroll-margin-top: calc(var(--tw-header-height) + 10px);
+}
+
+.tw-section--alt {
+  background-color: var(--tw-bg-alt);
+}
+
+.tw-section--dark {
+  background-color: var(--tw-bg-dark);
+  color: var(--tw-text-light);
+}
+
+.tw-section--dark h1,
+.tw-section--dark h2,
+.tw-section--dark h3,
+.tw-section--dark h4,
+.tw-section--dark h5,
+.tw-section--dark h6 {
+  color: #FFFFFF;
+}
+
+.tw-section--dark .tw-section-subtitle {
+  color: #CBD5E1;
+}
+
+.tw-section-header {
+  margin-bottom: var(--tw-section-header-mb, 50px);
+}
+
+.tw-section-kicker {
+  display: inline-block;
+  font-family: var(--tw-font-heading);
+  font-size: var(--tw-badge-font-size, 0.85rem);
+  font-weight: var(--tw-badge-font-weight, 700);
+  text-transform: var(--tw-badge-transform, uppercase);
+  letter-spacing: var(--tw-badge-letter-spacing, 1.2px);
+  color: var(--tw-primary);
+  background-color: rgba(var(--tw-primary-rgb), 0.1);
+  padding: var(--tw-badge-padding-y, 5px) var(--tw-badge-padding-x, 14px);
+  border-radius: var(--tw-badge-radius, 999px);
+  margin-bottom: 12px;
+}
+
+.tw-section-title {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  letter-spacing: var(--tw-heading-letter-spacing, -0.02em);
+  text-transform: var(--tw-heading-transform, none);
+  font-weight: var(--tw-heading-font-weight, 700);
+  margin-bottom: 12px;
+}
+
+.tw-section-subtitle {
+  font-size: 1.08rem;
+  color: var(--tw-text-muted);
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Barra Superior (Topbar - Inspiración Passion)
+   -------------------------------------------------------------------------- */
+.tw-topbar {
+  background-color: var(--tw-bg-dark);
+  color: #CBD5E1;
+  font-size: 0.86rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tw-topbar a {
+  color: #CBD5E1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tw-topbar a:hover {
+  color: #FFFFFF;
+}
+
+.tw-topbar-social a {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  transition: var(--tw-transition);
+}
+
+.tw-topbar-social a:hover {
+  background: var(--tw-primary);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   5. Navegación y Header Principal (Sticky + Backdrop Blur)
+   -------------------------------------------------------------------------- */
+.tw-header {
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+  transition: var(--tw-transition);
+  z-index: 1020;
+  padding: 14px 0;
+}
+
+.tw-header.is-scrolled {
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+  padding: 10px 0;
+}
+
+.tw-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--tw-font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--tw-text-title);
+  letter-spacing: -0.5px;
+}
+
+.tw-brand:hover {
+  color: var(--tw-primary);
+}
+
+.tw-brand-logo {
+  max-height: 42px;
+  width: auto;
+}
+
+.tw-brand-dot {
+  color: var(--tw-primary);
+}
+
+.tw-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tw-nav-link {
+  font-family: var(--tw-font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--tw-text-title);
+  position: relative;
+  padding: 6px 0;
+  transition: var(--tw-transition);
+}
+
+.tw-nav-link:hover,
+.tw-nav-link.active {
+  color: var(--tw-primary);
+}
+
+.tw-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--tw-primary);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+.tw-nav-link.active::after,
+.tw-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Toggle */
+.tw-mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  color: var(--tw-text-title);
+  cursor: pointer;
+  padding: 4px;
+}
+
+@media (max-width: 991px) {
+  .tw-mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .tw-nav-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--tw-border-color);
+    box-shadow: var(--tw-shadow-lg);
+    padding: 20px 24px;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tw-nav-collapse.is-open {
+    display: flex;
+  }
+
+  .tw-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .tw-nav-link {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 1.05rem;
+  }
+
+  .tw-nav-cta {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Botones y Elementos de Acción
+   -------------------------------------------------------------------------- */
+.tw-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--tw-btn-font-family);
+  font-weight: var(--tw-btn-font-weight);
+  font-size: var(--tw-btn-font-size);
+  letter-spacing: var(--tw-btn-letter-spacing);
+  text-transform: var(--tw-btn-transform);
+  padding: var(--tw-btn-padding-y) var(--tw-btn-padding-x);
+  border-radius: var(--tw-btn-radius);
+  border: var(--tw-btn-border-width) solid transparent;
+  cursor: pointer;
+  transition: var(--tw-transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tw-btn-primary {
+  background-color: var(--tw-btn-primary-bg);
+  border-color: var(--tw-btn-primary-border);
+  color: var(--tw-btn-primary-color) !important;
+  box-shadow: var(--tw-btn-shadow);
+}
+
+.tw-btn-primary:hover {
+  background-color: var(--tw-btn-primary-hover-bg);
+  border-color: var(--tw-btn-primary-hover-border);
+  color: var(--tw-btn-primary-hover-color) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--tw-btn-shadow-hover);
+}
+
+.tw-btn-secondary {
+  background-color: var(--tw-btn-secondary-bg);
+  border-color: var(--tw-btn-secondary-border);
+  color: var(--tw-btn-secondary-color) !important;
+}
+
+.tw-btn-secondary:hover {
+  background-color: var(--tw-btn-secondary-hover-bg);
+  border-color: var(--tw-btn-secondary-hover-border);
+  color: var(--tw-btn-secondary-hover-color) !important;
+  transform: translateY(-2px);
+}
+
+.tw-btn-outline {
+  background-color: transparent;
+  color: var(--tw-btn-outline-color) !important;
+  border-color: var(--tw-btn-outline-border);
+}
+
+.tw-btn-outline:hover {
+  border-color: var(--tw-btn-outline-hover-border);
+  color: var(--tw-btn-outline-hover-color) !important;
+  background-color: var(--tw-btn-outline-hover-bg);
+  transform: translateY(-2px);
+}
+
+.tw-btn-wa {
+  background-color: var(--tw-btn-wa-bg);
+  border-color: var(--tw-btn-wa-bg);
+  color: var(--tw-btn-wa-color) !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.tw-btn-wa:hover {
+  background-color: var(--tw-btn-wa-hover-bg);
+  border-color: var(--tw-btn-wa-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
+.tw-btn-sm {
+  padding: 8px 18px;
+  font-size: 0.88rem;
+}
+
+.tw-btn-lg {
+  padding: 15px 34px;
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Botón Flotante de WhatsApp con Pulso y Tooltip
+   -------------------------------------------------------------------------- */
+.tw-wa-floating {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--tw-wa-color);
+  color: #FFFFFF !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  z-index: 1040;
+  transition: var(--tw-transition);
+  text-decoration: none;
+}
+
+.tw-wa-floating:hover {
+  transform: scale(1.08) translateY(-3px);
+  background-color: var(--tw-wa-hover);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+}
+
+.tw-wa-floating::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: var(--tw-wa-color);
+  opacity: 0.5;
+  z-index: -1;
+  animation: twWaPulse 2.4s infinite;
+}
+
+@keyframes twWaPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.tw-wa-tooltip {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--tw-bg-dark);
+  color: #FFFFFF;
+  font-family: var(--tw-font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  box-shadow: var(--tw-shadow);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--tw-transition);
+}
+
+.tw-wa-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--tw-bg-dark);
+}
+
+.tw-wa-floating:hover .tw-wa-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: calc(100% + 10px);
+}
+
+@media (max-width: 576px) {
+  .tw-wa-floating {
+    bottom: 18px;
+    right: 18px;
+    width: 54px;
+    height: 54px;
+    font-size: 28px;
+  }
+  .tw-wa-tooltip {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. Esquinas Rectas y Modificadores Geométricos (Inspiración Archiste/Strada)
+   -------------------------------------------------------------------------- */
+.tw-sharp,
+.tw-sharp .tw-btn,
+.tw-sharp .tw-service-card,
+.tw-sharp .tw-product-card,
+.tw-sharp .tw-review-card,
+.tw-sharp .tw-feature-card,
+.tw-sharp .tw-location-card,
+.tw-sharp .tw-form-box,
+.tw-sharp .tw-contact-info-card,
+.tw-sharp img,
+.tw-sharp input,
+.tw-sharp textarea,
+.tw-sharp select,
+.tw-sharp .badge {
+  border-radius: 0 !important;
+}
+
+.tw-card--sharp { border-radius: 0 !important; }
+.tw-btn--sharp { border-radius: 0 !important; }
+.tw-img--sharp { border-radius: 0 !important; }
+.tw-badge--sharp { border-radius: 0 !important; }
+
+/* --------------------------------------------------------------------------
+   9. Animaciones Nativas de Entrada (Scroll Reveal)
+   -------------------------------------------------------------------------- */
+[data-tw-animate] {
+  opacity: 0;
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-tw-animate="fade-up"] {
+  transform: translateY(32px);
+}
+
+[data-tw-animate="fade-down"] {
+  transform: translateY(-32px);
+}
+
+[data-tw-animate="fade-left"] {
+  transform: translateX(36px);
+}
+
+[data-tw-animate="fade-right"] {
+  transform: translateX(-36px);
+}
+
+[data-tw-animate="zoom-in"] {
+  transform: scale(0.92);
+}
+
+[data-tw-animate].is-animated {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Retardo configurable */
+[data-tw-delay="100"] { transition-delay: 0.1s; }
+[data-tw-delay="200"] { transition-delay: 0.2s; }
+[data-tw-delay="300"] { transition-delay: 0.3s; }
+[data-tw-delay="400"] { transition-delay: 0.4s; }
+[data-tw-delay="500"] { transition-delay: 0.5s; }
+
+/* --------------------------------------------------------------------------
+   10. Footers: 3 Opciones de Diseño
+   -------------------------------------------------------------------------- */
+.tw-footer {
+  background-color: var(--tw-bg-dark);
+  color: #94A3B8;
+  padding: 70px 0 30px;
+  font-size: 0.92rem;
+}
+
+.tw-footer h5,
+.tw-footer h4 {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.tw-footer a {
+  color: #CBD5E1;
+  transition: var(--tw-transition);
+}
+
+.tw-footer a:hover {
+  color: var(--tw-primary);
+}
+
+.tw-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tw-footer-links li {
+  margin-bottom: 12px;
+}
+
+.tw-footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tw-footer-bottom {
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+}
+
+.tw-credit-badge {
+  color: #CBD5E1;
+}
+
+.tw-credit-badge a {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.tw-credit-badge a:hover {
+  color: var(--tw-primary);
+}
+
+/* Footer Variante 2: Minimalista en una sola línea */
+.tw-footer--minimal {
+  padding: 30px 0;
+  background-color: var(--tw-bg-dark);
+}
+
+.tw-footer--minimal .tw-footer-bottom {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* Footer Variante 3: Gran Llamada a la Acción (Big CTA) */
+.tw-footer--big-cta {
+  padding: 85px 0 35px;
+  background: linear-gradient(180deg, var(--tw-bg-dark) 0%, #060913 100%);
+  text-align: center;
+}
+
+.tw-footer--big-cta .big-cta-title {
+  color: #FFFFFF;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.tw-footer--big-cta .big-cta-subtitle {
+  color: #94A3B8;
+  font-size: 1.15rem;
+  max-width: 580px;
+  margin: 0 auto 34px;
+}
+
+/* --------------------------------------------------------------------------
+   11. Formularios, Controles e Inputs
+   -------------------------------------------------------------------------- */
+.tw-form-control,
+.form-control,
+.form-select {
+  border-radius: var(--tw-input-radius) !important;
+  border-color: var(--tw-input-border-color) !important;
+  background-color: var(--tw-input-bg) !important;
+  padding: var(--tw-input-padding-y) var(--tw-input-padding-x) !important;
+  font-size: var(--tw-input-font-size) !important;
+  color: var(--tw-text-title) !important;
+  transition: var(--tw-transition);
+}
+
+.tw-form-control:focus,
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--tw-input-focus-border) !important;
+  box-shadow: var(--tw-input-focus-shadow) !important;
+}
+
+/* --------------------------------------------------------------------------
+   12. Utilidades Semánticas y Estructura SEO
+   -------------------------------------------------------------------------- */
+article.tw-card,
+.tw-card,
+article.tw-service-card,
+article.tw-product-card,
+article.tw-testimonial-card,
+article.tw-project-card,
+article.tw-unit-card {
+  display: flex;
+  flex-direction: column;
+}
+
+header.tw-section-header {
+  display: block;
+}
+
+figure.tw-gallery-item,
+figure.tw-product-thumb {
+  margin: 0;
+  display: block;
+}
+
+address.tw-contact-info,
+address.tw-location-details {
+  font-style: normal;
+  display: block;
+  margin: 0;
+}
+
+time {
+  font-variant-numeric: tabular-nums;
+}
+
+

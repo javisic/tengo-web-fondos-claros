@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Completo de Módulos — Tengo Web (Diseñar)</title>
+  <meta name="description" content="Showroom interactivo y biblioteca de módulos para el equipo de producción de Diseñar.">
+
+  <!-- Bootstrap 5.3 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Tengo Web Core -->
+  <link href="../core/css/tengo-core.css" rel="stylesheet">
+  <link href="../core/css/tengo-modules.css" rel="stylesheet">
+
+  <!-- Tipografía Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --tw-font-heading: 'Outfit', sans-serif;
+      --tw-font-body: 'Plus Jakarta Sans', sans-serif;
+      --tw-primary: #2563EB;
+      --tw-primary-hover: #1D4ED8;
+      --tw-primary-rgb: 37, 99, 235;
+      --tw-accent: #10B981;
+    }
+
+    .showroom-header {
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 55px 0 45px;
+      border-bottom: 4px solid var(--tw-primary);
+    }
+
+    .showroom-nav {
+      background: #1E293B;
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .showroom-nav a {
+      color: #CBD5E1;
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .showroom-nav a:hover,
+    .showroom-nav a.active {
+      background: var(--tw-primary);
+      color: #FFFFFF;
+    }
+
+    .component-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      margin-bottom: 45px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    .component-header {
+      padding: 16px 24px;
+      background: #F8FAFC;
+      border-bottom: 1px solid #E2E8F0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .component-badge {
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--tw-primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .component-preview {
+      padding: 30px;
+      background: #FFFFFF;
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: #0F172A;
+      color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .copy-btn:hover {
+      background: var(--tw-primary);
+      transform: translateY(-1px);
+    }
+
+    .copy-btn.copied {
+      background: #10B981 !important;
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border-radius: 999px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      font-size: 0.95rem;
+      font-weight: 600;
+      z-index: 9999;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#showroom-nav" tabindex="0">
+
+  <!-- Encabezado del Showroom -->
+  <header class="showroom-header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+          <span class="badge bg-primary mb-2">DISEÑAR · RÍO TERCERO</span>
+          <h1 class="h2 mb-1 text-white">Tengo Web: Catálogo Completo de Módulos</h1>
+          <p class="text-secondary mb-0">Elegí la variante, hacé clic en "Copiar HTML" y pegalo directamente en el <code>index.html</code> de tu cliente.</p>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="../index.html" class="btn btn-outline-light btn-sm"><i class="bi bi-grid-fill"></i> Portal General</a>
+          <a href="../starter-boilerplate/index.html" class="btn btn-outline-light btn-sm"><i class="bi bi-code-slash"></i> Boilerplate</a>
+          <a href="../demos/01-profesional-abogado/index.html" class="btn btn-primary btn-sm">Abogado</a>
+          <a href="../demos/02-estilista-salon/index.html" class="btn btn-danger btn-sm" style="background:#C47355; border-color:#C47355;">Salón</a>
+          <a href="../demos/03-comercio-almacen/index.html" class="btn btn-success btn-sm">Almacén</a>
+          <a href="../demos/04-turismo-cabanas/index.html" class="btn btn-sm text-white" style="background:#2D5A27; border-color:#2D5A27;">Cabañas</a>
+          <a href="../demos/05-oficio-electricista/index.html" class="btn btn-warning btn-sm text-dark fw-bold">Electricista</a>
+          <a href="../demos/06-arquitectura-construccion/index.html" class="btn btn-secondary btn-sm text-white" style="background:#121212; border-color:#333;">Arquitectura</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegación interna rápida del catálogo -->
+  <nav id="showroom-nav" class="showroom-nav">
+    <div class="container d-flex overflow-auto gap-2 py-1">
+      <a href="#sec-heroes">Heroes</a>
+      <a href="#sec-sharp">Esquinas Rectas</a>
+      <a href="#sec-about">Nosotros</a>
+      <a href="#sec-services">Servicios</a>
+      <a href="#sec-offers">Banner Ofertas</a>
+      <a href="#sec-catalog">Catálogo de Productos</a>
+      <a href="#sec-gallery">Galería (8 fotos)</a>
+      <a href="#sec-testimonials">Testimonios</a>
+      <a href="#sec-faq">FAQS</a>
+      <a href="#sec-location">Horarios & Mapa</a>
+      <a href="#sec-contact">Contacto</a>
+      <a href="#sec-footers">Footers</a>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+
+    <!-- ====================================================================
+         1. MÓDULOS HERO
+         ==================================================================== -->
+    <div id="sec-heroes" class="d-flex align-items-center justify-content-between mb-4 pb-2 border-bottom">
+      <h2 class="h3 mb-0">1. Módulos Hero & Banners Principales</h2>
+      <span class="badge bg-secondary">7 Variantes</span>
+    </div>
+
+    <!-- Hero 1: Background con Imagen y Overlay -->
+    <div id="hero-bg-image" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Hero · Ancho Completo</span>
+          <strong class="ms-2">Hero de Ancho Completo con Imagen de Fondo y Overlay (Inspiración Titan / Tasty / Wix)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-hero-bg-image')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview p-0">
+        <section class="tw-hero tw-hero--bg-image" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&auto=format&fit=crop&q=80');">
+          <div class="tw-hero-overlay"></div>
+          <div class="container text-center">
+            <span class="tw-hero-kicker"><i class="bi bi-geo-alt-fill"></i> Río Tercero & Calamuchita</span>
+            <h1 class="tw-hero-title mx-auto" style="max-width: 800px;">Experiencias gastronómicas que despiertan los sentidos</h1>
+            <p class="tw-hero-subtitle mx-auto" style="max-width: 620px;">Platos de autor, ambiente cálido y la mejor selección de vinos en pleno centro de la ciudad.</p>
+            <div class="tw-hero-actions justify-content-center">
+              <a href="#contacto" class="tw-btn tw-btn-wa"><i class="bi bi-whatsapp"></i> Reservar Mesa por WhatsApp</a>
+              <a href="#servicios" class="tw-btn tw-btn-outline" style="border-color:#FFFFFF; color:#FFFFFF !important;">Ver Carta del Menú</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <textarea id="code-hero-bg-image" class="d-none">
+<section class="tw-hero tw-hero--bg-image" style="background-image: url('assets/img/hero-bg.jpg');">
+  <div class="tw-hero-overlay"></div>
+  <div class="container text-center">
+    <span class="tw-hero-kicker"><i class="bi bi-star-fill"></i> Destacado en Río Tercero</span>
+    <h1 class="tw-hero-title mx-auto" style="max-width: 820px;">Título imponente de alto impacto visual</h1>
+    <p class="tw-hero-subtitle mx-auto" style="max-width: 640px;">Descripción clara de tu negocio sobre fondo fotográfico con contraste garantizado.</p>
+    <div class="tw-hero-actions justify-content-center">
+      <a href="https://wa.me/5493571XXXXXX?text=Hola!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" class="tw-btn tw-btn-wa">
+        <i class="bi bi-whatsapp"></i> Contactar por WhatsApp
+      </a>
+      <a href="#servicios" class="tw-btn tw-btn-outline" style="border-color:#FFFFFF; color:#FFFFFF !important;">Conocer Más</a>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- Hero 2: Fondo Plano de Color de Marca -->
+    <div id="hero-flat" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Hero · Color Plano</span>
+          <strong class="ms-2">Hero de Fondo Plano con Color Sólido de Marca (Inspiración Wix / Minimal Studio)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-hero-flat')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview p-0">
+        <section class="tw-hero tw-hero--bg-flat">
+          <div class="container">
+            <div class="row align-items-center gy-4">
+              <div class="col-lg-8">
+                <span class="tw-hero-kicker">Diseño & Estrategia</span>
+                <h1 class="tw-hero-title">Creamos marcas que conectan y venden con claridad</h1>
+                <p class="tw-hero-subtitle">Desarrollamos identidades visuales, sitios web y comunicación efectiva para comercios y profesionales de Río Tercero.</p>
+                <div class="tw-hero-actions">
+                  <a href="#contacto" class="tw-btn tw-btn-secondary">Iniciar Proyecto</a>
+                  <a href="#servicios" class="tw-btn tw-btn-outline">Nuestros Trabajos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <textarea id="code-hero-flat" class="d-none">
+<section class="tw-hero tw-hero--bg-flat">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-8" data-tw-animate="fade-right">
+        <span class="tw-hero-kicker">Especialidad</span>
+        <h1 class="tw-hero-title">Título contundente sobre fondo de marca</h1>
+        <p class="tw-hero-subtitle">Explicá la propuesta de valor con máxima legibilidad y sin distracciones.</p>
+        <div class="tw-hero-actions">
+          <a href="#contacto" class="tw-btn tw-btn-secondary">Botón Principal</a>
+          <a href="#servicios" class="tw-btn tw-btn-outline">Botón Secundario</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- Hero 3: Fondo con Degradado Vibrante -->
+    <div id="hero-gradient" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Hero · Degradado</span>
+          <strong class="ms-2">Hero con Fondo Degradado Moderno (Inspiración MobApp / Tech)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-hero-gradient')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview p-0">
+        <section class="tw-hero tw-hero--bg-gradient">
+          <div class="container text-center">
+            <span class="tw-hero-kicker"><i class="bi bi-lightning-charge-fill"></i> Solución Digital 100% Nativa</span>
+            <h1 class="tw-hero-title mx-auto" style="max-width: 760px;">Gestioná tu negocio desde tu celular sin complicaciones</h1>
+            <p class="tw-hero-subtitle mx-auto" style="max-width: 580px;">Rápido, seguro y accesible. Desarrollado a medida para emprendimientos locales.</p>
+            <div class="tw-hero-actions justify-content-center">
+              <a href="https://wa.me/5493571XXXXXX" class="tw-btn tw-btn-wa"><i class="bi bi-whatsapp"></i> Solicitar Demo</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <textarea id="code-hero-gradient" class="d-none">
+<section class="tw-hero tw-hero--bg-gradient">
+  <div class="container text-center">
+    <span class="tw-hero-kicker"><i class="bi bi-lightning-charge-fill"></i> Novedad / Destacado</span>
+    <h1 class="tw-hero-title mx-auto" style="max-width: 760px;">Título sobre degradado contemporáneo</h1>
+    <p class="tw-hero-subtitle mx-auto" style="max-width: 580px;">Descripción directa enfocada a la acción y conversión inmediata.</p>
+    <div class="tw-hero-actions justify-content-center">
+      <a href="https://wa.me/5493571XXXXXX" class="tw-btn tw-btn-wa"><i class="bi bi-whatsapp"></i> Botón WhatsApp</a>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- Hero 4: Ultra Minimalista Texto + Botón -->
+    <div id="hero-minimal-cta" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Hero · Texto + Botón</span>
+          <strong class="ms-2">Hero Ultra Minimalista: Gran Titular + Texto + Botón (Inspiración Archiste / Framer)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-hero-minimal-cta')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <section class="tw-hero tw-hero--minimal-cta p-0">
+          <span class="text-uppercase fw-bold text-primary small letter-spacing-2 d-block mb-3">Estudio de Arquitectura & Diseño</span>
+          <h1 class="tw-hero-title">Espacios concebidos a través de la luz, el detalle y la materia.</h1>
+          <p class="tw-hero-subtitle text-muted">Proyectamos viviendas unifamiliares, reformas comerciales e interiorismo contemporáneo en Río Tercero y Valle de Calamuchita.</p>
+          <div class="tw-hero-actions">
+            <a href="#contacto" class="tw-btn tw-btn-primary tw-btn-lg">Iniciar Consulta de Proyecto <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </section>
+      </div>
+      <textarea id="code-hero-minimal-cta" class="d-none">
+<section class="tw-hero tw-hero--minimal-cta">
+  <div class="container">
+    <span class="text-uppercase fw-bold text-primary small d-block mb-3">Subtítulo o Rubro</span>
+    <h1 class="tw-hero-title">Titular imponente con peso tipográfico destacado.</h1>
+    <p class="tw-hero-subtitle text-muted">Texto explicativo breve que sintetiza el espíritu del profesional o comercio.</p>
+    <div class="tw-hero-actions">
+      <a href="#contacto" class="tw-btn tw-btn-primary tw-btn-lg">Botón de Acción Directa <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- Hero 5: Split con Stats Flotante (Clarity) -->
+    <div id="hero-split-clarity" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Hero · Split con Stats</span>
+          <strong class="ms-2">Hero Split con Tarjeta Flotante de Métricas (Inspirado en Clarity)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-hero-split-clarity')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <section class="tw-hero tw-hero--split-text-left p-0">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+              <span class="tw-hero-kicker"><i class="bi bi-shield-check"></i> Asesoramiento Profesional</span>
+              <h2 class="tw-hero-title" style="font-size: 2.2rem;">Soluciones claras para proteger tu tranquilidad</h2>
+              <p class="tw-hero-subtitle" style="font-size: 1.05rem;">Atención ágil, directa y transparente en Río Tercero.</p>
+              <div class="tw-hero-actions">
+                <a href="#contacto" class="tw-btn tw-btn-primary">Agendar Consulta</a>
+                <a href="#servicios" class="tw-btn tw-btn-outline">Ver Especialidades</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="tw-hero-visual">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=80" alt="Oficina" class="tw-hero-main-img">
+                <div class="tw-hero-floating-stat">
+                  <div class="stat-icon"><i class="bi bi-award"></i></div>
+                  <div>
+                    <div class="stat-number">20+ Años</div>
+                    <div class="stat-label">De Experiencia y Compromiso</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <textarea id="code-hero-split-clarity" class="d-none">
+<section class="tw-hero tw-hero--split-text-left">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-tw-animate="fade-right">
+        <span class="tw-hero-kicker"><i class="bi bi-shield-check"></i> Rubro o Especialidad</span>
+        <h1 class="tw-hero-title">Título principal de alto impacto</h1>
+        <p class="tw-hero-subtitle">Descripción clara del servicio y de la propuesta de valor para el cliente.</p>
+        <div class="tw-hero-actions">
+          <a href="#contacto" class="tw-btn tw-btn-primary">Botón Principal</a>
+          <a href="#servicios" class="tw-btn tw-btn-outline">Botón Secundario</a>
+        </div>
+      </div>
+      <div class="col-lg-6" data-tw-animate="fade-left" data-tw-delay="200">
+        <div class="tw-hero-visual">
+          <img src="assets/img/hero.jpg" alt="Foto descriptiva" class="tw-hero-main-img">
+          <div class="tw-hero-floating-stat">
+            <div class="stat-icon"><i class="bi bi-award"></i></div>
+            <div>
+              <div class="stat-number">+15 Años</div>
+              <div class="stat-label">De trayectoria en Río Tercero</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- Hero 6: Local Store con Horarios y Ubicación en Vivo (Savora) -->
+    <div id="hero-store-savora" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Hero · Comercio Local</span>
+          <strong class="ms-2">Hero Comercial con Horario "Abierto Hoy" y Ubicación en Vivo (Inspirado en Savora)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-hero-store-savora')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <section class="tw-hero tw-hero--local-store p-0">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+              <span class="tw-hero-kicker"><i class="bi bi-basket2-fill"></i> Almacén & Fiambrería</span>
+              <h2 class="tw-hero-title" style="font-size: 2.2rem;">Lo más fresco directo a tu mesa</h2>
+              <p class="tw-hero-subtitle" style="font-size: 1.05rem;">Picadas artesanales, quesos seleccionados y productos de primera calidad en Río Tercero.</p>
+              <div class="tw-hero-actions">
+                <a href="https://wa.me/5493571XXXXXX" class="tw-btn tw-btn-wa"><i class="bi bi-whatsapp"></i> Pedir por WhatsApp</a>
+                <a href="#ofertas" class="tw-btn tw-btn-outline">Ver Ofertas</a>
+              </div>
+              <div class="tw-store-pills">
+                <div class="tw-store-pill">
+                  <span class="pill-dot"></span>
+                  <span><strong>Abierto Hoy:</strong> 08:30 a 13:00 / 17:00 a 21:30 hs</span>
+                </div>
+                <div class="tw-store-pill">
+                  <i class="bi bi-geo-alt-fill text-danger"></i>
+                  <span>Av. Savio 450, Río Tercero</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="tw-hero-mosaic">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&auto=format&fit=crop&q=80" alt="Productos" class="tw-mosaic-main">
+                <div class="tw-mosaic-badge">
+                  <span class="badge-val">10% OFF</span>
+                  <small>En efectivo</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <textarea id="code-hero-store-savora" class="d-none">
+<section class="tw-hero tw-hero--local-store">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-tw-animate="fade-right">
+        <span class="tw-hero-kicker"><i class="bi bi-shop"></i> Comercio de Barrio</span>
+        <h1 class="tw-hero-title">Título comercial con gancho</h1>
+        <p class="tw-hero-subtitle">Breve descripción de los productos o servicios destacados.</p>
+        <div class="tw-hero-actions">
+          <a href="https://wa.me/5493571XXXXXX" class="tw-btn tw-btn-wa"><i class="bi bi-whatsapp"></i> Pedir por WhatsApp</a>
+          <a href="#ofertas" class="tw-btn tw-btn-outline">Ver Ofertas del Mes</a>
+        </div>
+        <div class="tw-store-pills">
+          <div class="tw-store-pill">
+            <span class="pill-dot"></span>
+            <span><strong>Abierto hoy:</strong> 08:30 a 13:00 / 17:00 a 21:30 hs</span>
+          </div>
+          <div class="tw-store-pill">
+            <i class="bi bi-geo-alt-fill text-danger"></i>
+            <span>Dirección del local, Río Tercero</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-tw-animate="fade-left" data-tw-delay="200">
+        <div class="tw-hero-mosaic">
+          <img src="assets/img/local.jpg" alt="Foto de local" class="tw-mosaic-main">
+          <div class="tw-mosaic-badge">
+            <span class="badge-val">OFERTA</span>
+            <small>De la semana</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         2. OPCIONES CON ESQUINAS RECTAS (SHARP EDGES / 90 GRADOS)
+         ==================================================================== -->
+    <div id="sec-sharp" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <div>
+        <h2 class="h3 mb-0">2. Opciones con Esquinas Rectas (Sharp 90°)</h2>
+        <small class="text-muted">Inspirado en Archiste, Titan y estudios de arquitectura / diseño contemporáneo sin bordes redondeados.</small>
+      </div>
+      <span class="badge bg-dark">Modificadores .tw-sharp</span>
+    </div>
+
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Diseño Rectilíneo</span>
+          <strong class="ms-2">Tarjetas, Imágenes y Botones con Esquinas Rectas (0px Radius)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-sharp-cards')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="tw-sharp">
+          <div class="row gy-4">
+            <div class="col-md-4">
+              <div class="tw-service-card tw-card--sharp">
+                <div class="service-icon rounded-0" style="border-radius:0 !important;"><i class="bi bi-bounding-box"></i></div>
+                <h4>Arquitectura Residencial</h4>
+                <p>Diseño geométrico puro y estructurado con esquinas a 90 grados y máxima sobriedad.</p>
+                <a href="#contacto" class="service-link">Ver Proyecto <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="tw-service-card tw-card--sharp">
+                <div class="service-icon rounded-0" style="border-radius:0 !important;"><i class="bi bi-aspect-ratio"></i></div>
+                <h4>Dirección de Obra</h4>
+                <p>Supervisión rigurosa de materiales, tiempos y mano de obra con precisión milimétrica.</p>
+                <a href="#contacto" class="service-link">Ver Proyecto <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-4 border bg-dark text-white h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <span class="text-uppercase small text-white-50 d-block mb-2">Configuración Fácil</span>
+                  <h4 class="text-white">¿Cómo activar esquinas rectas?</h4>
+                  <p class="small text-white-50">Podés agregar la clase <code>.tw-sharp</code> al contenedor, usar <code>.tw-card--sharp</code> o definir en <code>theme.css</code>: <br><code>--tw-card-radius: 0px; --tw-btn-radius: 0px;</code></p>
+                </div>
+                <a href="#contacto" class="tw-btn tw-btn-primary tw-btn--sharp w-100">Botón Esquinas Rectas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-sharp-cards" class="d-none">
+<!-- Para aplicar esquinas rectas a toda una sección, añadí la clase "tw-sharp" -->
+<section class="tw-section tw-sharp">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <div class="tw-service-card tw-card--sharp">
+          <div class="service-icon"><i class="bi bi-bounding-box"></i></div>
+          <h4>Servicio Rectilíneo 1</h4>
+          <p>Descripción con diseño limpio sin curvaturas.</p>
+          <a href="#contacto" class="service-link">Explorar <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="tw-service-card tw-card--sharp">
+          <div class="service-icon"><i class="bi bi-aspect-ratio"></i></div>
+          <h4>Servicio Rectilíneo 2</h4>
+          <p>Descripción con diseño limpio sin curvaturas.</p>
+          <a href="#contacto" class="service-link">Explorar <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <a href="#contacto" class="tw-btn tw-btn-primary tw-btn--sharp w-100">Botón Recto</a>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         3. NOSOTROS / HISTORIA VARIANTES
+         ==================================================================== -->
+    <div id="sec-about" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <h2 class="h3 mb-0">3. Módulos Nosotros & Trayectoria</h2>
+      <span class="badge bg-secondary">2 Variantes Principales</span>
+    </div>
+
+    <!-- Nosotros Stats (Clarity) -->
+    <div id="about-stats" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Nosotros · Variante Stats</span>
+          <strong class="ms-2">Nosotros con Imagen Superpuesta + Tarjeta Flotante de Experiencia (Clarity)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-about-stats')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <section class="tw-about--story-stats p-0">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+              <span class="tw-section-kicker">Nuestra Trayectoria</span>
+              <h2 class="tw-section-title">Más de una década brindando soluciones concretas</h2>
+              <p class="text-muted">Acompañamos a personas y comercios de Río Tercero y localidades cercanas con un equipo multidisciplinario enfocado en la calidad y el cumplimiento estricto de cada proyecto.</p>
+              
+              <ul class="tw-about-check-list">
+                <li><i class="bi bi-check-circle-fill"></i> <span>Atención directa y personalizada sin intermediarios.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Presupuestos claros y tiempos de entrega garantizados.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i> <span>Soporte post-entrega continuo por WhatsApp.</span></li>
+              </ul>
+
+              <a href="#contacto" class="tw-btn tw-btn-primary">Conocé Más Sobre Nosotros</a>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="tw-about-composition">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80" alt="Equipo" class="img-main">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&auto=format&fit=crop&q=80" alt="Detalle" class="img-overlap">
+                <div class="experience-tag">
+                  <span class="num">12+</span>
+                  <small>Años de Pasión</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <textarea id="code-about-stats" class="d-none">
+<section id="nosotros" class="tw-section tw-about--story-stats">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-tw-animate="fade-right">
+        <span class="tw-section-kicker">Nuestra Historia</span>
+        <h2 class="tw-section-title">Título representativo de la empresa</h2>
+        <p class="text-muted">Descripción de la trayectoria, valores y el impacto en la comunidad local.</p>
+        
+        <ul class="tw-about-check-list">
+          <li><i class="bi bi-check-circle-fill"></i> <span>Punto destacado o beneficio clave 1.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span>Punto destacado o beneficio clave 2.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i> <span>Punto destacado o beneficio clave 3.</span></li>
+        </ul>
+
+        <a href="#contacto" class="tw-btn tw-btn-primary">Saber Más</a>
+      </div>
+
+      <div class="col-lg-6" data-tw-animate="fade-left" data-tw-delay="200">
+        <div class="tw-about-composition">
+          <img src="assets/img/nosotros-principal.jpg" alt="Foto principal" class="img-main">
+          <img src="assets/img/nosotros-secundaria.jpg" alt="Foto secundaria" class="img-overlap">
+          <div class="experience-tag">
+            <span class="num">15+</span>
+            <small>Años en el rubro</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- Nosotros Asimétrico (Strada) -->
+    <div id="about-asymmetric" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Nosotros · Variante Asimétrica</span>
+          <strong class="ms-2">Nosotros Asimétrico en 3 Columnas: Stats + Retrato + Pilares (Strada)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-about-asymmetric')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="tw-about--asymmetric-3col">
+          <div class="row gy-5 align-items-center">
+            <!-- Columna 1: Presentación y Stats -->
+            <div class="col-lg-5">
+              <h3 class="h4 mb-3">Compromiso ético y solidez profesional en cada paso</h3>
+              <p class="text-muted small">Brindamos soluciones integrales analizando en detalle las particularidades de cada cliente.</p>
+              
+              <div class="stats-row">
+                <div class="stat-item">
+                  <span class="num">450+</span>
+                  <span class="lbl">Clientes Atendidos</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <span class="num">98%</span>
+                  <span class="lbl">Satisfacción</span>
+                </div>
+              </div>
+
+              <a href="#contacto" class="tw-btn tw-btn-outline tw-btn-sm">Conocé al Equipo <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <!-- Columna 2: Retrato -->
+            <div class="col-lg-3">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80" alt="Profesional" class="img-fluid rounded shadow">
+            </div>
+
+            <!-- Columna 3: Rasgos Clave -->
+            <div class="col-lg-4">
+              <div class="feature-entry">
+                <h5><i class="bi bi-arrow-up-right text-primary"></i> Visión Estratégica</h5>
+                <p class="small text-muted">Planificamos cada etapa con objetivos comerciales medibles.</p>
+              </div>
+              <div class="feature-entry">
+                <h5><i class="bi bi-shield-check text-primary"></i> Transparencia Total</h5>
+                <p class="small text-muted">Presupuestos sin sorpresas y seguimiento en tiempo real.</p>
+              </div>
+              <div class="feature-entry">
+                <h5><i class="bi bi-geo-alt text-primary"></i> Alcance en Río Tercero</h5>
+                <p class="small text-muted">Cercanía y respuesta ágil en la zona centro y alrededores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-about-asymmetric" class="d-none">
+<section id="nosotros" class="tw-section tw-about--asymmetric-3col">
+  <div class="container">
+    <div class="row gy-5 align-items-center">
+      <!-- Columna 1: Presentación y Stats -->
+      <div class="col-lg-5" data-tw-animate="fade-right">
+        <h3 class="h4 mb-3">Título de la trayectoria y visión</h3>
+        <p class="text-muted small">Descripción del enfoque y compromiso de la firma o negocio.</p>
+        
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="num">500+</span>
+            <span class="lbl">Casos / Clientes</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="num">15+</span>
+            <span class="lbl">Años Locales</span>
+          </div>
+        </div>
+
+        <a href="#contacto" class="tw-btn tw-btn-outline tw-btn-sm">Saber Más <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+      <!-- Columna 2: Retrato Formal -->
+      <div class="col-lg-3" data-tw-animate="fade-up" data-tw-delay="150">
+        <img src="assets/img/retrato.jpg" alt="Titular" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Columna 3: Pilares de Valor -->
+      <div class="col-lg-4" data-tw-animate="fade-left" data-tw-delay="300">
+        <div class="feature-entry">
+          <h5><i class="bi bi-arrow-up-right text-primary"></i> Pilar 1</h5>
+          <p class="small text-muted">Breve descripción del valor diferencial.</p>
+        </div>
+        <div class="feature-entry">
+          <h5><i class="bi bi-shield-check text-primary"></i> Pilar 2</h5>
+          <p class="small text-muted">Breve descripción del valor diferencial.</p>
+        </div>
+        <div class="feature-entry">
+          <h5><i class="bi bi-geo-alt text-primary"></i> Pilar 3</h5>
+          <p class="small text-muted">Breve descripción del valor diferencial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         4. MÓDULOS DE SERVICIOS
+         ==================================================================== -->
+    <div id="sec-services" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <h2 class="h3 mb-0">4. Módulos de Servicios (Cards Elevadas & Opciones)</h2>
+      <span class="badge bg-secondary">3 Variantes</span>
+    </div>
+
+    <!-- Servicios: Cards Elevadas (Clarity) -->
+    <div id="services-cards-clarity" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Servicios · Cards Elevadas</span>
+          <strong class="ms-2">Servicios en Tarjetas Modernas con Icono en Cápsula y Hover Lift (Inspiración Clarity)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-services-cards-clarity')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="tw-service-card">
+              <div class="service-icon"><i class="bi bi-palette-fill"></i></div>
+              <h4>Identidad de Marca & Branding</h4>
+              <p>Diseño de logotipos memorables, paleta cromática, manual de normas y papelería comercial para que tu negocio se destaque.</p>
+              <a href="#contacto" class="service-link">Consultar presupuesto <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="tw-service-card">
+              <div class="service-icon"><i class="bi bi-laptop"></i></div>
+              <h4>Sitios Web One-Page</h4>
+              <p>Páginas livianas, 100% responsive y optimizadas para celulares con botón directo a WhatsApp para generar consultas inmediatas.</p>
+              <a href="#contacto" class="service-link">Consultar presupuesto <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="tw-service-card">
+              <div class="service-icon"><i class="bi bi-megaphone-fill"></i></div>
+              <h4>Estrategia en Redes Sociales</h4>
+              <p>Campañas visuales coordinadas, banners promocionales y estética cuidada para posicionar tu comercio en Río Tercero.</p>
+              <a href="#contacto" class="service-link">Consultar presupuesto <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-services-cards-clarity" class="d-none">
+<section id="servicios" class="tw-section tw-section--alt">
+  <div class="container">
+    <div class="tw-section-header text-center" data-tw-animate="fade-up">
+      <span class="tw-section-kicker">Lo Que Hacemos</span>
+      <h2 class="tw-section-title">Nuestros Servicios Principales</h2>
+      <p class="tw-section-subtitle">Soluciones profesionales diseñadas para responder exactamente a tus necesidades.</p>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6" data-tw-animate="fade-up" data-tw-delay="100">
+        <div class="tw-service-card">
+          <div class="service-icon"><i class="bi bi-check2-circle"></i></div>
+          <h4>Servicio 1</h4>
+          <p>Explicación concisa y persuasiva del servicio ofrecido y su beneficio para el usuario.</p>
+          <a href="#contacto" class="service-link">Consultar disponibilidad <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-tw-animate="fade-up" data-tw-delay="200">
+        <div class="tw-service-card">
+          <div class="service-icon"><i class="bi bi-lightning-charge"></i></div>
+          <h4>Servicio 2</h4>
+          <p>Explicación concisa y persuasiva del servicio ofrecido y su beneficio para el usuario.</p>
+          <a href="#contacto" class="service-link">Consultar disponibilidad <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-tw-animate="fade-up" data-tw-delay="300">
+        <div class="tw-service-card">
+          <div class="service-icon"><i class="bi bi-shield-lock"></i></div>
+          <h4>Servicio 3</h4>
+          <p>Explicación concisa y persuasiva del servicio ofrecido y su beneficio para el usuario.</p>
+          <a href="#contacto" class="service-link">Consultar disponibilidad <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         5. BANNER DE OFERTAS & PROMOCIONES
+         ==================================================================== -->
+    <div id="sec-offers" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <h2 class="h3 mb-0">5. Banner de Ofertas & Promociones Semanales</h2>
+      <span class="badge bg-danger">Alta Conversión</span>
+    </div>
+
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Banner Promocional</span>
+          <strong class="ms-2">Banner Destacado para Oferta de la Semana con Botón WhatsApp</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-promo-banner-full')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="tw-promo-banner">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+              <span class="promo-tag"><i class="bi bi-fire"></i> OFERTA DESTACADA DEL MES</span>
+              <h3>Promo Especial Almacén: Picada Don Tomás para 4 Personas</h3>
+              <p>Jamón crudo estacionado, queso gouda saborizado, bondiola, aceitunas rellenas y pan de masa madre casero con descuento exclusivo.</p>
+              <div class="d-flex align-items-baseline gap-3 mb-4">
+                <span class="fs-2 fw-bold text-white">$24.900</span>
+                <span class="text-white-50 text-decoration-line-through fs-5">$29.500</span>
+                <span class="badge bg-warning text-dark fw-bold">Ahorrás $4.600</span>
+              </div>
+              <a href="https://wa.me/5493571XXXXXX?text=Hola,%20quiero%20encargar%20la%20Promo%20Especial." target="_blank" rel="noopener" class="tw-btn tw-btn-wa">
+                <i class="bi bi-whatsapp"></i> Encargar Promo por WhatsApp
+              </a>
+            </div>
+            <div class="col-lg-4 text-center d-none d-lg-block">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&auto=format&fit=crop&q=80" alt="Promo" class="img-fluid rounded-3 shadow">
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-promo-banner-full" class="d-none">
+<section id="ofertas" class="tw-section py-4">
+  <div class="container">
+    <div class="tw-promo-banner" data-tw-animate="fade-up">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-8">
+          <span class="promo-tag"><i class="bi bi-fire"></i> OFERTA DE LA SEMANA</span>
+          <h3>Nombre de la Promoción o Paquete Especial</h3>
+          <p>Detalle de lo que incluye la oferta y las condiciones de compra o retiro.</p>
+          <div class="d-flex align-items-baseline gap-3 mb-4">
+            <span class="fs-2 fw-bold text-white">$XX.XXX</span>
+            <span class="text-white-50 text-decoration-line-through fs-5">$XX.XXX</span>
+            <span class="badge bg-warning text-dark fw-bold">Ahorrás 15%</span>
+          </div>
+          <a href="https://wa.me/5493571XXXXXX?text=Hola!%20Quiero%20pedir%20la%20oferta." target="_blank" rel="noopener" class="tw-btn tw-btn-wa">
+            <i class="bi bi-whatsapp"></i> Pedir Oferta por WhatsApp
+          </a>
+        </div>
+        <div class="col-lg-4 text-center d-none d-lg-block">
+          <img src="assets/img/oferta.jpg" alt="Foto Oferta" class="img-fluid rounded-3 shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         6. CATÁLOGO DE PRODUCTOS (CARDS + FILTROS POR CATEGORÍA)
+         ==================================================================== -->
+    <div id="sec-catalog" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <div>
+        <h2 class="h3 mb-0">6. Módulo Catálogo de Productos</h2>
+        <small class="text-muted">Cards de productos con fotos, badges, precios y pedido directo por WhatsApp con o sin filtro de categorías.</small>
+      </div>
+      <span class="badge bg-secondary">2 Variantes</span>
+    </div>
+
+    <!-- Catálogo Variante 1: Grilla de Cards con Botón WhatsApp -->
+    <div id="catalog-cards" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Catálogo Estándar</span>
+          <strong class="ms-2">Grilla de Productos con Foto, Categoría, Precio y Botón de Consulta/Pedido por WhatsApp</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-catalog-cards')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <span class="tw-product-badge">Destacado</span>
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop&q=80" alt="Producto 1">
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Especialidades</span>
+                <h3 class="tw-product-title">Tabla de Quesos y Fiambres Selección</h3>
+                <p class="tw-product-desc">Selección premium de quesos duros, semiduros, jamón crudo serrano y frutos secos para 4 a 6 personas.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">
+                    $18.500 <small>/ tabla</small>
+                  </div>
+                  <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20la%20Tabla%20de%20Quesos%20y%20Fiambres" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <span class="tw-product-badge" style="background:#EF4444;">Oferta</span>
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80" alt="Producto 2">
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Panadería Artesanal</span>
+                <h3 class="tw-product-title">Pan de Masa Madre de Centeno</h3>
+                <p class="tw-product-desc">Elaborado con fermentación lenta de 24 horas, harina orgánica molida en piedra y corteza crocante.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">
+                    $3.200 <small>/ hogaza</small>
+                  </div>
+                  <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20el%20Pan%20de%20Masa%20Madre" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600&auto=format&fit=crop&q=80" alt="Producto 3">
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Vinos de Altura</span>
+                <h3 class="tw-product-title">Vino Malbec Reserva del Valle</h3>
+                <p class="tw-product-desc">Crianza de 12 meses en roble francés, notas a ciruela madura, especias y chocolate. Ideal maridaje.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">
+                    $9.800 <small>/ botella</small>
+                  </div>
+                  <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20el%20Vino%20Malbec%20Reserva" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                    <i class="bi bi-whatsapp"></i> Pedir
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-catalog-cards" class="d-none"><!-- Módulo: Catálogo Estándar de Productos (Cards con WhatsApp) -->
+<section id="catalogo" class="tw-section">
+  <div class="container">
+    <div class="tw-section-header">
+      <span class="tw-section-subtitle">Nuestros Productos</span>
+      <h2 class="tw-section-title">Calidad y Sabor en Cada Detalle</h2>
+      <div class="tw-section-divider"></div>
+      <p class="tw-section-desc">Elegí lo que más te guste y realizá tu pedido directamente por WhatsApp de forma rápida y personalizada.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-tw-reveal>
+        <div class="tw-product-card">
+          <div class="tw-product-thumb">
+            <span class="tw-product-badge">Destacado</span>
+            <img src="assets/img/producto-1.jpg" alt="Nombre del Producto 1" loading="lazy">
+          </div>
+          <div class="tw-product-body">
+            <span class="tw-product-category">Categoría A</span>
+            <h3 class="tw-product-title">Nombre del Producto 1</h3>
+            <p class="tw-product-desc">Descripción corta y tentadora del producto con sus características clave e ingredientes.</p>
+            <div class="tw-product-footer">
+              <div class="tw-product-price">
+                $18.500 <small>/ unidad</small>
+              </div>
+              <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20el%20Producto%201" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                <i class="bi bi-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-tw-reveal>
+        <div class="tw-product-card">
+          <div class="tw-product-thumb">
+            <span class="tw-product-badge">Oferta</span>
+            <img src="assets/img/producto-2.jpg" alt="Nombre del Producto 2" loading="lazy">
+          </div>
+          <div class="tw-product-body">
+            <span class="tw-product-category">Categoría B</span>
+            <h3 class="tw-product-title">Nombre del Producto 2</h3>
+            <p class="tw-product-desc">Descripción corta y tentadora del producto con sus características clave e ingredientes.</p>
+            <div class="tw-product-footer">
+              <div class="tw-product-price">
+                $3.200 <small>/ unidad</small>
+              </div>
+              <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20el%20Producto%202" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                <i class="bi bi-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-tw-reveal>
+        <div class="tw-product-card">
+          <div class="tw-product-thumb">
+            <img src="assets/img/producto-3.jpg" alt="Nombre del Producto 3" loading="lazy">
+          </div>
+          <div class="tw-product-body">
+            <span class="tw-product-category">Categoría C</span>
+            <h3 class="tw-product-title">Nombre del Producto 3</h3>
+            <p class="tw-product-desc">Descripción corta y tentadora del producto con sus características clave e ingredientes.</p>
+            <div class="tw-product-footer">
+              <div class="tw-product-price">
+                $9.800 <small>/ unidad</small>
+              </div>
+              <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20el%20Producto%203" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                <i class="bi bi-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- Catálogo Variante 2: Tabs de Categorías Interactivas (Estilo Savora) -->
+    <div id="catalog-tabs" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Pestañas Filtrables</span>
+          <strong class="ms-2">Filtro Dinámico por Rubros/Categorías sin Recargar la Página (data-tw-tabs)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-catalog-tabs')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <!-- Pestañas -->
+        <ul class="tw-cat-tabs" data-tw-tabs data-target="#showroom-cat-grid">
+          <li><button type="button" class="tw-cat-tab-btn active" data-filter="all">Todos</button></li>
+          <li><button type="button" class="tw-cat-tab-btn" data-filter="quesos">Quesos</button></li>
+          <li><button type="button" class="tw-cat-tab-btn" data-filter="fiambres">Fiambres</button></li>
+          <li><button type="button" class="tw-cat-tab-btn" data-filter="panaderia">Panadería</button></li>
+        </ul>
+
+        <!-- Grilla de productos vinculada -->
+        <div id="showroom-cat-grid" class="row g-4">
+          <div class="col-md-6 col-lg-4" data-category="quesos">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <span class="tw-product-badge">Artesanal</span>
+                <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?w=600&auto=format&fit=crop&q=80" alt="Queso Gouda">
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Quesos</span>
+                <h3 class="tw-product-title">Queso Gouda Estacionado</h3>
+                <p class="tw-product-desc">Sabor suave y textura mantecosa. Ideal para picadas y sándwiches gourmet.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$4.800 <small>/ 500g</small></div>
+                  <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20Queso%20Gouda" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm"><i class="bi bi-whatsapp"></i> Pedir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-category="fiambres">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <span class="tw-product-badge">Importado</span>
+                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop&q=80" alt="Jamón Serrano">
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Fiambres</span>
+                <h3 class="tw-product-title">Jamón Serrano Reserva 14 Meses</h3>
+                <p class="tw-product-desc">Curado tradicional, fetas finas y punto justo de sal marina.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$6.200 <small>/ 200g</small></div>
+                  <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20Jamon%20Serrano" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm"><i class="bi bi-whatsapp"></i> Pedir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-category="panaderia">
+            <div class="tw-product-card">
+              <div class="tw-product-thumb">
+                <span class="tw-product-badge" style="background:#059669;">Recién Horneado</span>
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80" alt="Focaccia de Romero">
+              </div>
+              <div class="tw-product-body">
+                <span class="tw-product-category">Panadería</span>
+                <h3 class="tw-product-title">Focaccia al Romero y Oliva Extra Virgen</h3>
+                <p class="tw-product-desc">Crocante por fuera y esponjosa por dentro, con sal marina y romero fresco del huerto.</p>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">$2.900 <small>/ porción</small></div>
+                  <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20Focaccia" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm"><i class="bi bi-whatsapp"></i> Pedir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-catalog-tabs" class="d-none"><!-- Módulo: Catálogo con Tabs de Filtrado Dinámico (data-tw-tabs) -->
+<section id="catalogo" class="tw-section">
+  <div class="container">
+    <div class="tw-section-header">
+      <span class="tw-section-subtitle">Nuestra Carta / Catálogo</span>
+      <h2 class="tw-section-title">Explorá Nuestras Variedades</h2>
+      <div class="tw-section-divider"></div>
+      <p class="tw-section-desc">Seleccioná una categoría para filtrar los productos al instante sin recargar la página.</p>
+    </div>
+
+    <!-- Barra de Pestañas Filtrables -->
+    <ul class="tw-cat-tabs" data-tw-tabs data-target="#catalog-grid">
+      <li><button type="button" class="tw-cat-tab-btn active" data-filter="all">Todos</button></li>
+      <li><button type="button" class="tw-cat-tab-btn" data-filter="categoria-1">Categoría 1</button></li>
+      <li><button type="button" class="tw-cat-tab-btn" data-filter="categoria-2">Categoría 2</button></li>
+      <li><button type="button" class="tw-cat-tab-btn" data-filter="categoria-3">Categoría 3</button></li>
+    </ul>
+
+    <!-- Grilla de Productos (filtrables mediante el atributo data-category) -->
+    <div id="catalog-grid" class="row g-4">
+      <div class="col-md-6 col-lg-4" data-category="categoria-1" data-tw-reveal>
+        <div class="tw-product-card">
+          <div class="tw-product-thumb">
+            <span class="tw-product-badge">Destacado</span>
+            <img src="assets/img/producto-1.jpg" alt="Producto 1" loading="lazy">
+          </div>
+          <div class="tw-product-body">
+            <span class="tw-product-category">Categoría 1</span>
+            <h3 class="tw-product-title">Nombre del Producto 1</h3>
+            <p class="tw-product-desc">Breve descripción del producto con sus bondades principales.</p>
+            <div class="tw-product-footer">
+              <div class="tw-product-price">$4.800 <small>/ unidad</small></div>
+              <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20el%20Producto%201" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                <i class="bi bi-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="categoria-2" data-tw-reveal>
+        <div class="tw-product-card">
+          <div class="tw-product-thumb">
+            <img src="assets/img/producto-2.jpg" alt="Producto 2" loading="lazy">
+          </div>
+          <div class="tw-product-body">
+            <span class="tw-product-category">Categoría 2</span>
+            <h3 class="tw-product-title">Nombre del Producto 2</h3>
+            <p class="tw-product-desc">Breve descripción del producto con sus bondades principales.</p>
+            <div class="tw-product-footer">
+              <div class="tw-product-price">$6.200 <small>/ unidad</small></div>
+              <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20el%20Producto%202" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                <i class="bi bi-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4" data-category="categoria-3" data-tw-reveal>
+        <div class="tw-product-card">
+          <div class="tw-product-thumb">
+            <span class="tw-product-badge">Novedad</span>
+            <img src="assets/img/producto-3.jpg" alt="Producto 3" loading="lazy">
+          </div>
+          <div class="tw-product-body">
+            <span class="tw-product-category">Categoría 3</span>
+            <h3 class="tw-product-title">Nombre del Producto 3</h3>
+            <p class="tw-product-desc">Breve descripción del producto con sus bondades principales.</p>
+            <div class="tw-product-footer">
+              <div class="tw-product-price">$2.900 <small>/ unidad</small></div>
+              <a href="https://wa.me/5493571000000?text=Hola!%20Quiero%20pedir%20el%20Producto%203" target="_blank" rel="noopener" class="tw-btn tw-btn--primary btn-sm">
+                <i class="bi bi-whatsapp"></i> Pedir
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         7. GALERÍA / PORTFOLIO (MÁXIMO 8 / 10 IMÁGENES)
+         ==================================================================== -->
+    <div id="sec-gallery" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <div>
+        <h2 class="h3 mb-0">7. Módulo de Galería (8 a 10 Imágenes)</h2>
+        <small class="text-muted">Grilla limpia y balanceada con zoom suave y overlay descriptivo.</small>
+      </div>
+      <span class="badge bg-secondary">8 Fotos</span>
+    </div>
+
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Galería Fotográfica</span>
+          <strong class="ms-2">Grilla de 8 Imágenes con Efecto Zoom y Overlay al Hover</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-gallery-8')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="tw-gallery-grid">
+          <div class="tw-gallery-item">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&auto=format&fit=crop&q=80" alt="Foto 1">
+            <div class="tw-gallery-overlay">
+              <h5>Balayage Cálido</h5>
+              <span>Estilismo & Color</span>
+            </div>
+          </div>
+          <div class="tw-gallery-item">
+            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&auto=format&fit=crop&q=80" alt="Foto 2">
+            <div class="tw-gallery-overlay">
+              <h5>Corte Bob Moderno</h5>
+              <span>Tendencia & Estructura</span>
+            </div>
+          </div>
+          <div class="tw-gallery-item">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80" alt="Foto 3">
+            <div class="tw-gallery-overlay">
+              <h5>Gloss Nutritivo</h5>
+              <span>Tratamientos Capilares</span>
+            </div>
+          </div>
+          <div class="tw-gallery-item">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&auto=format&fit=crop&q=80" alt="Foto 4">
+            <div class="tw-gallery-overlay">
+              <h5>Lifting de Pestañas</h5>
+              <span>Mirada Definida</span>
+            </div>
+          </div>
+          <div class="tw-gallery-item">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&auto=format&fit=crop&q=80" alt="Foto 5">
+            <div class="tw-gallery-overlay">
+              <h5>Tono Cobrizo Intenso</h5>
+              <span>Coloración Especial</span>
+            </div>
+          </div>
+          <div class="tw-gallery-item">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&auto=format&fit=crop&q=80" alt="Foto 6">
+            <div class="tw-gallery-overlay">
+              <h5>Ambiente de Relax</h5>
+              <span>Nuestro Espacio</span>
+            </div>
+          </div>
+          <div class="tw-gallery-item">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&auto=format&fit=crop&q=80" alt="Foto 7">
+            <div class="tw-gallery-overlay">
+              <h5>Cuidado Integral</h5>
+              <span>Cosmética Vegana</span>
+            </div>
+          </div>
+          <div class="tw-gallery-item">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&auto=format&fit=crop&q=80" alt="Foto 8">
+            <div class="tw-gallery-overlay">
+              <h5>Atención Personalizada</h5>
+              <span>Dedicación en Cada Detalle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-gallery-8" class="d-none">
+<section id="galeria" class="tw-section tw-section--alt">
+  <div class="container">
+    <div class="tw-section-header text-center" data-tw-animate="fade-up">
+      <span class="tw-section-kicker">Galería Visual</span>
+      <h2 class="tw-section-title">Nuestros Trabajos Realizados</h2>
+      <p class="tw-section-subtitle">Una muestra fotográfica de resultados y momentos reales.</p>
+    </div>
+
+    <div class="tw-gallery-grid" data-tw-animate="fade-up">
+      <div class="tw-gallery-item">
+        <img src="assets/img/galeria-1.jpg" alt="Foto 1">
+        <div class="tw-gallery-overlay">
+          <h5>Título de Foto 1</h5>
+          <span>Categoría o detalle</span>
+        </div>
+      </div>
+      <div class="tw-gallery-item">
+        <img src="assets/img/galeria-2.jpg" alt="Foto 2">
+        <div class="tw-gallery-overlay">
+          <h5>Título de Foto 2</h5>
+          <span>Categoría o detalle</span>
+        </div>
+      </div>
+      <div class="tw-gallery-item">
+        <img src="assets/img/galeria-3.jpg" alt="Foto 3">
+        <div class="tw-gallery-overlay">
+          <h5>Título de Foto 3</h5>
+          <span>Categoría o detalle</span>
+        </div>
+      </div>
+      <div class="tw-gallery-item">
+        <img src="assets/img/galeria-4.jpg" alt="Foto 4">
+        <div class="tw-gallery-overlay">
+          <h5>Título de Foto 4</h5>
+          <span>Categoría o detalle</span>
+        </div>
+      </div>
+      <div class="tw-gallery-item">
+        <img src="assets/img/galeria-5.jpg" alt="Foto 5">
+        <div class="tw-gallery-overlay">
+          <h5>Título de Foto 5</h5>
+          <span>Categoría o detalle</span>
+        </div>
+      </div>
+      <div class="tw-gallery-item">
+        <img src="assets/img/galeria-6.jpg" alt="Foto 6">
+        <div class="tw-gallery-overlay">
+          <h5>Título de Foto 6</h5>
+          <span>Categoría o detalle</span>
+        </div>
+      </div>
+      <div class="tw-gallery-item">
+        <img src="assets/img/galeria-7.jpg" alt="Foto 7">
+        <div class="tw-gallery-overlay">
+          <h5>Título de Foto 7</h5>
+          <span>Categoría o detalle</span>
+        </div>
+      </div>
+      <div class="tw-gallery-item">
+        <img src="assets/img/galeria-8.jpg" alt="Foto 8">
+        <div class="tw-gallery-overlay">
+          <h5>Título de Foto 8</h5>
+          <span>Categoría o detalle</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         8. TESTIMONIOS / RESEÑAS
+         ==================================================================== -->
+    <div id="sec-testimonials" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <h2 class="h3 mb-0">8. Módulo de Testimonios & Reseñas de Clientes</h2>
+      <span class="badge bg-secondary">3 Tarjetas</span>
+    </div>
+
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Reseñas de Clientes</span>
+          <strong class="ms-2">Tarjetas de Opiniones con Estrellas, Avatar y Ciudad</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-testimonials-cards')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="tw-review-card">
+              <div class="tw-review-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="tw-review-text">"Excelente atención y cumplimiento. Supieron asesorarme con total paciencia y profesionalismo desde el primer contacto por WhatsApp."</p>
+              <div class="tw-review-author">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&auto=format&fit=crop&q=80" alt="Cliente" class="tw-review-avatar">
+                <div class="tw-review-info">
+                  <h6>Mariana López</h6>
+                  <span>Cliente particular · Río Tercero</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="tw-review-card">
+              <div class="tw-review-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="tw-review-text">"Resolvieron un problema complejo en tiempo récord. La calidez humana y la transparencia en los costos es lo que más destaco."</p>
+              <div class="tw-review-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" alt="Cliente" class="tw-review-avatar">
+                <div class="tw-review-info">
+                  <h6>Carlos Benítez</h6>
+                  <span>Comerciante local · Almafuerte</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="tw-review-card">
+              <div class="tw-review-stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p class="tw-review-text">"Superaron mis expectativas. Los recomendé a todos mis colegas y familiares. Es difícil encontrar un servicio tan dedicado en la zona."</p>
+              <div class="tw-review-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&auto=format&fit=crop&q=80" alt="Cliente" class="tw-review-avatar">
+                <div class="tw-review-info">
+                  <h6>Valeria Rossi</h6>
+                  <span>Cliente habitual · Río Tercero</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-testimonials-cards" class="d-none">
+<section id="testimonios" class="tw-section">
+  <div class="container">
+    <div class="tw-section-header text-center" data-tw-animate="fade-up">
+      <span class="tw-section-kicker">Confianza</span>
+      <h2 class="tw-section-title">Lo Que Dicen Quienes Nos Eligen</h2>
+      <p class="tw-section-subtitle">Testimonios de clientes reales de Río Tercero y la zona.</p>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-4" data-tw-animate="fade-up" data-tw-delay="100">
+        <div class="tw-review-card">
+          <div class="tw-review-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="tw-review-text">"Texto del testimonio destacando la calidad, cumplimiento o solución recibida."</p>
+          <div class="tw-review-author">
+            <img src="assets/img/avatar-1.jpg" alt="Cliente" class="tw-review-avatar">
+            <div class="tw-review-info">
+              <h6>Nombre y Apellido</h6>
+              <span>Cliente · Localidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-tw-animate="fade-up" data-tw-delay="200">
+        <div class="tw-review-card">
+          <div class="tw-review-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="tw-review-text">"Texto del testimonio destacando la calidad, cumplimiento o solución recibida."</p>
+          <div class="tw-review-author">
+            <img src="assets/img/avatar-2.jpg" alt="Cliente" class="tw-review-avatar">
+            <div class="tw-review-info">
+              <h6>Nombre y Apellido</h6>
+              <span>Cliente · Localidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-tw-animate="fade-up" data-tw-delay="300">
+        <div class="tw-review-card">
+          <div class="tw-review-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="tw-review-text">"Texto del testimonio destacando la calidad, cumplimiento o solución recibida."</p>
+          <div class="tw-review-author">
+            <img src="assets/img/avatar-3.jpg" alt="Cliente" class="tw-review-avatar">
+            <div class="tw-review-info">
+              <h6>Nombre y Apellido</h6>
+              <span>Cliente · Localidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         9. PREGUNTAS FRECUENTES (FAQS)
+         ==================================================================== -->
+    <div id="sec-faq" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <h2 class="h3 mb-0">9. Módulo de Preguntas Frecuentes (FAQS)</h2>
+      <span class="badge bg-secondary">Acordeón Accesible</span>
+    </div>
+
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">FAQS Acordeón</span>
+          <strong class="ms-2">Acordeón Desplegable Fluido con Preguntas Frecuentes</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-faq-accordion-full')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion tw-faq-accordion" id="faqAccordionShowroom">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqSh1">
+                    ¿Cómo coordino una consulta o presupuesto?
+                  </button>
+                </h3>
+                <div id="faqSh1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordionShowroom">
+                  <div class="accordion-body">
+                    Podés escribirnos directamente a nuestro WhatsApp o completar el formulario del sitio web. Respondemos en el día para coordinar turnos o enviar presupuestos sin cargo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSh2">
+                    ¿Qué medios de pago aceptan?
+                  </button>
+                </h3>
+                <div id="faqSh2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionShowroom">
+                  <div class="accordion-body">
+                    Aceptamos efectivo (con descuento especial en promociones), transferencias bancarias, tarjetas de débito/crédito y billeteras virtuales (Mercado Pago y MODO).
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqSh3">
+                    ¿Hacen envíos o atienden en localidades vecinas?
+                  </button>
+                </h3>
+                <div id="faqSh3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionShowroom">
+                  <div class="accordion-body">
+                    Sí, atendemos en Río Tercero, Almafuerte, Tancacha, Hernando y toda la zona de Calamuchita con servicios presenciales, envíos a domicilio o asesoramiento virtual.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-faq-accordion-full" class="d-none">
+<section id="faq" class="tw-section tw-section--alt">
+  <div class="container">
+    <div class="tw-section-header text-center" data-tw-animate="fade-up">
+      <span class="tw-section-kicker">Dudas Habituales</span>
+      <h2 class="tw-section-title">Preguntas Frecuentes</h2>
+      <p class="tw-section-subtitle">Respuestas claras a las consultas más comunes.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-tw-animate="fade-up">
+        <div class="accordion tw-faq-accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                ¿Pregunta frecuente número 1?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Respuesta detallada y clara a la primera inquietud del cliente.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                ¿Pregunta frecuente número 2?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Respuesta detallada y clara a la segunda inquietud del cliente.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                ¿Pregunta frecuente número 3?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Respuesta detallada y clara a la tercera inquietud del cliente.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         10. HORARIOS COMERCIALES & MAPA INTERACTIVO
+         ==================================================================== -->
+    <div id="sec-location" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <div>
+        <h2 class="h3 mb-0">10. Módulo Horarios Comerciales & Mapa Interactivo</h2>
+        <small class="text-muted">Ficha semántica (article/address/time) con estado en vivo, horarios semanales, medios de pago y Google Maps integrado.</small>
+      </div>
+      <span class="badge bg-secondary">Semántico SEO</span>
+    </div>
+
+    <!-- Horarios & Mapa Variante: Ficha Semántica Split -->
+    <div id="location-split" class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Horarios & Ubicación</span>
+          <strong class="ms-2">Ficha Semántica con Horarios Semanales, Medios de Pago y Mapa de Río Tercero y Zona</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-location-split')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5">
+            <article class="tw-location-card">
+              <div class="tw-status-badge">
+                <i class="bi bi-clock-fill"></i> Abierto ahora · Cierra a las <time datetime="20:30">20:30 hs</time>
+              </div>
+              <h3 class="h4 mb-2">Visitanos en Río Tercero</h3>
+              <p class="text-muted mb-4">Estamos en pleno centro comercial, con fácil acceso y estacionamiento sobre la avenida.</p>
+
+              <address class="tw-location-details">
+                <div class="d-flex align-items-start gap-3 mb-3">
+                  <i class="bi bi-geo-alt-fill text-primary fs-5 mt-1"></i>
+                  <div>
+                    <strong>Dirección:</strong><br>
+                    <span class="text-muted">Av. Savio 1420, Río Tercero, Córdoba</span>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-start gap-3 mb-4">
+                  <i class="bi bi-telephone-fill text-primary fs-5 mt-1"></i>
+                  <div>
+                    <strong>Teléfono directo:</strong><br>
+                    <a href="tel:03571420000" class="text-decoration-none fw-semibold">(03571) 42-0000</a>
+                  </div>
+                </div>
+              </address>
+
+              <h4 class="h6 text-uppercase fw-bold text-secondary mb-2">Horarios de Atención</h4>
+              <table class="tw-schedule-table">
+                <tbody>
+                  <tr>
+                    <td>Lunes a Viernes</td>
+                    <td><time>08:30 a 12:30</time> · <time>16:30 a 20:30 hs</time></td>
+                  </tr>
+                  <tr>
+                    <td>Sábados</td>
+                    <td><time>09:00 a 13:00</time> · <time>17:00 a 21:00 hs</time></td>
+                  </tr>
+                  <tr>
+                    <td>Domingos y Feriados</td>
+                    <td class="text-danger fw-semibold">Cerrado</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="h6 text-uppercase fw-bold text-secondary mt-4 mb-2">Medios de Pago Aceptados</h4>
+              <div class="tw-payment-methods">
+                <span class="tw-payment-pill"><i class="bi bi-cash"></i> Efectivo (10% OFF)</span>
+                <span class="tw-payment-pill"><i class="bi bi-qr-code"></i> Mercado Pago / Transferencia</span>
+                <span class="tw-payment-pill"><i class="bi bi-credit-card"></i> Tarjetas Débito / Crédito</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="h-100 rounded-3 overflow-hidden shadow-sm border" style="min-height: 400px;">
+              <iframe
+                title="Mapa de Ubicación en Río Tercero"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26989.375806653183!2d-64.116667!3d-32.166667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd6f113a30c5e9%3A0x6b77c38bf64a13e2!2sR%C3%ADo%20Tercero%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                width="100%"
+                height="100%"
+                style="border:0; min-height: 420px; display:block;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-location-split" class="d-none"><!-- Módulo Semántico: Horarios Comerciales y Ubicación con Mapa (SEO Friendly) -->
+<section id="horarios-ubicacion" class="tw-section tw-section--alt">
+  <div class="container">
+    <header class="tw-section-header text-center" data-tw-animate="fade-up">
+      <span class="tw-section-kicker">Dónde Estamos</span>
+      <h2 class="tw-section-title">Horarios & Ubicación</h2>
+      <p class="tw-section-subtitle">Te esperamos en nuestro local o contactanos para coordinar entregas y consultas.</p>
+    </header>
+
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-5" data-tw-animate="fade-up">
+        <article class="tw-location-card">
+          <!-- Estado en vivo -->
+          <div class="tw-status-badge">
+            <i class="bi bi-clock-fill"></i> Abierto ahora · Cierra a las <time datetime="20:30">20:30 hs</time>
+          </div>
+          <h3 class="h4 mb-2">Visitanos en Río Tercero</h3>
+          <p class="text-muted mb-4">Estamos en pleno centro comercial, con fácil acceso y estacionamiento.</p>
+
+          <address class="tw-location-details">
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="bi bi-geo-alt-fill text-primary fs-5 mt-1"></i>
+              <div>
+                <strong>Dirección:</strong><br>
+                <span class="text-muted">Av. Savio 1420, Río Tercero, Córdoba</span>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3 mb-4">
+              <i class="bi bi-telephone-fill text-primary fs-5 mt-1"></i>
+              <div>
+                <strong>Teléfono:</strong><br>
+                <a href="tel:03571420000" class="text-decoration-none fw-semibold">(03571) 42-0000</a>
+              </div>
+            </div>
+          </address>
+
+          <h4 class="h6 text-uppercase fw-bold text-secondary mb-2">Horarios Semanales</h4>
+          <table class="tw-schedule-table">
+            <tbody>
+              <tr>
+                <td>Lunes a Viernes</td>
+                <td><time>08:30 a 12:30</time> · <time>16:30 a 20:30 hs</time></td>
+              </tr>
+              <tr>
+                <td>Sábados</td>
+                <td><time>09:00 a 13:00</time> · <time>17:00 a 21:00 hs</time></td>
+              </tr>
+              <tr>
+                <td>Domingos y Feriados</td>
+                <td class="text-danger fw-semibold">Cerrado</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4 class="h6 text-uppercase fw-bold text-secondary mt-4 mb-2">Medios de Pago</h4>
+          <div class="tw-payment-methods">
+            <span class="tw-payment-pill"><i class="bi bi-cash"></i> Efectivo (10% OFF)</span>
+            <span class="tw-payment-pill"><i class="bi bi-qr-code"></i> Mercado Pago / Transferencia</span>
+            <span class="tw-payment-pill"><i class="bi bi-credit-card"></i> Tarjetas Débito / Crédito</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-lg-7" data-tw-animate="fade-up">
+        <div class="h-100 rounded-3 overflow-hidden shadow-sm border" style="min-height: 400px;">
+          <!-- Reemplazar el src por el iframe de Google Maps del cliente -->
+          <iframe
+            title="Ubicación en Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26989.375806653183!2d-64.116667!3d-32.166667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd6f113a30c5e9%3A0x6b77c38bf64a13e2!2sR%C3%ADo%20Tercero%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+            width="100%"
+            height="100%"
+            style="border:0; min-height: 420px; display:block;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         11. CONTACTO
+         ==================================================================== -->
+    <div id="sec-contact" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <h2 class="h3 mb-0">11. Módulos de Contacto</h2>
+      <span class="badge bg-secondary">Formulario a WhatsApp & Datos</span>
+    </div>
+
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Contacto Split</span>
+          <strong class="ms-2">Ficha de Información a la Izquierda + Formulario a WhatsApp a la Derecha</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-contact-split-full')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="tw-contact-info-card">
+              <h4 class="mb-4">Canales de Atención</h4>
+              <div class="tw-contact-row">
+                <div class="icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+                <div>
+                  <h6>Dirección</h6>
+                  <p>Calle Ejemplo 123, Río Tercero, Córdoba</p>
+                </div>
+              </div>
+              <div class="tw-contact-row">
+                <div class="icon-box"><i class="bi bi-telephone-fill"></i></div>
+                <div>
+                  <h6>Teléfono Directo</h6>
+                  <p><a href="tel:+5493571XXXXXX">+54 9 3571 XX-XXXX</a></p>
+                </div>
+              </div>
+              <div class="tw-contact-row">
+                <div class="icon-box"><i class="bi bi-clock-fill"></i></div>
+                <div>
+                  <h6>Horario</h6>
+                  <p>Lunes a Viernes: 08:30 a 19:30 hs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="tw-form-box">
+              <h4 class="mb-3">Envianos tu consulta directa</h4>
+              <p class="small text-muted mb-4">El mensaje se abrirá automáticamente en tu WhatsApp listo para enviar.</p>
+              <form data-tw-wa-form="5493571XXXXXX">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Tu Nombre</label>
+                    <input type="text" name="nombre" class="form-control tw-form-control" required placeholder="Ej: Juan Pérez">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Asunto o Servicio</label>
+                    <input type="text" name="asunto" class="form-control tw-form-control" placeholder="Ej: Consulta de presupuesto">
+                  </div>
+                  <div class="col-12">
+                    <label class="tw-form-label">Mensaje</label>
+                    <textarea name="mensaje" rows="4" class="form-control tw-form-control" required placeholder="Escribí los detalles de tu consulta..."></textarea>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="tw-btn tw-btn-wa w-100">
+                      <i class="bi bi-whatsapp"></i> Enviar a WhatsApp
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <textarea id="code-contact-split-full" class="d-none">
+<section id="contacto" class="tw-section">
+  <div class="container">
+    <div class="tw-section-header text-center" data-tw-animate="fade-up">
+      <span class="tw-section-kicker">Comunicate</span>
+      <h2 class="tw-section-title">Estamos para Asesorarte</h2>
+      <p class="tw-section-subtitle">Escribinos y te responderemos a la brevedad.</p>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-5" data-tw-animate="fade-right">
+        <div class="tw-contact-info-card">
+          <h4 class="mb-4">Información de Contacto</h4>
+          <div class="tw-contact-row">
+            <div class="icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+            <div>
+              <h6>Dirección</h6>
+              <p>Calle y Número, Río Tercero, Córdoba</p>
+            </div>
+          </div>
+          <div class="tw-contact-row">
+            <div class="icon-box"><i class="bi bi-telephone-fill"></i></div>
+            <div>
+              <h6>Teléfono</h6>
+              <p><a href="tel:+5493571XXXXXX">+54 9 3571 XX-XXXX</a></p>
+            </div>
+          </div>
+          <div class="tw-contact-row">
+            <div class="icon-box"><i class="bi bi-clock-fill"></i></div>
+            <div>
+              <h6>Horarios</h6>
+              <p>Lunes a Viernes: 08:30 a 19:30 hs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-tw-animate="fade-left" data-tw-delay="200">
+        <div class="tw-form-box">
+          <h4 class="mb-3">Envianos tu consulta</h4>
+          <form data-tw-wa-form="5493571XXXXXX">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="tw-form-label">Nombre</label>
+                <input type="text" name="nombre" class="form-control tw-form-control" required placeholder="Tu nombre">
+              </div>
+              <div class="col-md-6">
+                <label class="tw-form-label">Asunto</label>
+                <input type="text" name="asunto" class="form-control tw-form-control" placeholder="Servicio de interés">
+              </div>
+              <div class="col-12">
+                <label class="tw-form-label">Mensaje</label>
+                <textarea name="mensaje" rows="4" class="form-control tw-form-control" required placeholder="Tu mensaje..."></textarea>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="tw-btn tw-btn-wa w-100">
+                  <i class="bi bi-whatsapp"></i> Enviar Mensaje a WhatsApp
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section></textarea>
+    </div>
+
+    <!-- ====================================================================
+         12. OPCIONES DE FOOTER
+         ==================================================================== -->
+    <div id="sec-footers" class="d-flex align-items-center justify-content-between mb-4 mt-5 pb-2 border-bottom">
+      <h2 class="h3 mb-0">12. Opciones de Footer</h2>
+      <span class="badge bg-secondary">3 Variantes</span>
+    </div>
+
+    <!-- Footer Variante 1: Standard 4 Columnas -->
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Footer · Variante 1</span>
+          <strong class="ms-2">Footer Standard en 4 Columnas (Bio + Enlaces + Contacto + Redes)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-footer-standard')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview p-0">
+        <footer class="tw-footer">
+          <div class="container">
+            <div class="row gy-4">
+              <div class="col-lg-4 col-md-6">
+                <h5>NombreCliente<span class="text-primary">.</span></h5>
+                <p class="small text-white-50">Servicios profesionales y de confianza para toda la comunidad de Río Tercero y localidades vecinas.</p>
+                <div class="d-flex gap-2 mt-3">
+                  <a href="#" class="btn btn-sm btn-outline-light rounded-circle" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-light rounded-circle" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;"><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6">
+                <h6 class="text-white mb-3">Navegación</h6>
+                <ul class="tw-footer-links small">
+                  <li><a href="#inicio">Inicio</a></li>
+                  <li><a href="#servicios">Servicios</a></li>
+                  <li><a href="#nosotros">Nosotros</a></li>
+                  <li><a href="#contacto">Contacto</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h6 class="text-white mb-3">Contacto Directo</h6>
+                <ul class="tw-footer-links small">
+                  <li><i class="bi bi-geo-alt me-2 text-primary"></i> Río Tercero, Córdoba</li>
+                  <li><i class="bi bi-telephone me-2 text-primary"></i> +54 9 3571 XX-XXXX</li>
+                  <li><i class="bi bi-envelope me-2 text-primary"></i> contacto@cliente.com</li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <h6 class="text-white mb-3">Horario Comercial</h6>
+                <p class="small text-white-50 mb-1">Lunes a Viernes: 08:30 a 19:30 hs</p>
+                <p class="small text-white-50">Sábados: 09:00 a 13:00 hs</p>
+              </div>
+            </div>
+            <div class="tw-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+              <div>© 2026 NombreCliente. Todos los derechos reservados.</div>
+              <div class="tw-credit-badge">
+                Desarrollado con <strong>Tengo Web</strong> de <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <textarea id="code-footer-standard" class="d-none">
+<footer class="tw-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6">
+        <h5>NombreCliente<span class="text-primary">.</span></h5>
+        <p class="small text-white-50">Servicios profesionales y de confianza en Río Tercero.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="#" class="btn btn-sm btn-outline-light rounded-circle" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="btn btn-sm btn-outline-light rounded-circle" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h6 class="text-white mb-3">Navegación</h6>
+        <ul class="tw-footer-links small">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h6 class="text-white mb-3">Contacto</h6>
+        <ul class="tw-footer-links small">
+          <li><i class="bi bi-geo-alt me-2 text-primary"></i> Río Tercero, Córdoba</li>
+          <li><i class="bi bi-telephone me-2 text-primary"></i> +54 9 3571 XX-XXXX</li>
+          <li><i class="bi bi-envelope me-2 text-primary"></i> info@cliente.com</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h6 class="text-white mb-3">Horario</h6>
+        <p class="small text-white-50 mb-1">Lunes a Viernes: 08:30 a 19:30 hs</p>
+        <p class="small text-white-50">Sábados: 09:00 a 13:00 hs</p>
+      </div>
+    </div>
+    <div class="tw-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div>© 2026 NombreCliente. Todos los derechos reservados.</div>
+      <div class="tw-credit-badge">
+        Desarrollado con <strong>Tengo Web</strong> de <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+      </div>
+    </div>
+  </div>
+</footer></textarea>
+    </div>
+
+    <!-- Footer Variante 2: Minimalista en una Sola Línea -->
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Footer · Variante 2</span>
+          <strong class="ms-2">Footer Minimalista en una Sola Línea Horizontal</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-footer-minimal')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview p-0">
+        <footer class="tw-footer tw-footer--minimal">
+          <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+              <div class="fw-bold text-white">NombreCliente<span class="text-primary">.</span></div>
+              <div class="small text-white-50">© 2026 Todos los derechos reservados. Río Tercero, Córdoba.</div>
+              <div class="tw-credit-badge small">
+                Web por <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <textarea id="code-footer-minimal" class="d-none">
+<footer class="tw-footer tw-footer--minimal">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="fw-bold text-white">NombreCliente<span class="text-primary">.</span></div>
+      <div class="small text-white-50">© 2026 Todos los derechos reservados. Río Tercero, Córdoba.</div>
+      <div class="tw-credit-badge small">
+        Desarrollado con <strong>Tengo Web</strong> de <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+      </div>
+    </div>
+  </div>
+</footer></textarea>
+    </div>
+
+    <!-- Footer Variante 3: Gran Llamada a la Acción (Big CTA) -->
+    <div class="component-card">
+      <div class="component-header">
+        <div>
+          <span class="component-badge">Footer · Variante 3</span>
+          <strong class="ms-2">Footer con Gran Llamada a la Acción Centrada (Big CTA)</strong>
+        </div>
+        <button class="copy-btn" onclick="copyComponent(this, 'code-footer-big-cta')"><i class="bi bi-clipboard"></i> Copiar HTML</button>
+      </div>
+      <div class="component-preview p-0">
+        <footer class="tw-footer tw-footer--big-cta">
+          <div class="container">
+            <span class="badge bg-primary px-3 py-2 text-uppercase mb-3">¿Conversamos?</span>
+            <h2 class="big-cta-title">¿Listo para llevar tu proyecto al siguiente nivel?</h2>
+            <p class="big-cta-subtitle">Escribinos hoy mismo por WhatsApp y comencemos a planificar juntos.</p>
+            
+            <div class="mb-5">
+              <a href="https://wa.me/5493571XXXXXX" class="tw-btn tw-btn-wa tw-btn-lg">
+                <i class="bi bi-whatsapp"></i> Hablar Directamente por WhatsApp
+              </a>
+            </div>
+
+            <div class="tw-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+              <div>© 2026 NombreCliente. Río Tercero, Córdoba.</div>
+              <div class="tw-credit-badge">
+                Desarrollado con <strong>Tengo Web</strong> de <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <textarea id="code-footer-big-cta" class="d-none">
+<footer class="tw-footer tw-footer--big-cta">
+  <div class="container">
+    <span class="badge bg-primary px-3 py-2 text-uppercase mb-3">¿Conversamos?</span>
+    <h2 class="big-cta-title">¿Listo para llevar tu proyecto al siguiente nivel?</h2>
+    <p class="big-cta-subtitle">Escribinos hoy mismo por WhatsApp y coordinemos una reunión sin compromiso.</p>
+    
+    <div class="mb-5">
+      <a href="https://wa.me/5493571XXXXXX?text=Hola!%20Quiero%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener" class="tw-btn tw-btn-wa tw-btn-lg">
+        <i class="bi bi-whatsapp"></i> Hablar Directamente por WhatsApp
+      </a>
+    </div>
+
+    <div class="tw-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div>© 2026 NombreCliente. Todos los derechos reservados.</div>
+      <div class="tw-credit-badge">
+        Desarrollado con <strong>Tengo Web</strong> de <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+      </div>
+    </div>
+  </div>
+</footer></textarea>
+    </div>
+
+  </div>
+
+  <!-- Toast Notificación de Copiado -->
+  <div id="toast-msg" class="toast-msg">
+    <i class="bi bi-check-circle-fill text-success"></i> ¡Código HTML copiado al portapapeles!
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../core/js/tengo-core.js"></script>
+
+  <script>
+    function copyComponent(btn, textareaId) {
+      const textarea = document.getElementById(textareaId);
+      if (!textarea) return;
+
+      navigator.clipboard.writeText(textarea.value).then(() => {
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-check-lg"></i> ¡Copiado!';
+        btn.classList.add('copied');
+
+        const toast = document.getElementById('toast-msg');
+        toast.classList.add('show');
+
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.classList.remove('copied');
+          toast.classList.remove('show');
+        }, 2200);
+      });
+    }
+  </script>
+</body>
+</html>

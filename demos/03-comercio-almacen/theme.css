@@ -1,0 +1,48 @@
+/* ==========================================================================
+   TENGO WEB — DEMO 03: DON TOMÁS (ALMACÉN & FIAMBRERÍA DE BARRIO)
+   Identidad visual fresca, amigable, cercana y con alta fuerza de venta.
+   Inspiración: Savora (Pills de Horario/Ubicación + Tabs de Catálogo)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Tipografía Sans de gran legibilidad y cercanía */
+  --tw-font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --tw-font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Paleta Comercial & Fresca */
+  --tw-primary: #15803D;              /* Verde almacén / fresco */
+  --tw-primary-hover: #166534;        /* Verde bosque profundo */
+  --tw-primary-rgb: 21, 128, 61;
+  --tw-secondary: #0F172A;            /* Slate oscuro para contrastes */
+  --tw-secondary-hover: #1E293B;
+  --tw-accent: #EA580C;               /* Naranja cálido para ofertas y llamadas de atención */
+  --tw-accent-hover: #C2410C;
+
+  /* Fondos y Superficies */
+  --tw-bg-body: #FFFFFF;
+  --tw-bg-surface: #FFFFFF;
+  --tw-bg-alt: #F8FAFC;
+  --tw-bg-dark: #0F172A;
+
+  /* Textos y Contrastes */
+  --tw-text-title: #0F172A;
+  --tw-text-body: #334155;
+  --tw-text-muted: #64748B;
+  --tw-border-color: #E2E8F0;
+
+  /* UI Tokens: Bordes dinámicos y amigables (12px), sombras visibles */
+  --tw-btn-radius: 10px;
+  --tw-card-radius: 14px;
+  --tw-img-radius: 12px;
+  --tw-badge-radius: 999px;
+
+  --tw-shadow: 0 10px 25px -5px rgba(21, 128, 61, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --tw-shadow-lg: 0 20px 35px -8px rgba(21, 128, 61, 0.14), 0 10px 15px -5px rgba(0, 0, 0, 0.06);
+
+  --tw-section-py: 85px;
+
+  /* Botón WhatsApp */
+  --tw-wa-color: #25D366;
+}

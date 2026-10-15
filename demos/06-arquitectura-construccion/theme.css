@@ -1,0 +1,90 @@
+/* ==========================================================================
+   TENGO WEB — THEME: ARQUITECTURA & CONSTRUCCIÓN (SHARP 90°)
+   Arquetipo: Arquitectura, Ingeniería, Estructuras Metálicas, Construcción
+   Inspiración: Archiste, Strada, Titan (Minimalismo Editorial)
+   Diseñar – Río Tercero
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Tipografía Editorial & Arquitectónica */
+  --tw-font-heading: 'Space Grotesk', sans-serif;
+  --tw-font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Paleta Monocromática de Alto Contraste con Acento Industrial */
+  --tw-primary: #121212;
+  --tw-primary-hover: #262626;
+  --tw-primary-rgb: 18, 18, 18;
+
+  --tw-secondary: #EA580C;              /* Naranja seguridad / acero corten */
+  --tw-secondary-hover: #C2410C;
+  --tw-secondary-rgb: 234, 88, 12;
+
+  --tw-accent: #0284C7;
+  --tw-accent-hover: #0369A1;
+
+  /* Fondos Arquitectónicos */
+  --tw-bg-body: #FFFFFF;
+  --tw-bg-surface: #FFFFFF;
+  --tw-bg-alt: #F8FAFC;
+  --tw-bg-dark: #121212;
+  --tw-bg-dark-surface: #1E1E1E;
+  --tw-bg-muted: #F1F5F9;
+
+  /* Textos */
+  --tw-text-title: #121212;
+  --tw-text-body: #475569;
+  --tw-text-muted: #94A3B8;
+  --tw-border-color: #E2E8F0;
+
+  /* ------------------------------------------------------------------------
+     ESQUINAS 100% RECTAS (PURE SHARP 90°)
+     Identidad geométrica rigurosa para arquitectura y montajes
+     ------------------------------------------------------------------------ */
+  --tw-btn-radius: 0px !important;
+  --tw-card-radius: 0px !important;
+  --tw-img-radius: 0px !important;
+  --tw-badge-radius: 0px !important;
+  --tw-input-radius: 0px !important;
+
+  /* Botones Geométricos */
+  --tw-btn-padding-y: 14px;
+  --tw-btn-padding-x: 30px;
+  --tw-btn-font-weight: 700;
+  --tw-btn-transform: uppercase;
+  --tw-btn-letter-spacing: 1.2px;
+  --tw-btn-font-size: 0.88rem;
+
+  --tw-btn-primary-bg: #121212;
+  --tw-btn-primary-border: #121212;
+  --tw-btn-primary-color: #FFFFFF;
+  --tw-btn-primary-hover-bg: var(--tw-secondary);
+  --tw-btn-primary-hover-border: var(--tw-secondary);
+  --tw-btn-primary-hover-color: #FFFFFF;
+
+  --tw-btn-outline-border: #121212;
+  --tw-btn-outline-color: #121212;
+  --tw-btn-outline-hover-bg: #121212;
+  --tw-btn-outline-hover-border: #121212;
+  --tw-btn-outline-hover-color: #FFFFFF;
+
+  /* Cards Arquitectónicas */
+  --tw-card-bg: #FFFFFF;
+  --tw-card-border-width: 1px;
+  --tw-card-border-color: #E2E8F0;
+  --tw-card-padding: 38px 32px;
+  --tw-card-shadow: none;
+  --tw-card-hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  --tw-card-hover-border: #121212;
+  --tw-card-hover-transform: translateY(-4px);
+
+  /* Badges Sharp */
+  --tw-badge-font-size: 0.8rem;
+  --tw-badge-letter-spacing: 1.5px;
+  --tw-badge-transform: uppercase;
+
+  /* Espaciado */
+  --tw-section-py: 100px;
+  --tw-section-header-mb: 60px;
+}

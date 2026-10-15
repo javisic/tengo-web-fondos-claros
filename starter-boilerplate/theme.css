@@ -1,0 +1,150 @@
+/* ==========================================================================
+   TENGO WEB — THEME DEL CLIENTE (theme.css)
+   Personalizá los colores, tipografías, botones, backgrounds y cards aquí.
+   No necesitás modificar los archivos del núcleo (core).
+   Diseñar – Diseño gráfico y web (Río Tercero, Córdoba)
+   ========================================================================== */
+
+/* 1. Tipografías Google Fonts deseadas */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ------------------------------------------------------------------------
+     A. TIPOGRAFÍAS Y CONTROL DE TEXTOS
+     ------------------------------------------------------------------------ */
+  --tw-font-heading: 'Outfit', sans-serif;
+  --tw-font-body: 'Plus Jakarta Sans', sans-serif;
+
+  --tw-text-title: #0F172A;              /* Color de títulos principales */
+  --tw-text-body: #475569;               /* Color de párrafos y textos generales */
+  --tw-text-muted: #64748B;              /* Textos secundarios y leyendas */
+  --tw-text-light: #F8FAFC;              /* Textos sobre fondos oscuros */
+
+  --tw-heading-letter-spacing: -0.02em;  /* Espaciado de letras en títulos (ej: -0.02em, 0.05em) */
+  --tw-heading-transform: none;          /* Transformación (none / uppercase / capitalize) */
+  --tw-heading-font-weight: 700;         /* Peso de fuente de títulos */
+  --tw-body-font-size: 1rem;             /* Tamaño base de texto */
+  --tw-body-line-height: 1.65;           /* Altura de línea de lectura */
+
+  /* ------------------------------------------------------------------------
+     B. PALETA DE COLORES Y FONDOS (BACKGROUNDS)
+     ------------------------------------------------------------------------ */
+  --tw-primary: #0D6EFD;                 /* Color principal de la marca */
+  --tw-primary-hover: #0b5ed7;           /* Hover del color principal */
+  --tw-primary-rgb: 13, 110, 253;        /* Mismo color en RGB para transparencias */
+
+  --tw-secondary: #0F172A;               /* Color secundario o de contraste */
+  --tw-secondary-hover: #1e293b;
+  --tw-secondary-rgb: 15, 23, 42;
+
+  --tw-accent: #10B981;                  /* Color de acento para ofertas, badges o destacados */
+  --tw-accent-hover: #059669;
+
+  --tw-bg-body: #FFFFFF;                 /* Fondo global de la página */
+  --tw-bg-surface: #FFFFFF;              /* Fondo de tarjetas, acordeones y contenedores */
+  --tw-bg-alt: #F8FAFC;                  /* Fondo de secciones alternadas */
+  --tw-bg-dark: #0F172A;                 /* Fondo oscuro (topbar, footer, hero oscuro) */
+  --tw-bg-dark-surface: #1E293B;         /* Fondo de tarjetas sobre fondos oscuros */
+  --tw-bg-muted: #F1F5F9;                /* Fondo suave para badges o inputs */
+
+  --tw-hero-overlay: rgba(15, 23, 42, 0.65); /* Opacidad y tono de capa sobre fotos de hero */
+  --tw-header-bg: rgba(255, 255, 255, 0.94); /* Fondo translúcido del navbar sticky */
+  --tw-topbar-bg: var(--tw-bg-dark);     /* Fondo de barra superior */
+  --tw-topbar-color: #CBD5E1;            /* Color de textos en barra superior */
+  --tw-footer-bg: var(--tw-bg-dark);     /* Fondo del footer */
+  --tw-footer-color: #94A3B8;            /* Textos en footer */
+  --tw-border-color: #E2E8F0;            /* Bordes y líneas divisorias claras */
+
+  /* ------------------------------------------------------------------------
+     C. CONTROL DE BOTONES (.tw-btn)
+     ------------------------------------------------------------------------ */
+  --tw-btn-radius: 10px;                 /* Curvatura: 0px (sharp 90°), 8px, 999px (pill) */
+  --tw-btn-padding-y: 12px;              /* Relleno vertical */
+  --tw-btn-padding-x: 26px;              /* Relleno horizontal */
+  --tw-btn-font-family: var(--tw-font-heading);
+  --tw-btn-font-size: 0.96rem;
+  --tw-btn-font-weight: 600;
+  --tw-btn-letter-spacing: 0px;
+  --tw-btn-transform: none;              /* none / uppercase */
+  --tw-btn-border-width: 1px;
+
+  /* Botón Primario */
+  --tw-btn-primary-bg: var(--tw-primary);
+  --tw-btn-primary-border: var(--tw-primary);
+  --tw-btn-primary-color: #FFFFFF;
+  --tw-btn-primary-hover-bg: var(--tw-primary-hover);
+  --tw-btn-primary-hover-border: var(--tw-primary-hover);
+  --tw-btn-primary-hover-color: #FFFFFF;
+  --tw-btn-shadow: 0 4px 14px rgba(var(--tw-primary-rgb), 0.25);
+  --tw-btn-shadow-hover: 0 6px 20px rgba(var(--tw-primary-rgb), 0.35);
+
+  /* Botón Secundario */
+  --tw-btn-secondary-bg: var(--tw-secondary);
+  --tw-btn-secondary-border: var(--tw-secondary);
+  --tw-btn-secondary-color: #FFFFFF;
+  --tw-btn-secondary-hover-bg: var(--tw-secondary-hover);
+  --tw-btn-secondary-hover-border: var(--tw-secondary-hover);
+  --tw-btn-secondary-hover-color: #FFFFFF;
+
+  /* Botón Contorno (Outline) */
+  --tw-btn-outline-border: var(--tw-border-color);
+  --tw-btn-outline-color: var(--tw-text-title);
+  --tw-btn-outline-hover-bg: rgba(var(--tw-primary-rgb), 0.06);
+  --tw-btn-outline-hover-border: var(--tw-primary);
+  --tw-btn-outline-hover-color: var(--tw-primary);
+
+  /* Botón WhatsApp */
+  --tw-btn-wa-bg: #25D366;
+  --tw-btn-wa-color: #FFFFFF;
+  --tw-btn-wa-hover-bg: #1EBE5D;
+
+  /* ------------------------------------------------------------------------
+     D. CONTROL DE TARJETAS (CARDS: Servicios, Catálogo, Testimonios)
+     ------------------------------------------------------------------------ */
+  --tw-card-radius: 16px;                /* Curvatura de tarjetas (0px para esquinas rectas) */
+  --tw-card-bg: var(--tw-bg-surface);    /* Fondo de tarjetas */
+  --tw-card-border-width: 1px;           /* Grosor del borde */
+  --tw-card-border-color: var(--tw-border-color);
+  --tw-card-padding: 32px 28px;          /* Espaciado interno */
+  --tw-card-shadow: var(--tw-shadow-sm); /* Sombra en reposo */
+  --tw-card-hover-shadow: var(--tw-shadow-lg); /* Sombra al pasar el cursor */
+  --tw-card-hover-transform: translateY(-6px); /* Elevación al hover */
+  --tw-card-hover-border: var(--tw-primary);   /* Borde al hover */
+
+  /* ------------------------------------------------------------------------
+     E. ETIQUETAS, BADGES Y KICKERS
+     ------------------------------------------------------------------------ */
+  --tw-badge-radius: 999px;              /* 999px píldora o 0px recto */
+  --tw-badge-padding-y: 5px;
+  --tw-badge-padding-x: 14px;
+  --tw-badge-font-size: 0.85rem;
+  --tw-badge-font-weight: 700;
+  --tw-badge-transform: uppercase;
+  --tw-badge-letter-spacing: 1.2px;
+
+  /* ------------------------------------------------------------------------
+     F. FORMULARIOS E INPUTS
+     ------------------------------------------------------------------------ */
+  --tw-input-radius: 10px;               /* Curvatura de campos de texto */
+  --tw-input-bg: #FFFFFF;
+  --tw-input-border-color: var(--tw-border-color);
+  --tw-input-focus-border: var(--tw-primary);
+  --tw-input-focus-shadow: 0 0 0 3px rgba(var(--tw-primary-rgb), 0.15);
+  --tw-input-padding-y: 12px;
+  --tw-input-padding-x: 16px;
+  --tw-input-font-size: 0.95rem;
+
+  /* ------------------------------------------------------------------------
+     G. ESPACIADO Y ESTRUCTURA DE PÁGINA
+     ------------------------------------------------------------------------ */
+  --tw-section-py: 90px;                 /* Relleno vertical de cada sección */
+  --tw-section-header-mb: 50px;          /* Margen inferior del encabezado de sección */
+  --tw-img-radius: 14px;                 /* Curvatura de fotografías */
+
+  /* ------------------------------------------------------------------------
+     H. BOTÓN FLOTANTE DE WHATSAPP
+     ------------------------------------------------------------------------ */
+  --tw-wa-color: #25D366;
+  --tw-wa-hover: #1EBE5D;
+  --tw-wa-text: #FFFFFF;
+}

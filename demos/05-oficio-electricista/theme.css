@@ -1,0 +1,76 @@
+/* ==========================================================================
+   TENGO WEB — THEME: OFICIO / ELECTRICISTA MATRICULADO & SERVICIOS
+   Arquetipo: Oficios, Electricidad, Climatización, Plomería, Mantenimiento
+   Diseñar – Río Tercero
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Tipografía Técnica e Industrial */
+  --tw-font-heading: 'Space Grotesk', sans-serif;
+  --tw-font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Paleta Ámbar de Seguridad & Grafito Profundo */
+  --tw-primary: #F59E0B;
+  --tw-primary-hover: #D97706;
+  --tw-primary-rgb: 245, 158, 11;
+
+  --tw-secondary: #0F172A;
+  --tw-secondary-hover: #1E293B;
+  --tw-secondary-rgb: 15, 23, 42;
+
+  --tw-accent: #0284C7;
+  --tw-accent-hover: #0369A1;
+
+  /* Fondos Limpios e Industriales */
+  --tw-bg-body: #FFFFFF;
+  --tw-bg-surface: #FFFFFF;
+  --tw-bg-alt: #F8FAFC;
+  --tw-bg-dark: #0B132B;
+  --tw-bg-dark-surface: #141E3C;
+  --tw-bg-muted: #F1F5F9;
+
+  /* Textos */
+  --tw-text-title: #0F172A;
+  --tw-text-body: #334155;
+  --tw-text-muted: #64748B;
+  --tw-border-color: #E2E8F0;
+
+  /* Botones Técnicos Semi-Rectos */
+  --tw-btn-radius: 6px;
+  --tw-btn-padding-y: 12px;
+  --tw-btn-padding-x: 24px;
+  --tw-btn-font-weight: 700;
+  --tw-btn-letter-spacing: 0.2px;
+
+  /* Botón Primario: Texto oscuro para máximo contraste sobre el amarillo/ámbar */
+  --tw-btn-primary-bg: #F59E0B;
+  --tw-btn-primary-border: #F59E0B;
+  --tw-btn-primary-color: #0F172A;
+  --tw-btn-primary-hover-bg: #D97706;
+  --tw-btn-primary-hover-border: #D97706;
+  --tw-btn-primary-hover-color: #0F172A;
+
+  /* Cards Compactas */
+  --tw-card-radius: 8px;
+  --tw-card-bg: #FFFFFF;
+  --tw-card-border-width: 1px;
+  --tw-card-border-color: #E2E8F0;
+  --tw-card-padding: 30px 26px;
+  --tw-card-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+  --tw-card-hover-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+  --tw-card-hover-border: #F59E0B;
+  --tw-img-radius: 8px;
+
+  /* Badges Técnicos */
+  --tw-badge-radius: 4px;
+  --tw-badge-font-size: 0.82rem;
+  --tw-badge-letter-spacing: 1px;
+
+  /* Inputs */
+  --tw-input-radius: 6px;
+
+  /* Espaciado */
+  --tw-section-py: 85px;
+}

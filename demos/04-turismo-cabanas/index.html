@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabañas Los Aromos — Descanso Serrano en Valle de Calamuchita</title>
+  <meta name="description" content="Complejo de cabañas de montaña en Calamuchita y Río Tercero. Pileta climatizada, asadores individuales, desayuno artesanal y reserva directa por WhatsApp.">
+
+  <!-- Bootstrap 5.3 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Tengo Web Core -->
+  <link href="../../core/css/tengo-core.css" rel="stylesheet">
+  <link href="../../core/css/tengo-modules.css" rel="stylesheet">
+
+  <!-- Tema Cabañas & Turismo -->
+  <link href="theme.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. TOPBAR DE CONTACTO & ESTADO
+       ======================================================================== -->
+  <div class="tw-topbar d-none d-md-block" style="background:#192719;">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <a href="tel:+5493571556677"><i class="bi bi-telephone-fill"></i> (03571) 15-556677</a>
+        <span><i class="bi bi-geo-alt-fill"></i> Ruta Prov. 5, Valle de Calamuchita (a 25 min de Río Tercero)</span>
+        <span class="badge" style="background:rgba(229,168,75,0.2); color:#E5A84B; border:1px solid rgba(229,168,75,0.4);">
+          <i class="bi bi-calendar2-check"></i> Temporada 2026 Abierta
+        </span>
+      </div>
+      <div class="tw-topbar-social d-flex align-items-center gap-2">
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://wa.me/5493571556677?text=Hola!%20Quisiera%20consultar%20disponibilidad%20en%20Cabañas%20Los%20Aromos" target="_blank" rel="noopener" class="text-white ms-2" style="font-size:0.85rem;">
+          <i class="bi bi-whatsapp text-success"></i> WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. HEADER STICKY & NAVEGACIÓN
+       ======================================================================== -->
+  <header class="tw-header sticky-top">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
+      <a href="#inicio" class="tw-brand">
+        <i class="bi bi-tree-fill" style="color:var(--tw-primary); font-size:1.6rem;"></i>
+        <span>Los Aromos<span style="color:var(--tw-secondary);">.</span></span>
+      </a>
+
+      <!-- Botón móvil -->
+      <button class="tw-mobile-toggle" aria-label="Abrir menú">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- Menú -->
+      <div class="tw-nav-collapse d-lg-flex align-items-center gap-4">
+        <ul class="tw-nav">
+          <li><a href="#inicio" class="tw-nav-link active">Inicio</a></li>
+          <li><a href="#nosotros" class="tw-nav-link">El Lugar</a></li>
+          <li><a href="#servicios" class="tw-nav-link">Comodidades</a></li>
+          <li><a href="#cabanas" class="tw-nav-link">Nuestras Cabañas</a></li>
+          <li><a href="#galeria" class="tw-nav-link">Galería</a></li>
+          <li><a href="#horarios-mapa" class="tw-nav-link">Ubicación</a></li>
+          <li><a href="#contacto" class="tw-nav-link">Contacto</a></li>
+        </ul>
+        <div class="tw-nav-cta">
+          <a href="https://wa.me/5493571556677?text=Hola!%20Quisiera%20consultar%20tarifas%20y%20fechas%20disponibles" target="_blank" rel="noopener" class="tw-btn tw-btn-primary tw-btn-sm">
+            <i class="bi bi-calendar-event"></i> Reservar
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ======================================================================
+         HERO FULLWIDTH CON IMAGEN DE FONDO Y OVERLAY
+         ====================================================================== -->
+    <section class="tw-hero tw-hero--bg-image" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600&auto=format&fit=crop&q=80');">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-9" data-tw-animate="fade-up">
+            <span class="tw-hero-kicker">
+              <i class="bi bi-compass"></i> Valle de Calamuchita · Córdoba
+            </span>
+            <h1 class="tw-hero-title">Tu refugio natural en el corazón de las sierras</h1>
+            <p class="tw-hero-subtitle">
+              Desconectá de la rutina en un parque de 3 hectáreas con bosque nativo, pileta climatizada, desayuno serrano y cabañas totalmente equipadas.
+            </p>
+            <div class="tw-hero-actions justify-content-center">
+              <a href="https://wa.me/5493571556677?text=Hola!%20Quiero%20consultar%20disponibilidad%20para%20una%20escapada" target="_blank" rel="noopener" class="tw-btn tw-btn-wa">
+                <i class="bi bi-whatsapp"></i> Consultar Disponibilidad
+              </a>
+              <a href="#cabanas" class="tw-btn tw-btn-outline" style="border-color:rgba(255,255,255,0.4); color:#FFFFFF !important;">
+                Ver Cabañas y Tarifas
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         NOSOTROS / EL LUGAR (ASIMÉTRICO CON STATS)
+         ====================================================================== -->
+    <section id="nosotros" class="tw-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6" data-tw-animate="fade-right">
+            <span class="tw-section-kicker">Bienvenidos a Los Aromos</span>
+            <h2 class="tw-section-title">Naturaleza, tranquilidad y confort familiar</h2>
+            <p class="lead text-muted mb-4">
+              A minutos de Río Tercero y de los principales lagos del valle, te ofrecemos un entorno soñado pensado para descansar, respirar aire puro y compartir momentos inolvidables.
+            </p>
+            <p class="text-muted mb-4">
+              Cada cabaña cuenta con privacidad, asador individual, amplios ventanales con vista a los cerros y todo el equipamiento necesario para que te sientas como en casa.
+            </p>
+
+            <div class="row g-3 pt-2">
+              <div class="col-6">
+                <div class="p-3 rounded-4" style="background:var(--tw-bg-alt); border:1px solid var(--tw-border-color);">
+                  <h3 class="h2 mb-1" style="color:var(--tw-primary);">3 Ha.</h3>
+                  <p class="small text-muted mb-0">De parque arbolado y bosque nativo</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 rounded-4" style="background:var(--tw-bg-alt); border:1px solid var(--tw-border-color);">
+                  <h3 class="h2 mb-1" style="color:var(--tw-secondary);">+12 Años</h3>
+                  <p class="small text-muted mb-0">Recibiendo familias y parejas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-tw-animate="fade-left">
+            <figure class="tw-hero-visual position-relative m-0">
+              <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=900&auto=format&fit=crop&q=80" alt="Parque y Cabañas Los Aromos" class="rounded-4 shadow img-fluid">
+              <div class="tw-hero-floating-stat" style="bottom: 24px; left: 24px;">
+                <div class="stat-icon" style="background:rgba(45,90,39,0.1); color:var(--tw-primary);"><i class="bi bi-cup-hot-fill"></i></div>
+                <div>
+                  <div class="stat-number">Desayuno</div>
+                  <div class="stat-label">Artesanal incluido</div>
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         COMODIDADES Y AMENITIES (CARDS SEMÁNTICAS)
+         ====================================================================== -->
+    <section id="servicios" class="tw-section tw-section--alt">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Todo Incluido</span>
+          <h2 class="tw-section-title">Comodidades para tu Estadía</h2>
+          <p class="tw-section-subtitle">Servicios pensados para que solo te preocupes por relajarte y disfrutar.</p>
+        </header>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="100">
+            <article class="tw-service-card">
+              <div class="service-icon"><i class="bi bi-water"></i></div>
+              <h4>Pileta Climatizada</h4>
+              <p>Piscina exterior con solarium húmedo y sector climatizado cubierto con reposeras y vista al parque.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="200">
+            <article class="tw-service-card">
+              <div class="service-icon" style="background:rgba(201,122,62,0.15); color:var(--tw-secondary);"><i class="bi bi-fire"></i></div>
+              <h4>Quincho & Asador Propio</h4>
+              <p>Cada cabaña posee su propia galería privada techada con asador individual, mesa y bancos campestres.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="300">
+            <article class="tw-service-card">
+              <div class="service-icon"><i class="bi bi-egg-fried"></i></div>
+              <h4>Desayuno Serrano</h4>
+              <p>Canasta diaria con pan recién horneado, dulces caseros de la zona, medialunas, café y frutas de estación.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="100">
+            <article class="tw-service-card">
+              <div class="service-icon"><i class="bi bi-wifi"></i></div>
+              <h4>Wi-Fi Starlink de Alta Velocidad</h4>
+              <p>Conexión satelital ultra rápida y estable en todo el predio, ideal para estadías de descanso o home-office.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="200">
+            <article class="tw-service-card">
+              <div class="service-icon"><i class="bi bi-p-square"></i></div>
+              <h4>Cochera Cubierta Individual</h4>
+              <p>Espacio techado junto a cada cabaña para proteger tu vehículo de la intemperie con acceso directo.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="300">
+            <article class="tw-service-card">
+              <div class="service-icon" style="background:rgba(201,122,62,0.15); color:var(--tw-secondary);"><i class="bi bi-heart-pulse-fill"></i></div>
+              <h4>Pet Friendly</h4>
+              <p>Aceptamos mascotas educadas bajo reserva previa para que tus compañeros de cuatro patas viajen con vos.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CATÁLOGO DE CABAÑAS (CARDS SEMÁNTICAS CON TARIFAS Y WHATSAPP)
+         ====================================================================== -->
+    <section id="cabanas" class="tw-section">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Nuestras Unidades</span>
+          <h2 class="tw-section-title">Elegí la Cabaña Ideal para tu Estadía</h2>
+          <p class="tw-section-subtitle">Opciones confortables para parejas, escapadas románticas o vacaciones familiares.</p>
+        </header>
+
+        <div class="row g-4">
+          <!-- Cabaña 1 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="100">
+            <article class="tw-product-card">
+              <figure class="tw-product-thumb m-0" style="height:230px;">
+                <span class="tw-product-badge">Para Parejas</span>
+                <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=700&auto=format&fit=crop&q=80" alt="Cabaña Roble" loading="lazy">
+              </figure>
+              <div class="tw-product-body">
+                <span class="tw-product-category"><i class="bi bi-people-fill"></i> 2 Personas · 1 Dormitorio</span>
+                <h3 class="tw-product-title">Cabaña Roble — Suite Romántica</h3>
+                <p class="tw-product-desc">Cama Sommier King Size, hidromasaje doble con vista panorámica, aire frío/calor, cocina equipada y deck privado.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-light text-dark border">Jacuzzi</span>
+                  <span class="badge bg-light text-dark border">Deck privado</span>
+                  <span class="badge bg-light text-dark border">Asador</span>
+                </div>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">
+                    $65.000 <small>/ noche</small>
+                  </div>
+                  <a href="https://wa.me/5493571556677?text=Hola!%20Quiero%20consultar%20por%20la%20Cabaña%20Roble%20(Suite%20Romántica)" target="_blank" rel="noopener" class="tw-btn tw-btn-primary btn-sm">
+                    <i class="bi bi-whatsapp"></i> Reservar
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Cabaña 2 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="200">
+            <article class="tw-product-card">
+              <figure class="tw-product-thumb m-0" style="height:230px;">
+                <span class="tw-product-badge" style="background:var(--tw-secondary);">La Más Elegida</span>
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700&auto=format&fit=crop&q=80" alt="Cabaña Nogal" loading="lazy">
+              </figure>
+              <div class="tw-product-body">
+                <span class="tw-product-category"><i class="bi bi-people-fill"></i> 4 a 5 Personas · 2 Dormitorios</span>
+                <h3 class="tw-product-title">Cabaña Nogal — Confort Familiar</h3>
+                <p class="tw-product-desc">Dormitorio matrimonial + habitación con dos camas individuales, amplio living-comedor con estufa a leña, cocina completa y quincho.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-light text-dark border">Estufa a leña</span>
+                  <span class="badge bg-light text-dark border">2 Baños</span>
+                  <span class="badge bg-light text-dark border">Galería techada</span>
+                </div>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">
+                    $88.000 <small>/ noche</small>
+                  </div>
+                  <a href="https://wa.me/5493571556677?text=Hola!%20Quiero%20consultar%20por%20la%20Cabaña%20Nogal%20(Familiar)" target="_blank" rel="noopener" class="tw-btn tw-btn-primary btn-sm">
+                    <i class="bi bi-whatsapp"></i> Reservar
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Cabaña 3 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="300">
+            <article class="tw-product-card">
+              <figure class="tw-product-thumb m-0" style="height:230px;">
+                <span class="tw-product-badge" style="background:#059669;">Grupo Grande</span>
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&auto=format&fit=crop&q=80" alt="Cabaña Castaño" loading="lazy">
+              </figure>
+              <div class="tw-product-body">
+                <span class="tw-product-category"><i class="bi bi-people-fill"></i> 6 a 7 Personas · 3 Dormitorios</span>
+                <h3 class="tw-product-title">Cabaña Castaño — Gran Cabaña</h3>
+                <p class="tw-product-desc">Cabaña en dos plantas construida en piedra y tronco. Tres habitaciones, living espacioso, Smart TV 55", lavavajillas y terraza mirador.</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-light text-dark border">Terraza mirador</span>
+                  <span class="badge bg-light text-dark border">Parrilla XL</span>
+                  <span class="badge bg-light text-dark border">2 Cocheras</span>
+                </div>
+                <div class="tw-product-footer">
+                  <div class="tw-product-price">
+                    $115.000 <small>/ noche</small>
+                  </div>
+                  <a href="https://wa.me/5493571556677?text=Hola!%20Quiero%20consultar%20por%20la%20Cabaña%20Castaño%20(Grande)" target="_blank" rel="noopener" class="tw-btn tw-btn-primary btn-sm">
+                    <i class="bi bi-whatsapp"></i> Reservar
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         GALERÍA (8 FOTOS CON FIGURE SEMÁNTICO)
+         ====================================================================== -->
+    <section id="galeria" class="tw-section tw-section--alt">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Postales del Complejo</span>
+          <h2 class="tw-section-title">Nuestros Rincones</h2>
+          <p class="tw-section-subtitle">Descubrí en imágenes el paisaje, la piscina y los detalles de Los Aromos.</p>
+        </header>
+
+        <div class="tw-gallery-grid">
+          <figure class="tw-gallery-item" data-tw-animate="fade-up" data-tw-delay="50">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&auto=format&fit=crop&q=80" alt="Vista exterior cabaña al atardecer" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <h5>Atardeceres Serranos</h5>
+              <p class="small mb-0">Vistas abiertas al cerro</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item" data-tw-animate="fade-up" data-tw-delay="100">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&auto=format&fit=crop&q=80" alt="Piscina exterior climatizada" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <h5>Piscina Climatizada</h5>
+              <p class="small mb-0">Solarium y descanso</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item" data-tw-animate="fade-up" data-tw-delay="150">
+            <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=600&auto=format&fit=crop&q=80" alt="Dormitorio principal con sommier" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <h5>Habitación Suite</h5>
+              <p class="small mb-0">Sommier King & vista al parque</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item" data-tw-animate="fade-up" data-tw-delay="200">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80" alt="Desayuno artesanal servido" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <h5>Desayuno Serrano</h5>
+              <p class="small mb-0">Horneados frescos cada mañana</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item" data-tw-animate="fade-up" data-tw-delay="250">
+            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=600&auto=format&fit=crop&q=80" alt="Sendero arbolado" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <h5>Parque de 3 Hectáreas</h5>
+              <p class="small mb-0">Naturaleza virgen y calma</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item" data-tw-animate="fade-up" data-tw-delay="300">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600&auto=format&fit=crop&q=80" alt="Living con chimenea y sillones" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <h5>Calidez y Madera</h5>
+              <p class="small mb-0">Espacios de encuentro familiar</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item" data-tw-animate="fade-up" data-tw-delay="350">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&auto=format&fit=crop&q=80" alt="Quincho y asador" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <h5>Asadores Individuales</h5>
+              <p class="small mb-0">Tu asado bajo las estrellas</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item" data-tw-animate="fade-up" data-tw-delay="400">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=80" alt="Vista del valle al amanecer" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <h5>El Valle de Calamuchita</h5>
+              <p class="small mb-0">A minutos del lago</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         HORARIOS DE ATENCIÓN, CHECK-IN & UBICACIÓN CON MAPA
+         ====================================================================== -->
+    <section id="horarios-mapa" class="tw-section">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Cómo Llegar & Horarios</span>
+          <h2 class="tw-section-title">Ubicación y Políticas de Ingreso</h2>
+          <p class="tw-section-subtitle">Acceso directo por ruta asfaltada en una ubicación estratégica entre Río Tercero y los lagos.</p>
+        </header>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5" data-tw-animate="fade-right">
+            <article class="tw-location-card">
+              <div class="tw-status-badge">
+                <i class="bi bi-clock-history"></i> Recepción Abierta · <time>08:00 a 22:00 hs</time>
+              </div>
+
+              <h3 class="h4 mb-3">Información de Estadía</h3>
+
+              <address class="tw-location-details mb-4">
+                <div class="d-flex align-items-start gap-3 mb-2">
+                  <i class="bi bi-geo-alt-fill text-success fs-5"></i>
+                  <div>
+                    <strong>Dirección del Complejo:</strong><br>
+                    <span class="text-muted">Ruta Provincial 5, Km 98 · Calamuchita, Córdoba</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3 mb-2">
+                  <i class="bi bi-signpost-2-fill text-success fs-5"></i>
+                  <div>
+                    <strong>Distancias de Referencia:</strong><br>
+                    <span class="text-muted">A 25 min de Río Tercero · A 12 min de Embalse</span>
+                  </div>
+                </div>
+              </address>
+
+              <h4 class="h6 text-uppercase fw-bold text-secondary mb-2">Horarios de Check-In & Check-Out</h4>
+              <table class="tw-schedule-table">
+                <tbody>
+                  <tr>
+                    <td>Check-In (Ingreso)</td>
+                    <td>A partir de las <time datetime="14:00">14:00 hs</time></td>
+                  </tr>
+                  <tr>
+                    <td>Check-Out (Egreso)</td>
+                    <td>Hasta las <time datetime="10:30">10:30 hs</time></td>
+                  </tr>
+                  <tr>
+                    <td>Late Check-Out</td>
+                    <td>Sujeto a disponibilidad previa</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="h6 text-uppercase fw-bold text-secondary mt-4 mb-2">Medios de Pago Aceptados</h4>
+              <div class="tw-payment-methods">
+                <span class="tw-payment-pill"><i class="bi bi-cash"></i> Efectivo (15% OFF en estadías de 4+ noches)</span>
+                <span class="tw-payment-pill"><i class="bi bi-bank"></i> Transferencia Bancaria</span>
+                <span class="tw-payment-pill"><i class="bi bi-credit-card"></i> Mercado Pago / Tarjetas de Crédito</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-7" data-tw-animate="fade-left">
+            <div class="h-100 rounded-4 overflow-hidden shadow-sm border" style="min-height: 420px;">
+              <iframe
+                title="Mapa de Ubicación Cabañas Los Aromos"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53955.51888497672!2d-64.444983!3d-32.181232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd453d8544d6db%3A0x6b306b991a27e7f9!2sEmbalse%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                width="100%"
+                height="100%"
+                style="border:0; min-height: 420px; display:block;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TESTIMONIOS DE HUÉSPEDES (CARDS SEMÁNTICAS)
+         ====================================================================== -->
+    <section id="testimonios" class="tw-section tw-section--alt">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Opiniones Reales</span>
+          <h2 class="tw-section-title">Lo Que Dicen Quienes Nos Eligen</h2>
+          <p class="tw-section-subtitle">La experiencia de familias y parejas que vivieron sus vacaciones en Los Aromos.</p>
+        </header>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-tw-animate="fade-up" data-tw-delay="100">
+            <article class="tw-testimonial-card">
+              <div class="tw-testimonial-stars mb-2">★★★★★</div>
+              <p class="tw-testimonial-text">"La paz que se respira acá no tiene comparación. La cabaña súper limpia, la pileta climatizada una delicia y el desayuno riquísimo. Volveremos seguro."</p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold" style="width:44px; height:44px; background:var(--tw-primary);">LG</div>
+                <div>
+                  <h4 class="h6 mb-0">Laura Gonzalez</h4>
+                  <small class="text-muted">Río Tercero</small>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4" data-tw-animate="fade-up" data-tw-delay="200">
+            <article class="tw-testimonial-card">
+              <div class="tw-testimonial-stars mb-2">★★★★★</div>
+              <p class="tw-testimonial-text">"Fuimos en familia con nuestro perro y nos atendieron de maravilla. El asador individual es comodísimo y el parque enorme para que los chicos jueguen tranquilos."</p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold" style="width:44px; height:44px; background:var(--tw-secondary);">MP</div>
+                <div>
+                  <h4 class="h6 mb-0">Mariano Pautasso</h4>
+                  <small class="text-muted">Córdoba Capital</small>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4" data-tw-animate="fade-up" data-tw-delay="300">
+            <article class="tw-testimonial-card">
+              <div class="tw-testimonial-stars mb-2">★★★★★</div>
+              <p class="tw-testimonial-text">"La suite con hidromasaje superó nuestras expectativas. Todo impecable, internet rapidísimo para trabajar unas horas y la atención por WhatsApp fue inmediata."</p>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold" style="width:44px; height:44px; background:var(--tw-primary);">CR</div>
+                <div>
+                  <h4 class="h6 mb-0">Carolina Rossi</h4>
+                  <small class="text-muted">Rosario, Santa Fe</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FORMULARIO DE RESERVA / CONSULTA A WHATSAPP
+         ====================================================================== -->
+    <section id="contacto" class="tw-section">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Planificá tu Escapada</span>
+          <h2 class="tw-section-title">Consultá Fechas y Tarifas</h2>
+          <p class="tw-section-subtitle">Completá los datos y te responderemos por WhatsApp con la disponibilidad exacta y cotización al instante.</p>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-tw-animate="fade-up">
+            <div class="tw-form-box" style="border-radius:24px;">
+              <h3 class="h4 mb-4 text-center">Formulario de Reserva Rápida</h3>
+              <form data-tw-wa-form="5493571556677">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Nombre y Apellido</label>
+                    <input type="text" name="nombre" class="form-control tw-form-control" required placeholder="Ej: Marcelo Fernández">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Cabaña de Interés</label>
+                    <select name="cabana" class="form-select tw-form-control">
+                      <option value="Suite Roble (2 pax)">Cabaña Roble (2 personas - Suite)</option>
+                      <option value="Cabaña Nogal (4-5 pax)" selected>Cabaña Nogal (4 a 5 personas)</option>
+                      <option value="Cabaña Castaño (6-7 pax)">Cabaña Castaño (6 a 7 personas)</option>
+                      <option value="A confirmar según disponibilidad">Cualquiera disponible</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Fecha Estimada de Ingreso</label>
+                    <input type="date" name="fecha_ingreso" class="form-control tw-form-control" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Cantidad de Noches y Personas</label>
+                    <input type="text" name="personas_noches" class="form-control tw-form-control" placeholder="Ej: 3 noches, 2 adultos y 1 niño">
+                  </div>
+                  <div class="col-12">
+                    <label class="tw-form-label">Mensaje o Consulta Especial</label>
+                    <textarea name="mensaje" rows="3" class="form-control tw-form-control" placeholder="¿Viajás con mascota? ¿Alguna consulta sobre el desayuno o late check-out?"></textarea>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="tw-btn tw-btn-wa w-100 py-3 fs-6">
+                      <i class="bi bi-whatsapp"></i> Enviar Consulta de Reserva a WhatsApp
+                    </button>
+                    <p class="text-center small text-muted mt-2 mb-0">Respondemos en menos de 30 minutos de 08:00 a 22:00 hs.</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="tw-footer" style="background:#142114;">
+    <div class="container text-center">
+      <div class="d-flex align-items-center justify-content-center gap-2 mb-2">
+        <i class="bi bi-tree-fill" style="color:var(--tw-secondary); font-size:1.8rem;"></i>
+        <h4 class="h3 mb-0 text-white">Los Aromos<span style="color:var(--tw-secondary);">.</span></h4>
+      </div>
+      <p class="mb-4" style="color:#A3B2A3; max-width:540px; margin-left:auto; margin-right:auto;">
+        Complejo de Cabañas & Suites de Montaña · Valle de Calamuchita, Córdoba, Argentina.
+      </p>
+
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <a href="#inicio" class="text-white text-decoration-none small">Inicio</a>
+        <span class="text-muted">·</span>
+        <a href="#cabanas" class="text-white text-decoration-none small">Cabañas</a>
+        <span class="text-muted">·</span>
+        <a href="#servicios" class="text-white text-decoration-none small">Comodidades</a>
+        <span class="text-muted">·</span>
+        <a href="#horarios-mapa" class="text-white text-decoration-none small">Ubicación</a>
+        <span class="text-muted">·</span>
+        <a href="#contacto" class="text-white text-decoration-none small">Reservas</a>
+      </div>
+
+      <div class="tw-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3" style="border-top-color:rgba(255,255,255,0.08);">
+        <div style="color:#7D8E7D; font-size:0.88rem;">
+          © 2026 Cabañas Los Aromos. Todos los derechos reservados.
+        </div>
+        <div class="tw-credit-badge" style="color:#7D8E7D;">
+          Sitio web creado con <strong>Tengo Web</strong> de <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP CON PULSO Y TOOLTIP
+       ======================================================================== -->
+  <a href="https://wa.me/5493571556677?text=Hola!%20Quisiera%20consultar%20disponibilidad%20en%20Cabañas%20Los%20Aromos" 
+     class="tw-wa-floating" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Reservar por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="tw-wa-tooltip">Consultá fechas por WhatsApp</span>
+  </a>
+
+  <!-- Bootstrap & Tengo Core JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../core/js/tengo-core.js"></script>
+</body>
+</html>

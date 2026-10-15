@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es" class="tw-sharp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vértice — Arquitectura, Estructuras Metálicas & Construcción</title>
+  <meta name="description" content="Estudio de arquitectura y construcción en Río Tercero, Córdoba. Viviendas premium, naves industriales, estructuras metálicas y proyectos llave en mano.">
+
+  <!-- Bootstrap 5.3 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Tengo Web Core -->
+  <link href="../../core/css/tengo-core.css" rel="stylesheet">
+  <link href="../../core/css/tengo-modules.css" rel="stylesheet">
+
+  <!-- Tema Arquitectura & Sharp 90° -->
+  <link href="theme.css" rel="stylesheet">
+</head>
+<body class="tw-sharp">
+
+  <!-- ========================================================================
+       1. TOPBAR MINIMALISTA
+       ======================================================================== -->
+  <div class="tw-topbar d-none d-md-block" style="background:#000000; border-bottom:1px solid #222;">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <span><i class="bi bi-geo-alt"></i> Río Tercero · Córdoba · Villa María</span>
+        <a href="tel:+5493571445566"><i class="bi bi-telephone"></i> (03571) 44-5566</a>
+        <a href="mailto:estudio@vertice-arq.com.ar"><i class="bi bi-envelope"></i> estudio@vertice-arq.com.ar</a>
+      </div>
+      <div class="tw-topbar-social d-flex align-items-center gap-2">
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/5493571445566?text=Hola!%20Quisiera%20consultar%20por%20un%20proyecto%20con%20Vértice%20Arquitectura" target="_blank" rel="noopener" class="text-white ms-2 small">
+          <i class="bi bi-whatsapp" style="color:var(--tw-secondary);"></i> WhatsApp Estudio
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. HEADER STICKY EDITORIAL
+       ======================================================================== -->
+  <header class="tw-header sticky-top" style="border-bottom: 1px solid #121212;">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
+      <a href="#inicio" class="tw-brand text-uppercase" style="letter-spacing:1px;">
+        <span>VÉRTICE <span style="font-size:0.85rem; font-weight:400; color:var(--tw-secondary);">[ARQ + ESTRUCTURAS]</span></span>
+      </a>
+
+      <!-- Botón móvil -->
+      <button class="tw-mobile-toggle" aria-label="Abrir menú">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- Menú de Navegación -->
+      <div class="tw-nav-collapse d-lg-flex align-items-center gap-4">
+        <ul class="tw-nav">
+          <li><a href="#inicio" class="tw-nav-link active">Inicio</a></li>
+          <li><a href="#estudio" class="tw-nav-link">Estudio</a></li>
+          <li><a href="#servicios" class="tw-nav-link">Servicios</a></li>
+          <li><a href="#obras" class="tw-nav-link">Obras</a></li>
+          <li><a href="#faq" class="tw-nav-link">Preguntas</a></li>
+          <li><a href="#contacto" class="tw-nav-link">Contacto</a></li>
+        </ul>
+        <div class="tw-nav-cta">
+          <a href="#contacto" class="tw-btn tw-btn-primary tw-btn-sm">
+            Iniciar Proyecto
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ======================================================================
+         HERO MINIMALISTA TIPOGRÁFICO CON ACCIÓN CLARA
+         ====================================================================== -->
+    <section class="tw-hero tw-hero--minimal-cta" style="background:#FFFFFF; border-bottom:1px solid #E2E8F0;">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-8" data-tw-animate="fade-up">
+            <span class="tw-hero-kicker" style="background:transparent; border:1px solid #121212; color:#121212; border-radius:0;">
+              Estudio & Constructora · Mat. CAPC 8421
+            </span>
+            <h1 class="tw-hero-title display-4 fw-bold mt-3 mb-3 text-uppercase" style="letter-spacing:-1px;">
+              Diseñamos y construimos espacios que perduran.
+            </h1>
+            <p class="tw-hero-subtitle fs-5 text-muted mb-4" style="max-width:620px;">
+              Combinamos rigor arquitectónico, cálculo estructural y montajes metálicos de precisión para viviendas de autor, naves industriales y desarrollos comerciales en Río Tercero y la región.
+            </p>
+            <div class="tw-hero-actions">
+              <a href="https://wa.me/5493571445566?text=Hola!%20Quiero%20solicitar%20una%20reunión%20técnica%20con%20el%20estudio" target="_blank" rel="noopener" class="tw-btn tw-btn-primary">
+                <i class="bi bi-whatsapp"></i> Consultar por WhatsApp
+              </a>
+              <a href="#obras" class="tw-btn tw-btn-outline">
+                Ver Obras Ejecutadas
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block" data-tw-animate="fade-left">
+            <div class="p-4 border border-dark bg-light">
+              <div class="text-uppercase small fw-bold text-muted mb-2">Especialidades Técnicas</div>
+              <div class="h5 fw-bold mb-3">Soluciones Llave en Mano</div>
+              <p class="small text-muted mb-4">Desde la primera idea en boceto y cálculo estructural hasta la entrega final de llaves y habilitación municipal.</p>
+              <div class="d-flex flex-column gap-2 small fw-semibold">
+                <span class="text-dark"><i class="bi bi-arrow-right-short text-warning"></i> Naves Industriales & Tinglados</span>
+                <span class="text-dark"><i class="bi bi-arrow-right-short text-warning"></i> Vivienda Unifamiliar Contemporánea</span>
+                <span class="text-dark"><i class="bi bi-arrow-right-short text-warning"></i> Estructuras de Hormigón & Acero</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ESTUDIO / ASIMÉTRICO CON STATS
+         ====================================================================== -->
+    <section id="estudio" class="tw-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6" data-tw-animate="fade-right">
+            <span class="tw-section-kicker">Filosofía de Trabajo</span>
+            <h2 class="tw-section-title">Precisión técnica, pureza formal y control total de obra</h2>
+            <p class="text-muted mb-4">
+              En Vértice entendemos que un proyecto no termina en el plano. Nuestra estructura integra el equipo de diseño proyectual con cuadrillas propias de montaje y dirección técnica, garantizando que los tiempos, los costos y la calidad de los materiales se cumplan sin desvíos.
+            </p>
+            <p class="text-muted mb-4">
+              Trabajamos con tecnologías constructivas tradicionales, estructuras metálicas pesadas y livianas, y sistemas mixtos adaptados a la topografía y clima de nuestra provincia.
+            </p>
+
+            <div class="row g-3 pt-2">
+              <div class="col-4">
+                <div class="p-3 border border-dark text-center">
+                  <div class="h2 fw-bold mb-0">18</div>
+                  <small class="text-muted text-uppercase" style="font-size:0.75rem;">Años de Trayectoria</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="p-3 border border-dark text-center">
+                  <div class="h2 fw-bold mb-0">+50</div>
+                  <small class="text-muted text-uppercase" style="font-size:0.75rem;">Obras Concluidas</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="p-3 border border-dark text-center">
+                  <div class="h2 fw-bold mb-0">28k</div>
+                  <small class="text-muted text-uppercase" style="font-size:0.75rem;">m² Edificados</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-tw-animate="fade-left">
+            <figure class="m-0 border border-dark p-2 bg-white shadow-sm">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&auto=format&fit=crop&q=80" alt="Obra de arquitectura contemporánea en hormigón y acero" class="img-fluid">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SERVICIOS PROFESIONALES (CARDS SHARP ARTICLE)
+         ====================================================================== -->
+    <section id="servicios" class="tw-section tw-section--alt">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Capacidades</span>
+          <h2 class="tw-section-title">Nuestras Áreas de Práctica</h2>
+          <p class="tw-section-subtitle">Acompañamiento profesional en cada una de las fases del ciclo constructivo.</p>
+        </header>
+
+        <div class="row g-4">
+          <!-- Servicio 1 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="50">
+            <article class="tw-service-card tw-card--sharp">
+              <span class="text-muted fw-bold mb-2">01 / PROYECTO</span>
+              <h4>Proyecto Arquitectónico & Renders 3D</h4>
+              <p>Desarrollo integral de anteproyecto, visualización hiperrealista en 3D, legajo técnico ejecutivo de obra, cómputo métrico y especificaciones de materiales.</p>
+              <a href="#contacto" class="service-link">Solicitar reunión <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Servicio 2 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="100">
+            <article class="tw-service-card tw-card--sharp">
+              <span class="text-muted fw-bold mb-2" style="color:var(--tw-secondary) !important;">02 / ESTRUCTURAS</span>
+              <h4>Naves Industriales & Galpones Metálicos</h4>
+              <p>Cálculo, fabricación en taller propio y montaje en obra de estructuras metálicas, tinglados parabólicos, alma llena y pórticos para agro e industria.</p>
+              <a href="#contacto" class="service-link">Cotizar estructura <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Servicio 3 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="150">
+            <article class="tw-service-card tw-card--sharp">
+              <span class="text-muted fw-bold mb-2">03 / CONSTRUCCIÓN</span>
+              <h4>Dirección & Ejecución Llave en Mano</h4>
+              <p>Gerenciamiento completo de obra con cuadrillas especializadas, control presupuestario estricto y certificación periódica de avances.</p>
+              <a href="#contacto" class="service-link">Consultar modalidad <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Servicio 4 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="200">
+            <article class="tw-service-card tw-card--sharp">
+              <span class="text-muted fw-bold mb-2">04 / HABITACIONAL</span>
+              <h4>Vivienda Unifamiliar Contemporánea</h4>
+              <p>Casas de autor que dialogan con el entorno serrano o urbano, privilegiando la luz natural, la ventilación cruzada y la eficiencia térmica.</p>
+              <a href="#contacto" class="service-link">Ver catálogo <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Servicio 5 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="250">
+            <article class="tw-service-card tw-card--sharp">
+              <span class="text-muted fw-bold mb-2" style="color:var(--tw-secondary) !important;">05 / COMERCIAL</span>
+              <h4>Locales Comerciales & Oficinas</h4>
+              <p>Arquitectura corporativa, remodelaciones de locales con plazos ajustados y adecuación funcional para marcas y empresas de la zona.</p>
+              <a href="#contacto" class="service-link">Iniciar consulta <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+
+          <!-- Servicio 6 -->
+          <div class="col-md-6 col-lg-4" data-tw-animate="fade-up" data-tw-delay="300">
+            <article class="tw-service-card tw-card--sharp">
+              <span class="text-muted fw-bold mb-2">06 / TÉCNICO</span>
+              <h4>Cálculo Estructural & Habilitaciones</h4>
+              <p>Memorias de cálculo antisísmico (CIRSOC), peritajes técnicos, agrimensura asociada y tramitación de expedientes municipales y del Colegio.</p>
+              <a href="#contacto" class="service-link">Consultar gestoría <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PORTFOLIO DE OBRAS (GRILLES RECTAS CON FIGURE SEMÁNTICO)
+         ====================================================================== -->
+    <section id="obras" class="tw-section">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Proyectos Seleccionados</span>
+          <h2 class="tw-section-title">Obras Ejecutadas</h2>
+          <p class="tw-section-subtitle">Una muestra de nuestras obras residenciales, comerciales e industriales en Córdoba.</p>
+        </header>
+
+        <div class="tw-gallery-grid">
+          <figure class="tw-gallery-item tw-img--sharp" data-tw-animate="fade-up" data-tw-delay="50">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&auto=format&fit=crop&q=80" alt="Casa Pátina - Río Tercero" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <span class="badge bg-white text-dark mb-1 align-self-start border-0 fw-bold">Vivienda Unifamiliar</span>
+              <h5 class="mb-0">Casa Pátina · 320 m²</h5>
+              <p class="small text-light opacity-75 mb-0">Hormigón visto y acero corten</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item tw-img--sharp" data-tw-animate="fade-up" data-tw-delay="100">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=700&auto=format&fit=crop&q=80" alt="Nave Industrial Parque Químico" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <span class="badge bg-warning text-dark mb-1 align-self-start border-0 fw-bold">Industrial</span>
+              <h5 class="mb-0">Nave Logística · 2.400 m²</h5>
+              <p class="small text-light opacity-75 mb-0">Estructura metálica reticulada</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item tw-img--sharp" data-tw-animate="fade-up" data-tw-delay="150">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&auto=format&fit=crop&q=80" alt="Interior Casa Los Aromos" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <span class="badge bg-white text-dark mb-1 align-self-start border-0 fw-bold">Interiorismo</span>
+              <h5 class="mb-0">Espacios Integrados</h5>
+              <p class="small text-light opacity-75 mb-0">Madera de nogal y doble altura</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item tw-img--sharp" data-tw-animate="fade-up" data-tw-delay="200">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&auto=format&fit=crop&q=80" alt="Edificio Comercial Mitre" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <span class="badge bg-white text-dark mb-1 align-self-start border-0 fw-bold">Comercial</span>
+              <h5 class="mb-0">Edificio Corporativo Mitre</h5>
+              <p class="small text-light opacity-75 mb-0">Fachada ventilada de aluminio</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item tw-img--sharp" data-tw-animate="fade-up" data-tw-delay="250">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=700&auto=format&fit=crop&q=80" alt="Casa Mirador del Lago" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <span class="badge bg-white text-dark mb-1 align-self-start border-0 fw-bold">Residencial</span>
+              <h5 class="mb-0">Casa Mirador · Almafuerte</h5>
+              <p class="small text-light opacity-75 mb-0">Vista franca al lago Piedras Moras</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item tw-img--sharp" data-tw-animate="fade-up" data-tw-delay="300">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&auto=format&fit=crop&q=80" alt="Centro de Distribución Tancacha" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <span class="badge bg-warning text-dark mb-1 align-self-start border-0 fw-bold">Agroindustrial</span>
+              <h5 class="mb-0">Acopio Agropecuario · 1.800 m²</h5>
+              <p class="small text-light opacity-75 mb-0">Cubierta autoportante y piso láser</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item tw-img--sharp" data-tw-animate="fade-up" data-tw-delay="350">
+            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=700&auto=format&fit=crop&q=80" alt="Galería y Asador Quincho" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <span class="badge bg-white text-dark mb-1 align-self-start border-0 fw-bold">Quincho & Galería</span>
+              <h5 class="mb-0">Galería Residencial</h5>
+              <p class="small text-light opacity-75 mb-0">Vigas de hierro IPN a la vista</p>
+            </figcaption>
+          </figure>
+
+          <figure class="tw-gallery-item tw-img--sharp" data-tw-animate="fade-up" data-tw-delay="400">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&auto=format&fit=crop&q=80" alt="Casa Cubo - Río Tercero" loading="lazy">
+            <figcaption class="tw-gallery-overlay">
+              <span class="badge bg-white text-dark mb-1 align-self-start border-0 fw-bold">Vivienda Unifamiliar</span>
+              <h5 class="mb-0">Casa Cubo · B° Castagnino</h5>
+              <p class="small text-light opacity-75 mb-0">Geometría pura y sustentabilidad</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PREGUNTAS FRECUENTES (FAQS ACORDEÓN SHARP)
+         ====================================================================== -->
+    <section id="faq" class="tw-section tw-section--alt">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Metodología</span>
+          <h2 class="tw-section-title">Preguntas Frecuentes sobre Obras</h2>
+          <p class="tw-section-subtitle">Claridad en los pasos y contratos antes de mover el primer metro de tierra.</p>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-tw-animate="fade-up">
+            <div class="accordion tw-faq-accordion" id="faqAccordionArq">
+              <div class="accordion-item" style="border-radius:0 !important;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqA1">
+                    ¿Cómo se inicia un proyecto y qué incluye el anteproyecto?
+                  </button>
+                </h3>
+                <div id="faqA1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordionArq">
+                  <div class="accordion-body">
+                    Iniciamos con una entrevista técnica para relevar tus necesidades, el terreno y el presupuesto estimado. El anteproyecto incluye plantas funcionales, volumetría en 3D, renders de fachada y una estimación de costos por metro cuadrado para definir la viabilidad antes del proyecto ejecutivo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" style="border-radius:0 !important;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA2">
+                    ¿Qué ventajas tiene contratar el sistema "Llave en Mano"?
+                  </button>
+                </h3>
+                <div id="faqA2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionArq">
+                  <div class="accordion-body">
+                    Bajo la modalidad llave en mano, Vértice asume la total responsabilidad del proyecto, compra de materiales, subcontratos, seguros de personal, aportes al Colegio y gestiones ante la Municipalidad. El cliente tiene un precio cerrado y un cronograma de pagos atado al avance real.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item" style="border-radius:0 !important;">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqA3">
+                    ¿Construyen naves industriales fuera de Río Tercero?
+                  </button>
+                </h3>
+                <div id="faqA3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionArq">
+                  <div class="accordion-body">
+                    Sí, fabricamos las estructuras en nuestro taller metalúrgico de Río Tercero y realizamos montajes en toda la provincia de Córdoba: Almafuerte, Tancacha, Hernando, Villa María, Río Cuarto y parques industriales de la región.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACTO / FORMULARIO SHARP A WHATSAPP
+         ====================================================================== -->
+    <section id="contacto" class="tw-section">
+      <div class="container">
+        <header class="tw-section-header text-center" data-tw-animate="fade-up">
+          <span class="tw-section-kicker">Comencemos</span>
+          <h2 class="tw-section-title">Contanos sobre tu Proyecto</h2>
+          <p class="tw-section-subtitle">Agendá una primera reunión de factibilidad técnica y honorarios con los arquitectos del estudio.</p>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-tw-animate="fade-up">
+            <div class="tw-form-box border border-dark p-4 p-md-5" style="border-radius:0 !important;">
+              <h3 class="h4 mb-4 text-center text-uppercase fw-bold" style="letter-spacing:1px;">Brief Inicial de Obra</h3>
+              <form data-tw-wa-form="5493571445566">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Nombre y Apellido / Razón Social</label>
+                    <input type="text" name="nombre" class="form-control tw-form-control" required placeholder="Ej: Arq. Mariano / Grupo Agro SA">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Ubicación de la Obra o Terreno</label>
+                    <input type="text" name="ubicacion" class="form-control tw-form-control" required placeholder="Ej: Río Tercero - Loteo Las Rosas">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Tipología de Construcción</label>
+                    <select name="tipologia" class="form-select tw-form-control">
+                      <option value="Vivienda Unifamiliar" selected>Vivienda Unifamiliar Residencial</option>
+                      <option value="Nave Industrial / Galpón Metálico">Nave Industrial / Galpón Metálico</option>
+                      <option value="Local Comercial u Oficinas">Local Comercial u Oficinas</option>
+                      <option value="Remodelación / Ampliación">Remodelación o Ampliación</option>
+                      <option value="Cálculo Estructural / Peritaje">Cálculo Estructural / Peritaje</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="tw-form-label">Superficie Estimada (m²)</label>
+                    <input type="text" name="superficie" class="form-control tw-form-control" placeholder="Ej: 180 m² / Galpón de 20x40 m">
+                  </div>
+                  <div class="col-12">
+                    <label class="tw-form-label">Detalles o Idea Inicial</label>
+                    <textarea name="detalles" rows="3" class="form-control tw-form-control" required placeholder="Contanos brevemente qué tenés en mente, plazos deseados o si ya disponés de terreno escriturado..."></textarea>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="tw-btn tw-btn-primary w-100 py-3 text-uppercase">
+                      <i class="bi bi-whatsapp"></i> Enviar Consulta al Estudio por WhatsApp
+                    </button>
+                    <p class="text-center small text-muted mt-2 mb-0">Coordinación de reuniones presenciales en estudio o virtuales por Meet.</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER BIG CTA (INSPIRACIÓN TITAN / ARCHISTE)
+       ======================================================================== -->
+  <footer class="tw-footer tw-footer--big-cta">
+    <div class="container text-center">
+      <span class="badge mb-3 text-uppercase px-3 py-2 fw-bold" style="background:#262626; color:var(--tw-secondary); border-radius:0;">
+        Estudio de Arquitectura & Metalúrgica
+      </span>
+      <h2 class="big-cta-title text-uppercase">¿Listo para construir con solidez y diseño?</h2>
+      <p class="big-cta-subtitle">
+        Conversemos sobre tu próxima vivienda o nave industrial. Te asesoramos desde el estudio de suelo hasta la materialización final.
+      </p>
+      <div class="mb-5">
+        <a href="https://wa.me/5493571445566?text=Hola!%20Quiero%20coordinar%20una%20reunión%20técnica%20con%20Vértice" target="_blank" rel="noopener" class="tw-btn tw-btn-wa fs-6 py-3 px-4">
+          <i class="bi bi-whatsapp"></i> Escribir al WhatsApp del Estudio
+        </a>
+      </div>
+
+      <address class="tw-contact-info mb-4" style="color:#94A3B8; font-style:normal;">
+        <span class="d-block mb-1"><strong>Estudio Vértice:</strong> Alberdi 350, Río Tercero, Córdoba</span>
+        <span class="d-block mb-1"><strong>Taller Metalúrgico:</strong> Parque Industrial Leonardo Da Vinci, Río Tercero</span>
+        <span class="d-block">Teléfono: (03571) 44-5566 · Matrícula Profesional CAPC N° 8421</span>
+      </address>
+
+      <div class="tw-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3" style="border-top-color:#262626;">
+        <div style="color:#64748B; font-size:0.85rem;">
+          © 2026 Vértice Arquitectura & Estructuras. Todos los derechos reservados.
+        </div>
+        <div class="tw-credit-badge" style="color:#64748B;">
+          Desarrollado con <strong>Tengo Web</strong> de <a href="https://disenar.com.ar" target="_blank" rel="noopener">Diseñar</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP SHARP
+       ======================================================================== -->
+  <a href="https://wa.me/5493571445566?text=Hola!%20Quiero%20hacer%20una%20consulta%20técnica%20con%20el%20estudio" 
+     class="tw-wa-floating tw-sharp" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Contactar al estudio por WhatsApp"
+     style="border-radius:0 !important;">
+    <i class="bi bi-whatsapp"></i>
+    <span class="tw-wa-tooltip" style="border-radius:0 !important;">Consulta técnica con arquitecto</span>
+  </a>
+
+  <!-- Bootstrap & Tengo Core JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../core/js/tengo-core.js"></script>
+</body>
+</html>
